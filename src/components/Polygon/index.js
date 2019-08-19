@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import './index.css'
 
 const PointDot = styled.div`
-  background: white;
+  background: red;
   border-radius: 1px;
   width: 2px;
   height: 2px;
