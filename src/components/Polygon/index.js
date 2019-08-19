@@ -6,8 +6,8 @@ import './index.css'
 const PointDot = styled.div`
   background: red;
   border-radius: 1px;
-  width: 2px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
   margin-left: -1px;
   margin-top: -1px;
   position: absolute;
