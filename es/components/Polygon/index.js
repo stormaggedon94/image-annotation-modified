@@ -1,6 +1,6 @@
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: red;\n  border-radius: 1px;\n  width: 5px;\n  height: 5px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n'], ['\n  background: red;\n  border-radius: 1px;\n  width: 5px;\n  height: 5px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n']);
+var _templateObject = _taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 1px;\n  width: 5px;\n  height: 5px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n'], ['\n  background: white;\n  border-radius: 1px;\n  width: 5px;\n  height: 5px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n']);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
@@ -57,9 +57,9 @@ function Polygon(props) {
           fromAnchor: item.x + "% " + item.y + "%",
           to: 'linesContainer',
           toAnchor: prevItem.x + "% " + prevItem.y + "%",
-          borderColor: 'white',
+          borderColor: 'black',
           borderStyle: 'dashed',
-          borderWidth: 2,
+          borderWidth: 0.5,
           className: !props.active ? "Polygon-LineTo" : "Polygon-LineToActive"
         })
       );

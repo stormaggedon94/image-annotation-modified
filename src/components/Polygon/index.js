@@ -56,9 +56,9 @@ function Polygon (props) {
             fromAnchor={item.x + "% " + item.y + "%"}
             to="linesContainer"
             toAnchor={prevItem.x + "% " + prevItem.y + "%"}
-            borderColor={'white'}
+            borderColor={'black'}
             borderStyle={'dashed'}
-            borderWidth={2}
+            borderWidth={0.5}
             className={(!props.active) ? "Polygon-LineTo" : "Polygon-LineToActive"}
           />
         )
