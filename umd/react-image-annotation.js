@@ -11,7 +11,7 @@
 		exports["ReactImageAnnotation"] = factory(require("react"));
 	else
 		root["ReactImageAnnotation"] = factory(root["React"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
+})(window, function(__WEBPACK_EXTERNAL_MODULE__0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -50,12 +50,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -73,18 +93,37 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
+module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, isValidElement, REACT_ELEMENT_TYPE; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(13)();
+}
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,20 +137,20 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 /* unused harmony export ServerStyleSheet */
 /* unused harmony export StyleSheetManager */
 /* unused harmony export __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_hyphenateStyleName__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_hyphenateStyleName___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_fbjs_lib_hyphenateStyleName__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_stylis__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_stylis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_stylis__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_stylis_rule_sheet__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_stylis_rule_sheet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_stylis_rule_sheet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_is__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_is__);
+/* harmony import */ var fbjs_lib_hyphenateStyleName__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var fbjs_lib_hyphenateStyleName__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fbjs_lib_hyphenateStyleName__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(stylis__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -211,19 +250,7 @@ var isPlainObject = (function (x) {
 /**
  * Parse errors.md and turn it into a simple hash of code: message
  */
-var ERRORS =  true ? {
-  "1": "Cannot create styled-component for component: %s.\n\n",
-  "2": "Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n* Are you trying to reuse it across renders?\n* Are you accidentally calling collectStyles twice?\n\n",
-  "3": "Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",
-  "4": "The `StyleSheetManager` expects a valid target or sheet prop!\n\n* Does this error occur on the client and is your target falsy?\n* Does this error occur on the server and is the sheet falsy?\n\n",
-  "5": "The clone method cannot be used on the client!\n\n* Are you running in a client-like environment on the server?\n* Are you trying to run SSR on the client?\n\n",
-  "6": "Trying to insert a new style tag, but the given Node is unmounted!\n\n* Are you using a custom target that isn't mounted?\n* Does your document not have a valid head element?\n* Have you accidentally removed a style tag manually?\n\n",
-  "7": "ThemeProvider: Please return an object from your \"theme\" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n",
-  "8": "ThemeProvider: Please make your \"theme\" prop an object.\n\n",
-  "9": "Missing document `<head>`\n\n",
-  "10": "Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",
-  "11": "A plain React class (%s) has been interpolated into styles, probably as a component selector (https://www.styled-components.com/docs/advanced#referring-to-other-components). Only styled-component classes can be targeted in this fashion."
-} : {};
+var ERRORS =  false ? undefined : {};
 
 /**
  * super basic version of sprintf
@@ -263,11 +290,9 @@ var StyledComponentsError = function (_Error) {
       interpolations[_key2 - 1] = arguments[_key2];
     }
 
-    if (false) {
+    if (true) {
       var _this = possibleConstructorReturn(this, _Error.call(this, 'An error occurred. See https://github.com/styled-components/styled-components/blob/master/src/utils/errors.md#' + code + ' for more information. ' + (interpolations ? 'Additional arguments: ' + interpolations.join(', ') : '')));
-    } else {
-      var _this = possibleConstructorReturn(this, _Error.call(this, format.apply(undefined, [ERRORS[code]].concat(interpolations))));
-    }
+    } else { var _this; }
     return possibleConstructorReturn(_this);
   }
 
@@ -282,7 +307,7 @@ var objToCss = function objToCss(obj, prevKey) {
     return chunk !== undefined && chunk !== null && chunk !== false && chunk !== '';
   }).map(function (key) {
     if (isPlainObject(obj[key])) return objToCss(obj[key], key);
-    return __WEBPACK_IMPORTED_MODULE_0_fbjs_lib_hyphenateStyleName___default()(key) + ': ' + obj[key] + ';';
+    return fbjs_lib_hyphenateStyleName__WEBPACK_IMPORTED_MODULE_0___default()(key) + ': ' + obj[key] + ';';
   }).join(' ');
   return prevKey ? prevKey + ' {\n  ' + css + '\n}' : css;
 };
@@ -312,7 +337,7 @@ var flatten = function flatten(chunks, executionContext) {
       if (executionContext) {
         var nextChunk = chunk(executionContext);
         /* Throw if a React Element was given styles */
-        if (__WEBPACK_IMPORTED_MODULE_1_react___default.a.isValidElement(nextChunk)) {
+        if (react__WEBPACK_IMPORTED_MODULE_1___default.a.isValidElement(nextChunk)) {
           var elementName = chunk.displayName || chunk.name;
           throw new StyledComponentsError(11, elementName);
         }
@@ -336,7 +361,7 @@ var flatten = function flatten(chunks, executionContext) {
 var COMMENT_REGEX = /^\s*\/\/.*$/gm;
 
 // NOTE: This stylis instance is only used to split rules from SSR'd style tags
-var stylisSplitter = new __WEBPACK_IMPORTED_MODULE_2_stylis___default.a({
+var stylisSplitter = new stylis__WEBPACK_IMPORTED_MODULE_2___default.a({
   global: false,
   cascade: true,
   keyframe: false,
@@ -345,7 +370,7 @@ var stylisSplitter = new __WEBPACK_IMPORTED_MODULE_2_stylis___default.a({
   semicolon: true
 });
 
-var stylis = new __WEBPACK_IMPORTED_MODULE_2_stylis___default.a({
+var stylis = new stylis__WEBPACK_IMPORTED_MODULE_2___default.a({
   global: false,
   cascade: true,
   keyframe: false,
@@ -368,7 +393,7 @@ var returnRulesPlugin = function returnRulesPlugin(context) {
   }
 };
 
-var parseRulesPlugin = __WEBPACK_IMPORTED_MODULE_3_stylis_rule_sheet___default()(function (rule) {
+var parseRulesPlugin = stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_3___default()(function (rule) {
   parsingRules.push(rule);
 });
 
@@ -404,10 +429,7 @@ function isStyledComponent(target) /* : %checks */{
  * the use of streamed style tags and will perform the rehydration earlier when needed
  * this function will not be needed anymore */
 function consolidateStreamedStyles() {
-  if (true) {
-    // eslint-disable-next-line no-console
-    console.warn('styled-components automatically does streaming SSR rehydration now.\n' + 'Calling consolidateStreamedStyles manually is no longer necessary and a noop now.\n' + '- Please remove the consolidateStreamedStyles call from your client.');
-  }
+  if (false) {}
 }
 
 // 
@@ -476,7 +498,7 @@ var CONTEXT_KEY = '__styled-components-stylesheet__';
 
 var IS_BROWSER = typeof window !== 'undefined' && 'HTMLElement' in window;
 
-var DISABLE_SPEEDY = "development" !== 'production';
+var DISABLE_SPEEDY = "production" !== 'production';
 
 // 
 var SC_COMPONENT_ID = /^[^\S\n]*?\/\* sc-component-id:\s*(\S+)\s+\*\//gm;
@@ -502,7 +524,7 @@ var extractComps = (function (maybeCSS) {
 /* eslint-disable camelcase, no-undef */
 
 var getNonce = (function () {
-  return  true ? __webpack_require__.nc : null;
+  return  true ? __webpack_require__.nc : undefined;
 });
 
 // 
@@ -686,7 +708,7 @@ var wrapAsElement = function wrapAsElement(css, names) {
     }
 
     // eslint-disable-next-line react/no-danger
-    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('style', _extends({}, props, { dangerouslySetInnerHTML: { __html: css() } }));
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement('style', _extends({}, props, { dangerouslySetInnerHTML: { __html: css() } }));
   };
 };
 
@@ -1331,7 +1353,7 @@ var StyleSheet = function () {
 
     return this.tags.map(function (tag, i) {
       var key = 'sc-' + id + '-' + i;
-      return Object(__WEBPACK_IMPORTED_MODULE_1_react__["cloneElement"])(tag.toElement(), { key: key });
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["cloneElement"])(tag.toElement(), { key: key });
     });
   };
 
@@ -1383,19 +1405,14 @@ var StyleSheetManager = function (_Component) {
     // Flow v0.43.1 will report an error accessing the `children` property,
     // but v0.47.0 will not. It is necessary to use a type cast instead of
     // a "fixme" comment to satisfy both Flow versions.
-    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.Children.only(this.props.children);
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.Children.only(this.props.children);
   };
 
   return StyleSheetManager;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-StyleSheetManager.childContextTypes = (_StyleSheetManager$ch = {}, _StyleSheetManager$ch[CONTEXT_KEY] = __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(StyleSheet), __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(ServerStyleSheet)]).isRequired, _StyleSheetManager$ch);
- true ? StyleSheetManager.propTypes = {
-  sheet: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(StyleSheet), __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(ServerStyleSheet)]),
-  target: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.shape({
-    appendChild: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func.isRequired
-  })
-} : void 0;
+StyleSheetManager.childContextTypes = (_StyleSheetManager$ch = {}, _StyleSheetManager$ch[CONTEXT_KEY] = prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.instanceOf(StyleSheet), prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.instanceOf(ServerStyleSheet)]).isRequired, _StyleSheetManager$ch);
+ false ? undefined : void 0;
 
 // 
 
@@ -1423,7 +1440,7 @@ var ServerStyleSheet = function () {
       throw new StyledComponentsError(2);
     }
 
-    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(
       StyleSheetManager,
       { sheet: this.instance },
       children
@@ -1654,21 +1671,16 @@ var _contextShape, _ThemeProvider$contex;
 var CHANNEL = '__styled-components__';
 var CHANNEL_NEXT = CHANNEL + 'next__';
 
-var CONTEXT_CHANNEL_SHAPE = __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.shape({
-  getTheme: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func,
-  subscribe: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func,
-  unsubscribe: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func
+var CONTEXT_CHANNEL_SHAPE = prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
+  getTheme: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  subscribe: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  unsubscribe: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func
 });
 
-var contextShape = (_contextShape = {}, _contextShape[CHANNEL] = __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func, _contextShape[CHANNEL_NEXT] = CONTEXT_CHANNEL_SHAPE, _contextShape);
+var contextShape = (_contextShape = {}, _contextShape[CHANNEL] = prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func, _contextShape[CHANNEL_NEXT] = CONTEXT_CHANNEL_SHAPE, _contextShape);
 
 var warnChannelDeprecated = void 0;
-if (true) {
-  warnChannelDeprecated = once(function () {
-    // eslint-disable-next-line no-console
-    console.warn('Warning: Usage of `context.' + CHANNEL + '` as a function is deprecated. It will be replaced with the object on `.context.' + CHANNEL_NEXT + '` in a future version.');
-  });
-}
+if (false) {}
 
 var isFunction = function isFunction(test) {
   return typeof test === 'function';
@@ -1721,9 +1733,7 @@ var ThemeProvider = function (_Component) {
       subscribe: this.broadcast.subscribe,
       unsubscribe: this.broadcast.unsubscribe
     }, _babelHelpers$extends[CHANNEL] = function (subscriber) {
-      if (true) {
-        warnChannelDeprecated();
-      }
+      if (false) {}
 
       // Patch the old `subscribe` provide via `CHANNEL` for older clients.
       var unsubscribeId = _this3.broadcast.subscribe(subscriber);
@@ -1754,9 +1764,7 @@ var ThemeProvider = function (_Component) {
     if (isFunction(theme)) {
       var mergedTheme = theme(this.outerTheme);
 
-      if ("development" !== 'production' && (mergedTheme === null || Array.isArray(mergedTheme) || (typeof mergedTheme === 'undefined' ? 'undefined' : _typeof(mergedTheme)) !== 'object')) {
-        throw new StyledComponentsError(7);
-      }
+      if (false) {}
 
       return mergedTheme;
     }
@@ -1777,11 +1785,11 @@ var ThemeProvider = function (_Component) {
       return null;
     }
 
-    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.Children.only(this.props.children);
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.Children.only(this.props.children);
   };
 
   return ThemeProvider;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 ThemeProvider.childContextTypes = contextShape;
 ThemeProvider.contextTypes = (_ThemeProvider$contex = {}, _ThemeProvider$contex[CHANNEL_NEXT] = CONTEXT_CHANNEL_SHAPE, _ThemeProvider$contex);
@@ -1792,7 +1800,7 @@ var _babelHelpers$extends;
 // an empty execution context every single time...
 var STATIC_EXECUTION_CONTEXT = {};
 
-var modifiedContextShape = _extends({}, contextShape, (_babelHelpers$extends = {}, _babelHelpers$extends[CONTEXT_KEY] = __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(StyleSheet), __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.instanceOf(ServerStyleSheet)]), _babelHelpers$extends));
+var modifiedContextShape = _extends({}, contextShape, (_babelHelpers$extends = {}, _babelHelpers$extends[CONTEXT_KEY] = prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.instanceOf(StyleSheet), prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.instanceOf(ServerStyleSheet)]), _babelHelpers$extends));
 
 var identifiers = {};
 
@@ -1813,12 +1821,7 @@ var generateId = function generateId(ComponentStyle, _displayName, parentCompone
 };
 
 var warnExtendDeprecated = function warnExtendDeprecated() {};
-if (true) {
-  warnExtendDeprecated = once(function () {
-    // eslint-disable-next-line no-console
-    console.warn('Warning: The "extend" API will be removed in the upcoming v4.0 release. Use styled(StyledComponent) instead. You can find more information here: https://github.com/styled-components/styled-components/issues/1546');
-  });
-}
+if (false) {}
 
 // $FlowFixMe
 
@@ -1858,7 +1861,7 @@ var BaseStyledComponent = function (_Component) {
       var attr = attrs[key];
 
       // eslint-disable-next-line no-param-reassign
-      acc[key] = typeof attr === 'function' && !hasInInheritanceChain(attr, __WEBPACK_IMPORTED_MODULE_1_react__["Component"]) ? attr(context) : attr;
+      acc[key] = typeof attr === 'function' && !hasInInheritanceChain(attr, react__WEBPACK_IMPORTED_MODULE_1__["Component"]) ? attr(context) : attr;
       return acc;
     }, {});
 
@@ -1881,9 +1884,7 @@ var BaseStyledComponent = function (_Component) {
       var executionContext = this.buildExecutionContext(theme, props);
       var className = componentStyle.generateAndInjectStyles(executionContext, styleSheet);
 
-      if ("development" !== 'production' && warnTooManyClasses !== undefined) {
-        warnTooManyClasses(className);
-      }
+      if (false) {}
 
       return className;
     }
@@ -1982,11 +1983,11 @@ var BaseStyledComponent = function (_Component) {
       }
     }
 
-    return Object(__WEBPACK_IMPORTED_MODULE_1_react__["createElement"])(target, propsForElement);
+    return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(target, propsForElement);
   };
 
   return BaseStyledComponent;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
   var createStyledComponent = function createStyledComponent(target, options, rules) {
@@ -2061,12 +2062,10 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
     StyledComponent.target = target;
 
 
-    if (true) {
-      StyledComponent.warnTooManyClasses = createWarnTooManyClasses(displayName);
-    }
+    if (false) {}
 
     if (isClass) {
-      __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics___default()(StyledComponent, target, {
+      hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_5___default()(StyledComponent, target, {
         // all SC-specific things should not be hoisted
         attrs: true,
         componentStyle: true,
@@ -2152,7 +2151,7 @@ var isStaticRules = function isStaticRules(rules, attrs) {
   return true;
 };
 
-var isHMREnabled = typeof module !== 'undefined' && module.hot && "development" !== 'production';
+var isHMREnabled = typeof module !== 'undefined' && module.hot && "production" !== 'production';
 
 /*
  ComponentStyle is all the CSS-specific stuff, not
@@ -2173,7 +2172,7 @@ var _ComponentStyle = (function (nameGenerator, flatten, stringifyRules) {
       this.componentId = componentId;
 
       if (!StyleSheet.master.hasId(componentId)) {
-        var placeholder =  true ? ['.' + componentId + ' {}'] : [];
+        var placeholder =  false ? undefined : [];
 
         StyleSheet.master.deferredInject(componentId, placeholder);
       }
@@ -2283,7 +2282,7 @@ var _constructWithOptions = (function (css) {
   var constructWithOptions = function constructWithOptions(componentConstructor, tag) {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
 
-    if (!Object(__WEBPACK_IMPORTED_MODULE_6_react_is__["isValidElementType"])(tag)) {
+    if (!Object(react_is__WEBPACK_IMPORTED_MODULE_6__["isValidElementType"])(tag)) {
       throw new StyledComponentsError(1, String(tag));
     }
 
@@ -2344,7 +2343,7 @@ var withTheme = (function (Component$$1) {
 
       var styledContext = this.context[CHANNEL_NEXT];
       var themeProp = determineTheme(this.props, undefined, defaultProps);
-      if (styledContext === undefined && themeProp === undefined && "development" !== 'production') {
+      if (styledContext === undefined && themeProp === undefined && "production" !== 'production') {
         // eslint-disable-next-line no-console
         console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps');
       } else if (styledContext === undefined && themeProp !== undefined) {
@@ -2385,18 +2384,18 @@ var withTheme = (function (Component$$1) {
         delete props.innerRef;
       }
 
-      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Component$$1, props);
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component$$1, props);
     };
 
     return WithTheme;
-  }(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
+  }(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
 
   WithTheme.contextTypes = contextShape;
   WithTheme.displayName = 'WithTheme(' + getComponentName(Component$$1) + ')';
   WithTheme.styledComponentId = 'withTheme';
 
 
-  return __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics___default()(WithTheme, Component$$1);
+  return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_5___default()(WithTheme, Component$$1);
 });
 
 // 
@@ -2409,22 +2408,10 @@ var __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = {
 // 
 
 /* Warning if you've imported this file on React Native */
-if ("development" !== 'production' && typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
-  // eslint-disable-next-line no-console
-  console.warn("It looks like you've imported 'styled-components' on React Native.\n" + "Perhaps you're looking to import 'styled-components/native'?\n" + 'Read more about this at https://www.styled-components.com/docs/basics#react-native');
-}
+if (false) {}
 
 /* Warning if there are several instances of styled-components */
-if ("development" !== 'production' && "development" !== 'test' && typeof window !== 'undefined' && typeof navigator !== 'undefined' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Node.js') === -1 && navigator.userAgent.indexOf('jsdom') === -1) {
-  window['__styled-components-init__'] = window['__styled-components-init__'] || 0;
-
-  if (window['__styled-components-init__'] === 1) {
-    // eslint-disable-next-line no-console
-    console.warn("It looks like there are several instances of 'styled-components' initialized in this application. " + 'This may cause dynamic styles not rendering properly, errors happening during rehydration process ' + 'and makes your application bigger without a good reason.\n\n' + 'See https://s-c.sh/2BAXzed for more info.');
-  }
-
-  window['__styled-components-init__'] += 1;
-}
+if (false) {}
 
 /* Instantiate singletons */
 var ComponentStyle = _ComponentStyle(generateAlphabeticName, flatten, stringifyRules);
@@ -2440,2538 +2427,10 @@ var styled = _styled(StyledComponent, constructWithOptions);
 
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(19), __webpack_require__(20)(module)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hocs_RectangleSelector__ = __webpack_require__(31);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__hocs_RectangleSelector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hocs_PointSelector__ = __webpack_require__(32);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__hocs_PointSelector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hocs_OvalSelector__ = __webpack_require__(33);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__hocs_OvalSelector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hocs_PolygonSelector__ = __webpack_require__(34);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__hocs_PolygonSelector__["a"]; });
-
-
-
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(18)(module)))
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = getHorizontallyCentralPoint;
-/* harmony export (immutable) */ __webpack_exports__["b"] = getVerticallyLowestPoint;
-/*
- * This util file contains functions for getting different kinds of horizontal/vertical
- * points given an array of points (e.g.: [{x: 4, y: 87}, {x: 99, y:7}, ...]).
- */
-
-/*
- * This function returns the horizontally central x-value (number return type), defined
- * as the mean of the smallest and largest x-values.
- */
-function getHorizontallyCentralPoint(points) {
-  var leftMostHorizontalPoint = points.reduce(function (prev, curr) {
-    return curr.x < prev.x ? curr : prev;
-  }).x;
-  var rightMostHorizontalPoint = points.reduce(function (prev, curr) {
-    return curr.x > prev.x ? curr : prev;
-  }).x;
-
-  return leftMostHorizontalPoint + Math.round((rightMostHorizontalPoint - leftMostHorizontalPoint) / 2);
-}
-
-/*
- * This function returns the vertically lowest y-value (number return type), defined
- * as the largest y-value.
- */
-function getVerticallyLowestPoint(points) {
-  return points.reduce(function (prev, curr) {
-    return curr.y > prev.y ? curr : prev;
-  }).y;
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (true) {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(16)(isValidElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = require('./factoryWithThrowingShims')();
-}
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var validateFormat = function validateFormat(format) {};
-
-if (true) {
-  validateFormat = function validateFormat(format) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  };
-}
-
-function invariant(condition, format, a, b, c, d, e, f) {
-  validateFormat(format);
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(format.replace(/%s/g, function () {
-        return args[argIndex++];
-      }));
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-}
-
-module.exports = invariant;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyFunction = __webpack_require__(5);
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-if (true) {
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Tesselator = exports.DEFAULT_OPTIONS = exports.GLU_TESS_WINDING_ABS_GEQ_TWO = exports.GLU_TESS_WINDING_NEGATIVE = exports.GLU_TESS_WINDING_POSITIVE = exports.GLU_TESS_WINDING_NONZERO = exports.GLU_TESS_WINDING_ODD = exports.GL_TRIANGLE_FAN = exports.GL_TRIANGLE_STRIP = exports.GL_TRIANGLES = exports.GL_LINE_LOOP = undefined;
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-exports.run = run;
-
-var _libtess = __webpack_require__(44);
-
-var _polygon = __webpack_require__(10);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @module tesselator
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-var GL_LINE_LOOP = _libtess.primitiveType.GL_LINE_LOOP,
-    GL_TRIANGLES = _libtess.primitiveType.GL_TRIANGLES,
-    GL_TRIANGLE_STRIP = _libtess.primitiveType.GL_TRIANGLE_STRIP,
-    GL_TRIANGLE_FAN = _libtess.primitiveType.GL_TRIANGLE_FAN;
-exports.GL_LINE_LOOP = GL_LINE_LOOP;
-exports.GL_TRIANGLES = GL_TRIANGLES;
-exports.GL_TRIANGLE_STRIP = GL_TRIANGLE_STRIP;
-exports.GL_TRIANGLE_FAN = GL_TRIANGLE_FAN;
-var GLU_TESS_WINDING_ODD = _libtess.windingRule.GLU_TESS_WINDING_ODD,
-    GLU_TESS_WINDING_NONZERO = _libtess.windingRule.GLU_TESS_WINDING_NONZERO,
-    GLU_TESS_WINDING_POSITIVE = _libtess.windingRule.GLU_TESS_WINDING_POSITIVE,
-    GLU_TESS_WINDING_NEGATIVE = _libtess.windingRule.GLU_TESS_WINDING_NEGATIVE,
-    GLU_TESS_WINDING_ABS_GEQ_TWO = _libtess.windingRule.GLU_TESS_WINDING_ABS_GEQ_TWO;
-
-/**
- * Tesselator options.
- * @typedef {Object} TesselatorOptions
- * @property {Array} [polygons=[]] Array of polygons
- * @property {Array} [holes=[]] Array of holes
- * @property {Number} [vertexSize=2] Vertex size to use
- * @property {Number} [windingRule=GLU_TESS_WINDING_POSITIVE] Winding rule
- * @property {Boolean} [boundaryOnly=false] Whether to output boundaries only
- * @property {Array} [normal=null] Normal
- * @property {Boolean} [autoWinding=true] Whether to automatically set the correct winding on polygons
- */
-
-exports.GLU_TESS_WINDING_ODD = GLU_TESS_WINDING_ODD;
-exports.GLU_TESS_WINDING_NONZERO = GLU_TESS_WINDING_NONZERO;
-exports.GLU_TESS_WINDING_POSITIVE = GLU_TESS_WINDING_POSITIVE;
-exports.GLU_TESS_WINDING_NEGATIVE = GLU_TESS_WINDING_NEGATIVE;
-exports.GLU_TESS_WINDING_ABS_GEQ_TWO = GLU_TESS_WINDING_ABS_GEQ_TWO;
-var DEFAULT_OPTIONS = exports.DEFAULT_OPTIONS = {
-  polygons: [],
-  holes: [],
-  windingRule: GLU_TESS_WINDING_POSITIVE,
-  boundaryOnly: false,
-  normal: null,
-  autoWinding: true
-};
-
-var Tesselator = exports.Tesselator = function (_GluTesselator) {
-  _inherits(Tesselator, _GluTesselator);
-
-  function Tesselator() {
-    var vsize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
-
-    _classCallCheck(this, Tesselator);
-
-    var _this = _possibleConstructorReturn(this, (Tesselator.__proto__ || Object.getPrototypeOf(Tesselator)).call(this));
-
-    _this._vsize = vsize;
-    _this._current = [];
-    _this._out = [];
-    _this._primitiveType = 0;
-
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_VERTEX_DATA, _this._vertex);
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_BEGIN, _this._begin);
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_END, _this._end);
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_ERROR, _this._error);
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_COMBINE, _this._combine);
-    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_EDGE_FLAG, _this._edge);
-    return _this;
-  }
-
-  _createClass(Tesselator, [{
-    key: 'start',
-    value: function start(polygons, holes) {
-      this._current = [];
-      this._out = [];
-
-      this.gluTessBeginPolygon();
-
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
-
-      try {
-        for (var _iterator = polygons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var poly = _step.value;
-
-          this.gluTessBeginContour();
-          var _iteratorNormalCompletion3 = true;
-          var _didIteratorError3 = false;
-          var _iteratorError3 = undefined;
-
-          try {
-            for (var _iterator3 = poly[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-              var v = _step3.value;
-
-              this.gluTessVertex(v, v);
-            }
-          } catch (err) {
-            _didIteratorError3 = true;
-            _iteratorError3 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion3 && _iterator3.return) {
-                _iterator3.return();
-              }
-            } finally {
-              if (_didIteratorError3) {
-                throw _iteratorError3;
-              }
-            }
-          }
-
-          this.gluTessEndContour();
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
-          }
-        }
-      }
-
-      var _iteratorNormalCompletion2 = true;
-      var _didIteratorError2 = false;
-      var _iteratorError2 = undefined;
-
-      try {
-        for (var _iterator2 = holes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var _poly = _step2.value;
-
-          this.gluTessBeginContour();
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
-
-          try {
-            for (var _iterator4 = _poly[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              var _v = _step4.value;
-
-              this.gluTessVertex(_v, _v);
-            }
-          } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-          } finally {
-            try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return) {
-                _iterator4.return();
-              }
-            } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
-            }
-          }
-
-          this.gluTessEndContour();
-        }
-      } catch (err) {
-        _didIteratorError2 = true;
-        _iteratorError2 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-            _iterator2.return();
-          }
-        } finally {
-          if (_didIteratorError2) {
-            throw _iteratorError2;
-          }
-        }
-      }
-
-      this.gluTessEndPolygon();
-    }
-  }, {
-    key: 'run',
-    value: function run() {
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_OPTIONS;
-      var opts = Object.assign({}, DEFAULT_OPTIONS, options),
-          polygons = opts.polygons,
-          holes = opts.holes,
-          autoWinding = opts.autoWinding,
-          boundaryOnly = opts.boundaryOnly;
-
-
-      if (!polygons || !polygons.length) {
-        throw new Error('need at least a single polygon');
-      }
-
-      if (autoWinding) {
-        polygons = polygons.filter(function (p) {
-          return Math.abs((0, _polygon.area)(p)) > 0;
-        }).map(function (p) {
-          if ((0, _polygon.is_cw)(p)) p.reverse();
-          return p;
-        });
-        holes = holes.filter(function (p) {
-          return Math.abs((0, _polygon.area)(p)) > 0;
-        }).map(function (p) {
-          if ((0, _polygon.is_ccw)(p)) p.reverse();
-          return p;
-        });
-      }
-
-      var _ref = opts.normal ? opts.normal : (0, _polygon.normal)(polygons[0], true),
-          _ref2 = _slicedToArray(_ref, 3),
-          nx = _ref2[0],
-          ny = _ref2[1],
-          nz = _ref2[2];
-
-      this.gluTessNormal(nx, ny, nz);
-      this.gluTessProperty(_libtess.gluEnum.GLU_TESS_BOUNDARY_ONLY, boundaryOnly);
-      this.gluTessProperty(_libtess.gluEnum.GLU_TESS_WINDING_RULE, opts.windingRule);
-
-      this.start(polygons, holes);
-
-      return this._out;
-    }
-  }, {
-    key: '_begin',
-    value: function _begin(type) {
-      this._primitiveType = type;
-      this._current = [];
-    }
-  }, {
-    key: '_end_fan',
-    value: function _end_fan() {
-      var c = this._current.shift(),
-          p1 = this._current.shift();
-      while (this._current.length) {
-        var p2 = this._current.shift();
-        this._out.push(c, p1, p2);
-        p1 = p2;
-      }
-    }
-  }, {
-    key: '_end_strip',
-    value: function _end_strip() {
-      var p1 = this._current.shift(),
-          p2 = this._current.shift();
-      while (this._current.length) {
-        var p3 = this._current.shift();
-        this._out.push(p1, p2, p3);
-        p1 = p2;
-        p2 = p3;
-      }
-    }
-  }, {
-    key: '_end',
-    value: function _end() {
-      switch (this._primitiveType) {
-        case GL_TRIANGLE_FAN:
-          this._end_fan();
-          break;
-        case GL_TRIANGLE_STRIP:
-          this._end_strip();
-          break;
-        case GL_TRIANGLES:
-        case GL_LINE_LOOP:
-        default:
-          this._out.push(this._current);
-          break;
-      }
-    }
-  }, {
-    key: '_vertex',
-    value: function _vertex(v) {
-      this._current.push(v);
-    }
-  }, {
-    key: '_edge',
-    value: function _edge() {}
-  }, {
-    key: '_error',
-    value: function _error(errno) {
-      console.error('error number: ' + errno);
-    }
-  }, {
-    key: '_combine',
-    value: function _combine(v, data, w) {
-      for (var i = 0; i < 4; ++i) {
-        if (!data[i]) {
-          data[i] = new Array(this._vsize);
-          for (var j = 0; j < this._vsize; ++j) {
-            data[i][j] = 0;
-          }
-        }
-      }
-      var r = new Array(this._vsize);
-      for (var _i = 0; _i < this._vsize; ++_i) {
-        r[_i] = data[0][_i] * w[0] + data[1][_i] * w[1] + data[2][_i] * w[2] + data[3][_i] * w[3];
-      }
-      return r;
-    }
-  }]);
-
-  return Tesselator;
-}(_libtess.GluTesselator);
-
-/**
- * Helper for triangulate
- * @private
- */
-
-
-function to_triangles(data) {
-  var result = [];
-  for (var i = 0; i < data.length; i += 3) {
-    result.push([data[i], data[i + 1], data[i + 2]]);
-  }
-  return result;
-}
-
-/**
- * Runs the tesselator
- * @see http://www.glprogramming.com/red/chapter11.html
- *
- * @param {TesselatorOptions} [options=TesselatorOptions] Options
- *
- * @returns {Array}
- */
-function run() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_OPTIONS;
-
-  var tesselator = new Tesselator(options.vertexSize),
-      result = tesselator.run(options);
-  return options.boundaryOnly ? result : result.map(to_triangles);
-}
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.WINDING_CW = exports.WINDING_CCW = exports.WINDING_UNKNOWN = undefined;
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }(); /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * @module polygon
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */
-
-
-exports.ccw = ccw;
-exports.normal = normal;
-exports.area = area;
-exports.centroid = centroid;
-exports.is_ccw = is_ccw;
-exports.is_cw = is_cw;
-exports.winding = winding;
-exports.bounds = bounds;
-exports.ensure_cw = ensure_cw;
-exports.ensure_ccw = ensure_ccw;
-exports.triangulate = triangulate;
-exports.subtract = subtract;
-exports.union = union;
-exports.intersection = intersection;
-
-var _tesselator = __webpack_require__(9);
-
-var tess = _interopRequireWildcard(_tesselator);
-
-var _vec = __webpack_require__(45);
-
-var vec = _interopRequireWildcard(_vec);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-var WINDING_UNKNOWN = exports.WINDING_UNKNOWN = 0;
-var WINDING_CCW = exports.WINDING_CCW = 1;
-var WINDING_CW = exports.WINDING_CW = 2;
-
-function ccw(a, b, c) {
-  return (b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1]);
-}
-
-/**
- * Polygon normal (2d / 3d)
- *
- * @param {Array} pts Points of the polygon
- * @param {Boolean} [forceNewell=false] Whether to force Newell's method
- *
- * @return {Array} Polygon normal or null if the polygon is degenerate
- */
-function normal(pts) {
-  var forceNewell = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-
-  if (pts.length < 3) return null;
-
-  var vs = pts.map(function (p) {
-    return p.length >= 3 ? p : [p[0], p[1], 0];
-  });
-
-  if (!forceNewell) {
-    var _vs = _slicedToArray(vs, 3),
-        a = _vs[0],
-        b = _vs[1],
-        c = _vs[2],
-        ba = vec.subtract(b, a),
-        ca = vec.subtract(c, a),
-        cr = vec.normalize(vec.cross(ba, ca));
-
-    if (cr.some(function (v) {
-      return isNaN(v);
-    })) {
-      if (pts.length === 3) return null;
-    } else {
-      return cr;
-    }
-  }
-
-  // fallback to Newell's method
-  var n = [0, 0, 0];
-  vs.forEach(function (v, i) {
-    var w = vs[(i + 1) % pts.length];
-    n[0] = n[0] + (v[1] - w[1]) * (v[2] + w[2]);
-    n[1] = n[1] + (v[2] - w[2]) * (v[0] + w[0]);
-    n[2] = n[2] + (v[0] - w[0]) * (v[1] + w[1]);
-  });
-
-  n = vec.normalize(n);
-
-  return n.some(function (v) {
-    return isNaN(v);
-  }) ? null : n;
-}
-
-/**
- * Signed area of a polygon.
- * For 3d polygons a signed area can only be computed when the optional
- * polygon normal ```n``` is passed in.
- * @see http://stackoverflow.com/questions/12642256/python-find-area-of-polygon-from-xyz-coordinates
- *
- * @param {Array} pts Polygon points
- * @param {Array} [n=null] Optional polygon normal, needed to compute the signed area for 3d polygons
- *
- * @return {Number}
- */
-function area(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  if (pts.length < 3) return 0;
-  if (pts[0].length < 3) {
-    return pts.reduce(function (a, p, i) {
-      var pn = pts[i + 1] || pts[0];
-      return a + p[0] * pn[1] - pn[0] * p[1];
-    }, 0) / 2;
-  } else {
-    var num = pts.length,
-        nrm = n || normal(pts),
-        total = [0, 0, 0];
-    if (!nrm) return 0;
-    for (var i = 0; i < num; ++i) {
-      var v = pts[i],
-          w = pts[(i + 1) % num];
-      total = vec.add(total, vec.cross(v, w));
-    }
-    return vec.dot(total, nrm) / 2;
-  }
-}
-
-/**
- * Polygon centroid (2d)
- *
- * @param {Array} pts
- *
- * @return {Array}
- */
-function centroid(pts) {
-  var _pts$reduce = pts.reduce(function (_ref, p, i) {
-    var _ref2 = _slicedToArray(_ref, 2),
-        x = _ref2[0],
-        y = _ref2[1];
-
-    var pn = pts[i + 1] || pts[0],
-        c = p[0] * pn[1] - pn[0] * p[1];
-    return [x + (p[0] + pn[0]) * c, y + (p[1] + pn[1]) * c];
-  }, [0, 0]),
-      _pts$reduce2 = _slicedToArray(_pts$reduce, 2),
-      x = _pts$reduce2[0],
-      y = _pts$reduce2[1];
-
-  var ar = area(pts);
-  if (x !== 0) {
-    x = x / (Math.abs(ar) * 6);
-  }
-  if (y !== 0) {
-    y = y / (Math.abs(ar) * 6);
-  }
-
-  if (ar < 0) {
-    x = -x;
-    y = -y;
-  }
-  return [x, y];
-}
-
-/**
- * Tests wether the polygon winding is counter clockwise
- *
- * @param {Array} pts
- * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
- *
- * @return {Boolean}
- */
-function is_ccw(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  return area(pts, n) > 0;
-}
-
-/**
- * Tests wether the polygon winding is clockwise
- *
- * @param {Array} pts
- * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
- *
- * @return {Boolean}
- */
-function is_cw(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  return area(pts, n) < 0;
-}
-
-/**
- * Polygon winding (2d only)
- *
- * @param {Array} pts
- * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
- *
- * @return {Number}
- */
-function winding(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  var a = area(pts, n);
-  if (a < 0) return WINDING_CW;
-  if (a > 0) return WINDING_CCW;
-  return WINDING_UNKNOWN;
-}
-
-/**
- * Polygon bounds.
- * @typedef {Object} PolygonBounds
- * @property {Number} xMin
- * @property {Number} yMin
- * @property {Number} xMax
- * @property {Number} yMax
- */
-
-/**
- * Polygon bounds
- *
- * @param {Array} pts
- *
- * @return {PolygonBounds}
- */
-function bounds(pts) {
-  var min = [Number.MAX_VALUE, Number.MAX_VALUE],
-      max = [-Number.MAX_VALUE, -Number.MAX_VALUE];
-
-  pts.forEach(function (p) {
-    for (var i = 0; i < Math.min(3, p.length); ++i) {
-      min[i] = Math.min(min[i], p[i]);
-      max[i] = Math.max(max[i], p[i]);
-    }
-  });
-
-  return {
-    xMin: min[0],
-    yMin: min[1],
-    xMax: max[0],
-    yMax: max[1]
-  };
-}
-
-/**
- * Ensures CW winding
- *
- * @param {Array} pts
- * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
- *
- * @return {Array}
- */
-function ensure_cw(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  if (is_ccw(pts, n)) pts.reverse();
-  return pts;
-}
-
-/**
- * Ensures CCW winding
- *
- * @param {Array} pts
- * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
- *
- * @return {Array}
- */
-function ensure_ccw(pts) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-  if (is_cw(pts, n)) pts.reverse();
-  return pts;
-}
-
-/**
- * Triangulates a polygon
- *
- * @param {Array} polygon
- * @param {Array.<Array>} holes
- *
- * @return triangles
- */
-function triangulate(polygon, holes) {
-  if (!polygon || polygon.length < 3) return polygon;
-
-  var bp = bounds(polygon);
-
-  holes = holes.filter(function (hole) {
-    var b = bounds(hole),
-        out = b.xMin > bp.xMax || b.yMin > bp.yMax || b.xMax < bp.xMin || b.yMax < bp.yMin;
-    return !out;
-  });
-
-  var options = { polygons: [polygon], holes: holes };
-
-  return tess.run(options).reduce(function (p, v) {
-    return p.concat(v);
-  }, []);
-}
-
-/**
- * Subtract polygons
- *
- * @param {Array} polygons
- *
- * @return {Array}
- */
-function subtract() {
-  for (var _len = arguments.length, polygons = Array(_len), _key = 0; _key < _len; _key++) {
-    polygons[_key] = arguments[_key];
-  }
-
-  var options = {
-    polygons: [ensure_ccw(polygons[0])],
-    holes: polygons.slice(1).map(function (p) {
-      return ensure_cw(p);
-    }),
-    boundaryOnly: true,
-    autoWinding: false
-  };
-  return tess.run(options);
-}
-
-/**
- * Union of a set of polygons
- *
- * @param {Array} polygons
- *
- * @return {Array}
- */
-function union() {
-  for (var _len2 = arguments.length, polygons = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    polygons[_key2] = arguments[_key2];
-  }
-
-  var options = {
-    polygons: polygons.map(function (p) {
-      return ensure_ccw(p);
-    }),
-    boundaryOnly: true,
-    autoWinding: false
-  };
-  return tess.run(options);
-}
-
-/**
- * Intersection of a set of polygons
- *
- * @param {Array} a First polygon
- * @param {Array} b Second polygon
- *
- * @return {Array}
- */
-function intersection(a, b) {
-  var options = {
-    polygons: [ensure_ccw(a), ensure_ccw(b)],
-    boundaryOnly: true,
-    windingRule: tess.GLU_TESS_WINDING_ABS_GEQ_TWO,
-    autoWinding: false
-  };
-  return tess.run(options);
-}
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Point__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Editor__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PolygonControls__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__FancyRectangle__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Rectangle__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Oval__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Polygon__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Content__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Overlay__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__selectors__ = __webpack_require__(2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  innerRef: function innerRef() {},
-  onChange: function onChange() {},
-  onSubmit: function onSubmit() {},
-  type: __WEBPACK_IMPORTED_MODULE_10__selectors__["d" /* RectangleSelector */].TYPE,
-  selectors: [__WEBPACK_IMPORTED_MODULE_10__selectors__["d" /* RectangleSelector */], __WEBPACK_IMPORTED_MODULE_10__selectors__["b" /* PointSelector */], __WEBPACK_IMPORTED_MODULE_10__selectors__["a" /* OvalSelector */], __WEBPACK_IMPORTED_MODULE_10__selectors__["c" /* PolygonSelector */]],
-  disableAnnotation: false,
-  disableSelector: false,
-  disableEditor: false,
-  disableOverlay: false,
-  imageZoomAmount: 1,
-  activeAnnotationComparator: function activeAnnotationComparator(a, b) {
-    return a === b;
-  },
-  renderSelector: function renderSelector(_ref) {
-    var annotation = _ref.annotation;
-
-    switch (annotation.geometry.type) {
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["d" /* RectangleSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__FancyRectangle__["a" /* default */], {
-          annotation: annotation
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["b" /* PointSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Point__["a" /* default */], {
-          annotation: annotation
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["a" /* OvalSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Oval__["a" /* default */], {
-          annotation: annotation
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["c" /* PolygonSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Polygon__["a" /* default */], {
-          annotation: annotation
-        });
-      default:
-        return null;
-    }
-  },
-  renderEditor: function renderEditor(_ref2) {
-    var annotation = _ref2.annotation,
-        onChange = _ref2.onChange,
-        onSubmit = _ref2.onSubmit,
-        imageZoomAmount = _ref2.imageZoomAmount;
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Editor__["a" /* default */], {
-      annotation: annotation,
-      onChange: onChange,
-      onSubmit: onSubmit,
-      imageZoomAmount: imageZoomAmount
-    });
-  },
-  renderPolygonControls: function renderPolygonControls(_ref3) {
-    var annotation = _ref3.annotation,
-        onSelectionComplete = _ref3.onSelectionComplete,
-        onSelectionClear = _ref3.onSelectionClear,
-        onSelectionUndo = _ref3.onSelectionUndo,
-        imageZoomAmount = _ref3.imageZoomAmount;
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__PolygonControls__["a" /* default */], {
-      annotation: annotation,
-      onSelectionComplete: onSelectionComplete,
-      onSelectionClear: onSelectionClear,
-      onSelectionUndo: onSelectionUndo,
-      imageZoomAmount: imageZoomAmount
-    });
-  },
-  renderHighlight: function renderHighlight(_ref4) {
-    var key = _ref4.key,
-        annotation = _ref4.annotation,
-        active = _ref4.active;
-
-    switch (annotation.geometry.type) {
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["d" /* RectangleSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Rectangle__["a" /* default */], {
-          key: key,
-          annotation: annotation,
-          active: active
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["b" /* PointSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Point__["a" /* default */], {
-          key: key,
-          annotation: annotation,
-          active: active
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["a" /* OvalSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Oval__["a" /* default */], {
-          key: key,
-          annotation: annotation,
-          active: active
-        });
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["c" /* PolygonSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Polygon__["a" /* default */], {
-          key: key,
-          annotation: annotation,
-          active: active
-        });
-      default:
-        return null;
-    }
-  },
-  renderContent: function renderContent(_ref5) {
-    var key = _ref5.key,
-        annotation = _ref5.annotation,
-        imageZoomAmount = _ref5.imageZoomAmount;
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Content__["a" /* default */], {
-      key: key,
-      annotation: annotation,
-      imageZoomAmount: imageZoomAmount
-    });
-  },
-  renderOverlay: function renderOverlay(_ref6) {
-    var type = _ref6.type,
-        annotation = _ref6.annotation;
-
-    switch (type) {
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["b" /* PointSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_9__Overlay__["a" /* default */],
-          null,
-          'Click to Annotate'
-        );
-      case __WEBPACK_IMPORTED_MODULE_10__selectors__["c" /* PolygonSelector */].TYPE:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_9__Overlay__["a" /* default */],
-          null,
-          'Click to Add Points to Annotation'
-        );
-      default:
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_9__Overlay__["a" /* default */],
-          null,
-          'Click and Drag to Annotate'
-        );
-    }
-  }
-});
-
-/***/ }),
-/* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, .4);\n  border-radius: 5px;\n  bottom: 4px;\n  color: white;\n  font-size: 12px;\n  font-weight: bold;\n  opacity: 0;\n  padding: 10px;\n  pointer-events: none;\n  position: absolute;\n  right: 4px;\n  transition: opacity 0.21s ease-in-out;\n  user-select: none;\n'], ['\n  background: rgba(0, 0, 0, .4);\n  border-radius: 5px;\n  bottom: 4px;\n  color: white;\n  font-size: 12px;\n  font-weight: bold;\n  opacity: 0;\n  padding: 10px;\n  pointer-events: none;\n  position: absolute;\n  right: 4px;\n  transition: opacity 0.21s ease-in-out;\n  user-select: none;\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject));
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(14);
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Annotation__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_defaultProps__ = __webpack_require__(11);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "defaultProps", function() { return __WEBPACK_IMPORTED_MODULE_1__components_defaultProps__["a"]; });
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0__components_Annotation__["a" /* default */]);
-
-/***/ }),
-/* 15 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_compose__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_isMouseHovering__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_withRelativeMousePos__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selectors__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__defaultProps__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Overlay__ = __webpack_require__(12);
-var _class, _temp2;
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  clear: both;\n  position: relative;\n  width: 100%;\n  &:hover ', ' {\n    opacity: 1;\n  }\n'], ['\n  clear: both;\n  position: relative;\n  width: 100%;\n  &:hover ', ' {\n    opacity: 1;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  display: block;\n  width: 100%;\n'], ['\n  display: block;\n  width: 100%;\n']),
-    _templateObject3 = _taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-var Container = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject, __WEBPACK_IMPORTED_MODULE_8__Overlay__["a" /* default */]);
-
-var Img = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].img(_templateObject2);
-
-var Items = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject3);
-
-var Target = Items;
-
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_3__utils_compose__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_4__utils_isMouseHovering__["a" /* default */])(), Object(__WEBPACK_IMPORTED_MODULE_5__utils_withRelativeMousePos__["a" /* default */])())((_temp2 = _class = function (_Component) {
-  _inherits(Annotation, _Component);
-
-  function Annotation() {
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Annotation);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
-      window.addEventListener("resize", _this.forceUpdateComponent);
-    }, _this.componentWillUnmount = function () {
-      window.removeEventListener("resize", _this.forceUpdateComponent);
-    }, _this.forceUpdateComponent = function () {
-      _this.forceUpdate();
-    }, _this.componentDidUpdate = function (prevProps) {
-      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
-        _this.forceUpdateComponent();
-      }
-    }, _this.setInnerRef = function (el) {
-      _this.container = el;
-      _this.props.relativeMousePos.innerRef(el);
-      _this.props.innerRef(el);
-    }, _this.getSelectorByType = function (type) {
-      return _this.props.selectors.find(function (s) {
-        return s.TYPE === type;
-      });
-    }, _this.getTopAnnotationAt = function (x, y) {
-      var annotations = _this.props.annotations;
-      var _this2 = _this,
-          container = _this2.container,
-          getSelectorByType = _this2.getSelectorByType;
-
-
-      if (!container) return;
-
-      var intersections = annotations.map(function (annotation) {
-        var geometry = annotation.geometry;
-
-        var selector = getSelectorByType(geometry.type);
-
-        return selector.intersects({ x: x, y: y }, geometry, container) ? annotation : false;
-      }).filter(function (a) {
-        return !!a;
-      }).sort(function (a, b) {
-        var aSelector = getSelectorByType(a.geometry.type);
-        var bSelector = getSelectorByType(b.geometry.type);
-
-        return aSelector.area(a.geometry, container) - bSelector.area(b.geometry, container);
-      });
-
-      return intersections[0];
-    }, _this.onTargetMouseMove = function (e) {
-      _this.props.relativeMousePos.onMouseMove(e);
-      _this.onMouseMove(e);
-    }, _this.onTargetMouseLeave = function (e) {
-      _this.props.relativeMousePos.onMouseLeave(e);
-    }, _this.onMouseUp = function (e) {
-      return _this.callSelectorMethod('onMouseUp', e);
-    }, _this.onMouseDown = function (e) {
-      return _this.callSelectorMethod('onMouseDown', e);
-    }, _this.onMouseMove = function (e) {
-      return _this.callSelectorMethod('onMouseMove', e);
-    }, _this.onClick = function (e) {
-      var onClickCheckFunc = _this.props.onClickCheckFunc;
-
-
-      if (!onClickCheckFunc || onClickCheckFunc(e)) {
-        return _this.callSelectorMethod('onClick', e);
-      }
-      return;
-    }, _this.onSelectionComplete = function () {
-      return _this.callSelectorMethod('onSelectionComplete');
-    }, _this.onSelectionClear = function () {
-      return _this.callSelectorMethod('onSelectionClear');
-    }, _this.onSelectionUndo = function () {
-      return _this.callSelectorMethod('onSelectionUndo');
-    }, _this.onSubmit = function () {
-      _this.props.onSubmit(_this.props.value);
-    }, _this.callSelectorMethod = function (methodName, e) {
-      if (_this.props.disableAnnotation) {
-        return;
-      }
-
-      if (!!_this.props[methodName]) {
-        _this.props[methodName](e);
-      } else {
-        var selector = _this.getSelectorByType(_this.props.type);
-        if (selector && selector.methods[methodName]) {
-          var value = selector.methods[methodName](_this.props.value, e);
-
-          if (typeof value === 'undefined') {
-            if (true) {
-              console.error('\n              ' + methodName + ' of selector type ' + _this.props.type + ' returned undefined.\n              Make sure to explicitly return the previous state\n            ');
-            }
-          } else {
-            _this.props.onChange(value);
-          }
-        }
-      }
-    }, _this.shouldAnnotationBeActive = function (annotation, top) {
-      if (_this.props.activeAnnotations) {
-        var isActive = !!_this.props.activeAnnotations.find(function (active) {
-          return _this.props.activeAnnotationComparator(annotation, active);
-        });
-
-        return isActive || top === annotation;
-      } else {
-        return top === annotation;
-      }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  Annotation.prototype.render = function render() {
-    var _this3 = this;
-
-    var props = this.props;
-    var isMouseHovering = props.isMouseHovering,
-        renderHighlight = props.renderHighlight,
-        renderContent = props.renderContent,
-        renderSelector = props.renderSelector,
-        renderEditor = props.renderEditor,
-        renderOverlay = props.renderOverlay,
-        renderPolygonControls = props.renderPolygonControls;
-
-
-    var topAnnotationAtMouse = this.getTopAnnotationAt(this.props.relativeMousePos.x, this.props.relativeMousePos.y);
-
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Container,
-      {
-        style: props.style,
-        innerRef: isMouseHovering.innerRef,
-        onMouseLeave: this.onTargetMouseLeave
-      },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Img, {
-        className: props.className,
-        style: props.style,
-        alt: props.alt,
-        src: props.src,
-        draggable: false,
-        innerRef: this.setInnerRef
-      }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        Items,
-        null,
-        props.annotations.map(function (annotation) {
-          return renderHighlight({
-            key: annotation.data.id,
-            annotation: annotation,
-            active: _this3.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
-          });
-        }),
-        !props.disableSelector && props.value && props.value.geometry && renderSelector({
-          annotation: props.value
-        })
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Target, {
-        onClick: this.onClick,
-        onMouseUp: this.onMouseUp,
-        onMouseDown: this.onMouseDown,
-        onMouseMove: this.onTargetMouseMove
-      }),
-      !props.disableOverlay && renderOverlay({
-        type: props.type,
-        annotation: props.value
-      }),
-      props.annotations.map(function (annotation) {
-        return (
-          /* this.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
-          && ( */
-          renderContent({
-            key: annotation.data.id,
-            annotation: annotation,
-            imageZoomAmount: props.imageZoomAmount
-          })
-          // )
-
-        );
-      }),
-      !props.disableEditor && props.value && props.value.selection && props.value.selection.showEditor && renderEditor({
-        annotation: props.value,
-        onChange: props.onChange,
-        onSubmit: this.onSubmit,
-        imageZoomAmount: props.imageZoomAmount
-      }),
-      props.value && props.value.geometry && props.value.geometry.type === __WEBPACK_IMPORTED_MODULE_6__selectors__["c" /* PolygonSelector */].TYPE && (!props.value.selection || !props.value.selection.showEditor) && renderPolygonControls({
-        annotation: props.value,
-        onSelectionComplete: this.onSelectionComplete,
-        onSelectionClear: this.onSelectionClear,
-        onSelectionUndo: this.onSelectionUndo,
-        imageZoomAmount: props.imageZoomAmount
-      })
-    );
-  };
-
-  return Annotation;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]), _class.propTypes = {
-  innerRef: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onMouseUp: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onMouseDown: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onMouseMove: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onClick: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  // This prop represents how zoom the image is (default: 1)
-  imageZoomAmount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
-  // This function is run before the onClick callback is executed (onClick
-  // is only called if onClickCheckFunc resolve to true or doesn't exist)
-  onClickCheckFunc: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  // For Polygon Selector
-  onSelectionComplete: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onSelectionClear: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onSelectionUndo: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-
-  annotations: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.arrayOf(__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    type: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
-  })).isRequired,
-  type: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  selectors: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.arrayOf(__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    TYPE: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-    intersects: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-    area: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-    methods: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
-  })).isRequired,
-
-  value: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-    selection: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-    geometry: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
-      type: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired
-    }),
-    data: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-  }),
-  onChange: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  onSubmit: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-
-  activeAnnotationComparator: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  activeAnnotations: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.arrayOf(__WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.any),
-
-  disableAnnotation: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  disableSelector: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  renderSelector: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  disableEditor: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  renderEditor: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-
-  renderHighlight: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-  renderContent: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-
-  disableOverlay: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  renderOverlay: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-  renderPolygonControls: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
-}, _class.defaultProps = __WEBPACK_IMPORTED_MODULE_7__defaultProps__["a" /* default */], _temp2)));
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var emptyFunction = __webpack_require__(5);
-var invariant = __webpack_require__(6);
-var warning = __webpack_require__(7);
-var assign = __webpack_require__(17);
-
-var ReactPropTypesSecret = __webpack_require__(8);
-var checkPropTypes = __webpack_require__(18);
-
-module.exports = function(isValidElement, throwOnDirectAccess) {
-  /* global Symbol */
-  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-  /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */
-  function getIteratorFn(maybeIterable) {
-    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-    if (typeof iteratorFn === 'function') {
-      return iteratorFn;
-    }
-  }
-
-  /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */
-
-  var ANONYMOUS = '<<anonymous>>';
-
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-  var ReactPropTypes = {
-    array: createPrimitiveTypeChecker('array'),
-    bool: createPrimitiveTypeChecker('boolean'),
-    func: createPrimitiveTypeChecker('function'),
-    number: createPrimitiveTypeChecker('number'),
-    object: createPrimitiveTypeChecker('object'),
-    string: createPrimitiveTypeChecker('string'),
-    symbol: createPrimitiveTypeChecker('symbol'),
-
-    any: createAnyTypeChecker(),
-    arrayOf: createArrayOfTypeChecker,
-    element: createElementTypeChecker(),
-    instanceOf: createInstanceTypeChecker,
-    node: createNodeChecker(),
-    objectOf: createObjectOfTypeChecker,
-    oneOf: createEnumTypeChecker,
-    oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker,
-    exact: createStrictShapeTypeChecker,
-  };
-
-  /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */
-  /*eslint-disable no-self-compare*/
-  function is(x, y) {
-    // SameValue algorithm
-    if (x === y) {
-      // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
-    }
-  }
-  /*eslint-enable no-self-compare*/
-
-  /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */
-  function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-  }
-  // Make `instanceof Error` still work for returned errors.
-  PropTypeError.prototype = Error.prototype;
-
-  function createChainableTypeChecker(validate) {
-    if (true) {
-      var manualPropTypeCallCache = {};
-      var manualPropTypeWarningCount = 0;
-    }
-    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-      componentName = componentName || ANONYMOUS;
-      propFullName = propFullName || propName;
-
-      if (secret !== ReactPropTypesSecret) {
-        if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
-          invariant(
-            false,
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-            'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
-          );
-        } else if ("development" !== 'production' && typeof console !== 'undefined') {
-          // Old behavior for people using React.PropTypes
-          var cacheKey = componentName + ':' + propName;
-          if (
-            !manualPropTypeCallCache[cacheKey] &&
-            // Avoid spamming the console because they are often not actionable except for lib authors
-            manualPropTypeWarningCount < 3
-          ) {
-            warning(
-              false,
-              'You are manually calling a React.PropTypes validation ' +
-              'function for the `%s` prop on `%s`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
-              'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-              propFullName,
-              componentName
-            );
-            manualPropTypeCallCache[cacheKey] = true;
-            manualPropTypeWarningCount++;
-          }
-        }
-      }
-      if (props[propName] == null) {
-        if (isRequired) {
-          if (props[propName] === null) {
-            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-          }
-          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-        }
-        return null;
-      } else {
-        return validate(props, propName, componentName, location, propFullName);
-      }
-    }
-
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-
-    return chainedCheckType;
-  }
-
-  function createPrimitiveTypeChecker(expectedType) {
-    function validate(props, propName, componentName, location, propFullName, secret) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== expectedType) {
-        // `propValue` being instance of, say, date/regexp, pass the 'object'
-        // check, but we can offer a more precise error message here rather than
-        // 'of type `object`'.
-        var preciseType = getPreciseType(propValue);
-
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
-  }
-
-  function createArrayOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-      }
-      var propValue = props[propName];
-      if (!Array.isArray(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-      }
-      for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
-        if (error instanceof Error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!isValidElement(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createInstanceTypeChecker(expectedClass) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!(props[propName] instanceof expectedClass)) {
-        var expectedClassName = expectedClass.name || ANONYMOUS;
-        var actualClassName = getClassName(props[propName]);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createEnumTypeChecker(expectedValues) {
-    if (!Array.isArray(expectedValues)) {
-       true ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      for (var i = 0; i < expectedValues.length; i++) {
-        if (is(propValue, expectedValues[i])) {
-          return null;
-        }
-      }
-
-      var valuesString = JSON.stringify(expectedValues);
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createObjectOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-      }
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-      }
-      for (var key in propValue) {
-        if (propValue.hasOwnProperty(key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-          if (error instanceof Error) {
-            return error;
-          }
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createUnionTypeChecker(arrayOfTypeCheckers) {
-    if (!Array.isArray(arrayOfTypeCheckers)) {
-       true ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-      return emptyFunction.thatReturnsNull;
-    }
-
-    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-      var checker = arrayOfTypeCheckers[i];
-      if (typeof checker !== 'function') {
-        warning(
-          false,
-          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received %s at index %s.',
-          getPostfixForTypeWarning(checker),
-          i
-        );
-        return emptyFunction.thatReturnsNull;
-      }
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-        var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
-          return null;
-        }
-      }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createNodeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!isNode(props[propName])) {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      for (var key in shapeTypes) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createStrictShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      // We need to check all keys in case some are required but missing from
-      // props.
-      var allKeys = assign({}, props[propName], shapeTypes);
-      for (var key in allKeys) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          return new PropTypeError(
-            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
-            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
-          );
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-
-    return createChainableTypeChecker(validate);
-  }
-
-  function isNode(propValue) {
-    switch (typeof propValue) {
-      case 'number':
-      case 'string':
-      case 'undefined':
-        return true;
-      case 'boolean':
-        return !propValue;
-      case 'object':
-        if (Array.isArray(propValue)) {
-          return propValue.every(isNode);
-        }
-        if (propValue === null || isValidElement(propValue)) {
-          return true;
-        }
-
-        var iteratorFn = getIteratorFn(propValue);
-        if (iteratorFn) {
-          var iterator = iteratorFn.call(propValue);
-          var step;
-          if (iteratorFn !== propValue.entries) {
-            while (!(step = iterator.next()).done) {
-              if (!isNode(step.value)) {
-                return false;
-              }
-            }
-          } else {
-            // Iterator will provide entry [k,v] tuples rather than values.
-            while (!(step = iterator.next()).done) {
-              var entry = step.value;
-              if (entry) {
-                if (!isNode(entry[1])) {
-                  return false;
-                }
-              }
-            }
-          }
-        } else {
-          return false;
-        }
-
-        return true;
-      default:
-        return false;
-    }
-  }
-
-  function isSymbol(propType, propValue) {
-    // Native Symbol.
-    if (propType === 'symbol') {
-      return true;
-    }
-
-    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-    if (propValue['@@toStringTag'] === 'Symbol') {
-      return true;
-    }
-
-    // Fallback for non-spec compliant Symbols which are polyfilled.
-    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-      return true;
-    }
-
-    return false;
-  }
-
-  // Equivalent of `typeof` but with special handling for array and regexp.
-  function getPropType(propValue) {
-    var propType = typeof propValue;
-    if (Array.isArray(propValue)) {
-      return 'array';
-    }
-    if (propValue instanceof RegExp) {
-      // Old webkits (at least until Android 4.0) return 'function' rather than
-      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-      // passes PropTypes.object.
-      return 'object';
-    }
-    if (isSymbol(propType, propValue)) {
-      return 'symbol';
-    }
-    return propType;
-  }
-
-  // This handles more types than `getPropType`. Only used for error messages.
-  // See `createPrimitiveTypeChecker`.
-  function getPreciseType(propValue) {
-    if (typeof propValue === 'undefined' || propValue === null) {
-      return '' + propValue;
-    }
-    var propType = getPropType(propValue);
-    if (propType === 'object') {
-      if (propValue instanceof Date) {
-        return 'date';
-      } else if (propValue instanceof RegExp) {
-        return 'regexp';
-      }
-    }
-    return propType;
-  }
-
-  // Returns a string that is postfixed to a warning about an invalid type.
-  // For example, "undefined" or "of type array"
-  function getPostfixForTypeWarning(value) {
-    var type = getPreciseType(value);
-    switch (type) {
-      case 'array':
-      case 'object':
-        return 'an ' + type;
-      case 'boolean':
-      case 'date':
-      case 'regexp':
-        return 'a ' + type;
-      default:
-        return type;
-    }
-  }
-
-  // Returns class name of the object, if any.
-  function getClassName(propValue) {
-    if (!propValue.constructor || !propValue.constructor.name) {
-      return ANONYMOUS;
-    }
-    return propValue.constructor.name;
-  }
-
-  ReactPropTypes.checkPropTypes = checkPropTypes;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-if (true) {
-  var invariant = __webpack_require__(6);
-  var warning = __webpack_require__(7);
-  var ReactPropTypesSecret = __webpack_require__(8);
-  var loggedTypeFailures = {};
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (true) {
-    for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-        }
-      }
-    }
-  }
-}
-
-module.exports = checkPropTypes;
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-module.exports = function(originalModule) {
-	if(!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true,
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-
-
-var hyphenate = __webpack_require__(22);
-
-var msPattern = /^ms-/;
-
-/**
- * Hyphenates a camelcased CSS property name, for example:
- *
- *   > hyphenateStyleName('backgroundColor')
- *   < "background-color"
- *   > hyphenateStyleName('MozTransition')
- *   < "-moz-transition"
- *   > hyphenateStyleName('msTransition')
- *   < "-ms-transition"
- *
- * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
- * is converted to `-ms-`.
- *
- * @param {string} string
- * @return {string}
- */
-function hyphenateStyleName(string) {
-  return hyphenate(string).replace(msPattern, '-ms-');
-}
-
-module.exports = hyphenateStyleName;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-var _uppercasePattern = /([A-Z])/g;
-
-/**
- * Hyphenates a camelcased string, for example:
- *
- *   > hyphenate('backgroundColor')
- *   < "background-color"
- *
- * For CSS style names, use `hyphenateStyleName` instead which works properly
- * with all vendor prefixes, including `ms`.
- *
- * @param {string} string
- * @return {string}
- */
-function hyphenate(string) {
-  return string.replace(_uppercasePattern, '-$1').toLowerCase();
-}
-
-module.exports = hyphenate;
-
-/***/ }),
-/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -4986,8 +2445,7 @@ module.exports = hyphenate;
  */
 (function (factory) {/* eslint-disable */
 	 true ? (module['exports'] = factory(null)) :
-		typeof define === 'function' && define['amd'] ? define(factory(null)) :
-			(window['stylis'] = factory(null))
+		undefined
 }(/** @param {*=} options */function factory (options) {/* eslint-disable */
 
 	'use strict'
@@ -6673,61 +4131,7 @@ module.exports = hyphenate;
 
 
 /***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function (factory) {
-	 true ? (module['exports'] = factory()) :
-		typeof define === 'function' && define['amd'] ? define(factory()) :
-			(window['stylisRuleSheet'] = factory())
-}(function () {
-
-	'use strict'
-
-	return function (insertRule) {
-		var delimiter = '/*|*/'
-		var needle = delimiter+'}'
-
-		function toSheet (block) {
-			if (block)
-				try {
-					insertRule(block + '}')
-				} catch (e) {}
-		}
-
-		return function ruleSheet (context, content, selectors, parents, line, column, length, ns, depth, at) {
-			switch (context) {
-				// property
-				case 1:
-					// @import
-					if (depth === 0 && content.charCodeAt(0) === 64)
-						return insertRule(content+';'), ''
-					break
-				// selector
-				case 2:
-					if (ns === 0)
-						return content + delimiter
-					break
-				// at-rule
-				case 3:
-					switch (ns) {
-						// @font-face, @page
-						case 102:
-						case 112:
-							return insertRule(selectors[0]+content), ''
-						default:
-							return content + (at === 0 ? delimiter : '')
-					}
-				case -2:
-					content.split(needle).forEach(toSheet)
-			}
-		}
-	}
-}))
-
-
-/***/ }),
-/* 25 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6802,28 +4206,1438 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 26 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-if (false) {
-  module.exports = require('./cjs/react-is.production.min.js');
-} else {
-  module.exports = __webpack_require__(27);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Tesselator = exports.DEFAULT_OPTIONS = exports.GLU_TESS_WINDING_ABS_GEQ_TWO = exports.GLU_TESS_WINDING_NEGATIVE = exports.GLU_TESS_WINDING_POSITIVE = exports.GLU_TESS_WINDING_NONZERO = exports.GLU_TESS_WINDING_ODD = exports.GL_TRIANGLE_FAN = exports.GL_TRIANGLE_STRIP = exports.GL_TRIANGLES = exports.GL_LINE_LOOP = undefined;
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.run = run;
+
+var _libtess = __webpack_require__(29);
+
+var _polygon = __webpack_require__(6);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @module tesselator
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var GL_LINE_LOOP = _libtess.primitiveType.GL_LINE_LOOP,
+    GL_TRIANGLES = _libtess.primitiveType.GL_TRIANGLES,
+    GL_TRIANGLE_STRIP = _libtess.primitiveType.GL_TRIANGLE_STRIP,
+    GL_TRIANGLE_FAN = _libtess.primitiveType.GL_TRIANGLE_FAN;
+exports.GL_LINE_LOOP = GL_LINE_LOOP;
+exports.GL_TRIANGLES = GL_TRIANGLES;
+exports.GL_TRIANGLE_STRIP = GL_TRIANGLE_STRIP;
+exports.GL_TRIANGLE_FAN = GL_TRIANGLE_FAN;
+var GLU_TESS_WINDING_ODD = _libtess.windingRule.GLU_TESS_WINDING_ODD,
+    GLU_TESS_WINDING_NONZERO = _libtess.windingRule.GLU_TESS_WINDING_NONZERO,
+    GLU_TESS_WINDING_POSITIVE = _libtess.windingRule.GLU_TESS_WINDING_POSITIVE,
+    GLU_TESS_WINDING_NEGATIVE = _libtess.windingRule.GLU_TESS_WINDING_NEGATIVE,
+    GLU_TESS_WINDING_ABS_GEQ_TWO = _libtess.windingRule.GLU_TESS_WINDING_ABS_GEQ_TWO;
+
+/**
+ * Tesselator options.
+ * @typedef {Object} TesselatorOptions
+ * @property {Array} [polygons=[]] Array of polygons
+ * @property {Array} [holes=[]] Array of holes
+ * @property {Number} [vertexSize=2] Vertex size to use
+ * @property {Number} [windingRule=GLU_TESS_WINDING_POSITIVE] Winding rule
+ * @property {Boolean} [boundaryOnly=false] Whether to output boundaries only
+ * @property {Array} [normal=null] Normal
+ * @property {Boolean} [autoWinding=true] Whether to automatically set the correct winding on polygons
+ */
+
+exports.GLU_TESS_WINDING_ODD = GLU_TESS_WINDING_ODD;
+exports.GLU_TESS_WINDING_NONZERO = GLU_TESS_WINDING_NONZERO;
+exports.GLU_TESS_WINDING_POSITIVE = GLU_TESS_WINDING_POSITIVE;
+exports.GLU_TESS_WINDING_NEGATIVE = GLU_TESS_WINDING_NEGATIVE;
+exports.GLU_TESS_WINDING_ABS_GEQ_TWO = GLU_TESS_WINDING_ABS_GEQ_TWO;
+var DEFAULT_OPTIONS = exports.DEFAULT_OPTIONS = {
+  polygons: [],
+  holes: [],
+  windingRule: GLU_TESS_WINDING_POSITIVE,
+  boundaryOnly: false,
+  normal: null,
+  autoWinding: true
+};
+
+var Tesselator = exports.Tesselator = function (_GluTesselator) {
+  _inherits(Tesselator, _GluTesselator);
+
+  function Tesselator() {
+    var vsize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
+
+    _classCallCheck(this, Tesselator);
+
+    var _this = _possibleConstructorReturn(this, (Tesselator.__proto__ || Object.getPrototypeOf(Tesselator)).call(this));
+
+    _this._vsize = vsize;
+    _this._current = [];
+    _this._out = [];
+    _this._primitiveType = 0;
+
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_VERTEX_DATA, _this._vertex);
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_BEGIN, _this._begin);
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_END, _this._end);
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_ERROR, _this._error);
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_COMBINE, _this._combine);
+    _this.gluTessCallback(_libtess.gluEnum.GLU_TESS_EDGE_FLAG, _this._edge);
+    return _this;
+  }
+
+  _createClass(Tesselator, [{
+    key: 'start',
+    value: function start(polygons, holes) {
+      this._current = [];
+      this._out = [];
+
+      this.gluTessBeginPolygon();
+
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = polygons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var poly = _step.value;
+
+          this.gluTessBeginContour();
+          var _iteratorNormalCompletion3 = true;
+          var _didIteratorError3 = false;
+          var _iteratorError3 = undefined;
+
+          try {
+            for (var _iterator3 = poly[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              var v = _step3.value;
+
+              this.gluTessVertex(v, v);
+            }
+          } catch (err) {
+            _didIteratorError3 = true;
+            _iteratorError3 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                _iterator3.return();
+              }
+            } finally {
+              if (_didIteratorError3) {
+                throw _iteratorError3;
+              }
+            }
+          }
+
+          this.gluTessEndContour();
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = holes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var _poly = _step2.value;
+
+          this.gluTessBeginContour();
+          var _iteratorNormalCompletion4 = true;
+          var _didIteratorError4 = false;
+          var _iteratorError4 = undefined;
+
+          try {
+            for (var _iterator4 = _poly[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+              var _v = _step4.value;
+
+              this.gluTessVertex(_v, _v);
+            }
+          } catch (err) {
+            _didIteratorError4 = true;
+            _iteratorError4 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion4 && _iterator4.return) {
+                _iterator4.return();
+              }
+            } finally {
+              if (_didIteratorError4) {
+                throw _iteratorError4;
+              }
+            }
+          }
+
+          this.gluTessEndContour();
+        }
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+            _iterator2.return();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+
+      this.gluTessEndPolygon();
+    }
+  }, {
+    key: 'run',
+    value: function run() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_OPTIONS;
+      var opts = Object.assign({}, DEFAULT_OPTIONS, options),
+          polygons = opts.polygons,
+          holes = opts.holes,
+          autoWinding = opts.autoWinding,
+          boundaryOnly = opts.boundaryOnly;
+
+
+      if (!polygons || !polygons.length) {
+        throw new Error('need at least a single polygon');
+      }
+
+      if (autoWinding) {
+        polygons = polygons.filter(function (p) {
+          return Math.abs((0, _polygon.area)(p)) > 0;
+        }).map(function (p) {
+          if ((0, _polygon.is_cw)(p)) p.reverse();
+          return p;
+        });
+        holes = holes.filter(function (p) {
+          return Math.abs((0, _polygon.area)(p)) > 0;
+        }).map(function (p) {
+          if ((0, _polygon.is_ccw)(p)) p.reverse();
+          return p;
+        });
+      }
+
+      var _ref = opts.normal ? opts.normal : (0, _polygon.normal)(polygons[0], true),
+          _ref2 = _slicedToArray(_ref, 3),
+          nx = _ref2[0],
+          ny = _ref2[1],
+          nz = _ref2[2];
+
+      this.gluTessNormal(nx, ny, nz);
+      this.gluTessProperty(_libtess.gluEnum.GLU_TESS_BOUNDARY_ONLY, boundaryOnly);
+      this.gluTessProperty(_libtess.gluEnum.GLU_TESS_WINDING_RULE, opts.windingRule);
+
+      this.start(polygons, holes);
+
+      return this._out;
+    }
+  }, {
+    key: '_begin',
+    value: function _begin(type) {
+      this._primitiveType = type;
+      this._current = [];
+    }
+  }, {
+    key: '_end_fan',
+    value: function _end_fan() {
+      var c = this._current.shift(),
+          p1 = this._current.shift();
+      while (this._current.length) {
+        var p2 = this._current.shift();
+        this._out.push(c, p1, p2);
+        p1 = p2;
+      }
+    }
+  }, {
+    key: '_end_strip',
+    value: function _end_strip() {
+      var p1 = this._current.shift(),
+          p2 = this._current.shift();
+      while (this._current.length) {
+        var p3 = this._current.shift();
+        this._out.push(p1, p2, p3);
+        p1 = p2;
+        p2 = p3;
+      }
+    }
+  }, {
+    key: '_end',
+    value: function _end() {
+      switch (this._primitiveType) {
+        case GL_TRIANGLE_FAN:
+          this._end_fan();
+          break;
+        case GL_TRIANGLE_STRIP:
+          this._end_strip();
+          break;
+        case GL_TRIANGLES:
+        case GL_LINE_LOOP:
+        default:
+          this._out.push(this._current);
+          break;
+      }
+    }
+  }, {
+    key: '_vertex',
+    value: function _vertex(v) {
+      this._current.push(v);
+    }
+  }, {
+    key: '_edge',
+    value: function _edge() {}
+  }, {
+    key: '_error',
+    value: function _error(errno) {
+      console.error('error number: ' + errno);
+    }
+  }, {
+    key: '_combine',
+    value: function _combine(v, data, w) {
+      for (var i = 0; i < 4; ++i) {
+        if (!data[i]) {
+          data[i] = new Array(this._vsize);
+          for (var j = 0; j < this._vsize; ++j) {
+            data[i][j] = 0;
+          }
+        }
+      }
+      var r = new Array(this._vsize);
+      for (var _i = 0; _i < this._vsize; ++_i) {
+        r[_i] = data[0][_i] * w[0] + data[1][_i] * w[1] + data[2][_i] * w[2] + data[3][_i] * w[3];
+      }
+      return r;
+    }
+  }]);
+
+  return Tesselator;
+}(_libtess.GluTesselator);
+
+/**
+ * Helper for triangulate
+ * @private
+ */
+
+
+function to_triangles(data) {
+  var result = [];
+  for (var i = 0; i < data.length; i += 3) {
+    result.push([data[i], data[i + 1], data[i + 2]]);
+  }
+  return result;
 }
+
+/**
+ * Runs the tesselator
+ * @see http://www.glprogramming.com/red/chapter11.html
+ *
+ * @param {TesselatorOptions} [options=TesselatorOptions] Options
+ *
+ * @returns {Array}
+ */
+function run() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_OPTIONS;
+
+  var tesselator = new Tesselator(options.vertexSize),
+      result = tesselator.run(options);
+  return options.boundaryOnly ? result : result.map(to_triangles);
+}
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WINDING_CW = exports.WINDING_CCW = exports.WINDING_UNKNOWN = undefined;
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * @module polygon
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */
+
+
+exports.ccw = ccw;
+exports.normal = normal;
+exports.area = area;
+exports.centroid = centroid;
+exports.is_ccw = is_ccw;
+exports.is_cw = is_cw;
+exports.winding = winding;
+exports.bounds = bounds;
+exports.ensure_cw = ensure_cw;
+exports.ensure_ccw = ensure_ccw;
+exports.triangulate = triangulate;
+exports.subtract = subtract;
+exports.union = union;
+exports.intersection = intersection;
+
+var _tesselator = __webpack_require__(5);
+
+var tess = _interopRequireWildcard(_tesselator);
+
+var _vec = __webpack_require__(30);
+
+var vec = _interopRequireWildcard(_vec);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var WINDING_UNKNOWN = exports.WINDING_UNKNOWN = 0;
+var WINDING_CCW = exports.WINDING_CCW = 1;
+var WINDING_CW = exports.WINDING_CW = 2;
+
+function ccw(a, b, c) {
+  return (b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1]);
+}
+
+/**
+ * Polygon normal (2d / 3d)
+ *
+ * @param {Array} pts Points of the polygon
+ * @param {Boolean} [forceNewell=false] Whether to force Newell's method
+ *
+ * @return {Array} Polygon normal or null if the polygon is degenerate
+ */
+function normal(pts) {
+  var forceNewell = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+
+  if (pts.length < 3) return null;
+
+  var vs = pts.map(function (p) {
+    return p.length >= 3 ? p : [p[0], p[1], 0];
+  });
+
+  if (!forceNewell) {
+    var _vs = _slicedToArray(vs, 3),
+        a = _vs[0],
+        b = _vs[1],
+        c = _vs[2],
+        ba = vec.subtract(b, a),
+        ca = vec.subtract(c, a),
+        cr = vec.normalize(vec.cross(ba, ca));
+
+    if (cr.some(function (v) {
+      return isNaN(v);
+    })) {
+      if (pts.length === 3) return null;
+    } else {
+      return cr;
+    }
+  }
+
+  // fallback to Newell's method
+  var n = [0, 0, 0];
+  vs.forEach(function (v, i) {
+    var w = vs[(i + 1) % pts.length];
+    n[0] = n[0] + (v[1] - w[1]) * (v[2] + w[2]);
+    n[1] = n[1] + (v[2] - w[2]) * (v[0] + w[0]);
+    n[2] = n[2] + (v[0] - w[0]) * (v[1] + w[1]);
+  });
+
+  n = vec.normalize(n);
+
+  return n.some(function (v) {
+    return isNaN(v);
+  }) ? null : n;
+}
+
+/**
+ * Signed area of a polygon.
+ * For 3d polygons a signed area can only be computed when the optional
+ * polygon normal ```n``` is passed in.
+ * @see http://stackoverflow.com/questions/12642256/python-find-area-of-polygon-from-xyz-coordinates
+ *
+ * @param {Array} pts Polygon points
+ * @param {Array} [n=null] Optional polygon normal, needed to compute the signed area for 3d polygons
+ *
+ * @return {Number}
+ */
+function area(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  if (pts.length < 3) return 0;
+  if (pts[0].length < 3) {
+    return pts.reduce(function (a, p, i) {
+      var pn = pts[i + 1] || pts[0];
+      return a + p[0] * pn[1] - pn[0] * p[1];
+    }, 0) / 2;
+  } else {
+    var num = pts.length,
+        nrm = n || normal(pts),
+        total = [0, 0, 0];
+    if (!nrm) return 0;
+    for (var i = 0; i < num; ++i) {
+      var v = pts[i],
+          w = pts[(i + 1) % num];
+      total = vec.add(total, vec.cross(v, w));
+    }
+    return vec.dot(total, nrm) / 2;
+  }
+}
+
+/**
+ * Polygon centroid (2d)
+ *
+ * @param {Array} pts
+ *
+ * @return {Array}
+ */
+function centroid(pts) {
+  var _pts$reduce = pts.reduce(function (_ref, p, i) {
+    var _ref2 = _slicedToArray(_ref, 2),
+        x = _ref2[0],
+        y = _ref2[1];
+
+    var pn = pts[i + 1] || pts[0],
+        c = p[0] * pn[1] - pn[0] * p[1];
+    return [x + (p[0] + pn[0]) * c, y + (p[1] + pn[1]) * c];
+  }, [0, 0]),
+      _pts$reduce2 = _slicedToArray(_pts$reduce, 2),
+      x = _pts$reduce2[0],
+      y = _pts$reduce2[1];
+
+  var ar = area(pts);
+  if (x !== 0) {
+    x = x / (Math.abs(ar) * 6);
+  }
+  if (y !== 0) {
+    y = y / (Math.abs(ar) * 6);
+  }
+
+  if (ar < 0) {
+    x = -x;
+    y = -y;
+  }
+  return [x, y];
+}
+
+/**
+ * Tests wether the polygon winding is counter clockwise
+ *
+ * @param {Array} pts
+ * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
+ *
+ * @return {Boolean}
+ */
+function is_ccw(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  return area(pts, n) > 0;
+}
+
+/**
+ * Tests wether the polygon winding is clockwise
+ *
+ * @param {Array} pts
+ * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
+ *
+ * @return {Boolean}
+ */
+function is_cw(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  return area(pts, n) < 0;
+}
+
+/**
+ * Polygon winding (2d only)
+ *
+ * @param {Array} pts
+ * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
+ *
+ * @return {Number}
+ */
+function winding(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  var a = area(pts, n);
+  if (a < 0) return WINDING_CW;
+  if (a > 0) return WINDING_CCW;
+  return WINDING_UNKNOWN;
+}
+
+/**
+ * Polygon bounds.
+ * @typedef {Object} PolygonBounds
+ * @property {Number} xMin
+ * @property {Number} yMin
+ * @property {Number} xMax
+ * @property {Number} yMax
+ */
+
+/**
+ * Polygon bounds
+ *
+ * @param {Array} pts
+ *
+ * @return {PolygonBounds}
+ */
+function bounds(pts) {
+  var min = [Number.MAX_VALUE, Number.MAX_VALUE],
+      max = [-Number.MAX_VALUE, -Number.MAX_VALUE];
+
+  pts.forEach(function (p) {
+    for (var i = 0; i < Math.min(3, p.length); ++i) {
+      min[i] = Math.min(min[i], p[i]);
+      max[i] = Math.max(max[i], p[i]);
+    }
+  });
+
+  return {
+    xMin: min[0],
+    yMin: min[1],
+    xMax: max[0],
+    yMax: max[1]
+  };
+}
+
+/**
+ * Ensures CW winding
+ *
+ * @param {Array} pts
+ * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
+ *
+ * @return {Array}
+ */
+function ensure_cw(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  if (is_ccw(pts, n)) pts.reverse();
+  return pts;
+}
+
+/**
+ * Ensures CCW winding
+ *
+ * @param {Array} pts
+ * @param {Array} [n=null] Optional polygon normal, needed for 3d polygons
+ *
+ * @return {Array}
+ */
+function ensure_ccw(pts) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+  if (is_cw(pts, n)) pts.reverse();
+  return pts;
+}
+
+/**
+ * Triangulates a polygon
+ *
+ * @param {Array} polygon
+ * @param {Array.<Array>} holes
+ *
+ * @return triangles
+ */
+function triangulate(polygon, holes) {
+  if (!polygon || polygon.length < 3) return polygon;
+
+  var bp = bounds(polygon);
+
+  holes = holes.filter(function (hole) {
+    var b = bounds(hole),
+        out = b.xMin > bp.xMax || b.yMin > bp.yMax || b.xMax < bp.xMin || b.yMax < bp.yMin;
+    return !out;
+  });
+
+  var options = { polygons: [polygon], holes: holes };
+
+  return tess.run(options).reduce(function (p, v) {
+    return p.concat(v);
+  }, []);
+}
+
+/**
+ * Subtract polygons
+ *
+ * @param {Array} polygons
+ *
+ * @return {Array}
+ */
+function subtract() {
+  for (var _len = arguments.length, polygons = Array(_len), _key = 0; _key < _len; _key++) {
+    polygons[_key] = arguments[_key];
+  }
+
+  var options = {
+    polygons: [ensure_ccw(polygons[0])],
+    holes: polygons.slice(1).map(function (p) {
+      return ensure_cw(p);
+    }),
+    boundaryOnly: true,
+    autoWinding: false
+  };
+  return tess.run(options);
+}
+
+/**
+ * Union of a set of polygons
+ *
+ * @param {Array} polygons
+ *
+ * @return {Array}
+ */
+function union() {
+  for (var _len2 = arguments.length, polygons = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    polygons[_key2] = arguments[_key2];
+  }
+
+  var options = {
+    polygons: polygons.map(function (p) {
+      return ensure_ccw(p);
+    }),
+    boundaryOnly: true,
+    autoWinding: false
+  };
+  return tess.run(options);
+}
+
+/**
+ * Intersection of a set of polygons
+ *
+ * @param {Array} a First polygon
+ * @param {Array} b Second polygon
+ *
+ * @return {Array}
+ */
+function intersection(a, b) {
+  var options = {
+    polygons: [ensure_ccw(a), ensure_ccw(b)],
+    boundaryOnly: true,
+    windingRule: tess.GLU_TESS_WINDING_ABS_GEQ_TWO,
+    autoWinding: false
+  };
+  return tess.run(options);
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
+ */
+
+
+
+var hyphenate = __webpack_require__(19);
+
+var msPattern = /^ms-/;
+
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ *
+ * @param {string} string
+ * @return {string}
+ */
+function hyphenateStyleName(string) {
+  return hyphenate(string).replace(msPattern, '-ms-');
+}
+
+module.exports = hyphenateStyleName;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (factory) {
+	 true ? (module['exports'] = factory()) :
+		undefined
+}(function () {
+
+	'use strict'
+
+	return function (insertRule) {
+		var delimiter = '/*|*/'
+		var needle = delimiter+'}'
+
+		function toSheet (block) {
+			if (block)
+				try {
+					insertRule(block + '}')
+				} catch (e) {}
+		}
+
+		return function ruleSheet (context, content, selectors, parents, line, column, length, ns, depth, at) {
+			switch (context) {
+				// property
+				case 1:
+					// @import
+					if (depth === 0 && content.charCodeAt(0) === 64)
+						return insertRule(content+';'), ''
+					break
+				// selector
+				case 2:
+					if (ns === 0)
+						return content + delimiter
+					break
+				// at-rule
+				case 3:
+					switch (ns) {
+						// @font-face, @page
+						case 102:
+						case 112:
+							return insertRule(selectors[0]+content), ''
+						default:
+							return content + (at === 0 ? delimiter : '')
+					}
+				case -2:
+					content.split(needle).forEach(toSheet)
+			}
+		}
+	}
+}))
 
 
 /***/ }),
-/* 27 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.9.0
- * react-is.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
+
+
+if (true) {
+  module.exports = __webpack_require__(20);
+} else {}
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tesselator = exports.polygon = undefined;
+
+var _tesselator = __webpack_require__(5);
+
+var tess = _interopRequireWildcard(_tesselator);
+
+var _polygon = __webpack_require__(6);
+
+var p = _interopRequireWildcard(_polygon);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var polygon = exports.polygon = p;
+var tesselator = exports.tesselator = tess;
+
+if (typeof window !== 'undefined') {
+  window.PolygonTools = {
+    polygon: p,
+    tesselator: tess,
+    version: window.polygon_tools_version || '',
+    build: window.polygon_tools_rev || ''
+  };
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(1), __webpack_require__(0));
+	else {}
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.SteppedLine = exports.Line = exports.SteppedLineTo = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = __webpack_require__(0);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var defaultAnchor = { x: 0.5, y: 0.5 };
+var defaultBorderColor = '#f00';
+var defaultBorderStyle = 'solid';
+var defaultBorderWidth = 1;
+
+var optionalStyleProps = {
+    borderColor: _propTypes2.default.string,
+    borderStyle: _propTypes2.default.string,
+    borderWidth: _propTypes2.default.number,
+    className: _propTypes2.default.string,
+    zIndex: _propTypes2.default.number
+};
+
+var LineTo = function (_Component) {
+    _inherits(LineTo, _Component);
+
+    function LineTo() {
+        _classCallCheck(this, LineTo);
+
+        return _possibleConstructorReturn(this, (LineTo.__proto__ || Object.getPrototypeOf(LineTo)).apply(this, arguments));
+    }
+
+    _createClass(LineTo, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            this.fromAnchor = this.parseAnchor(this.props.fromAnchor);
+            this.toAnchor = this.parseAnchor(this.props.toAnchor);
+            this.delay = this.parseDelay(this.props.delay);
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.delay = this.parseDelay(this.props.delay);
+            if (typeof this.delay !== 'undefined') {
+                this.deferUpdate(this.delay);
+            }
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (nextProps.fromAnchor !== this.props.fromAnchor) {
+                this.fromAnchor = this.parseAnchor(this.props.fromAnchor);
+            }
+            if (nextProps.toAnchor !== this.props.toAnchor) {
+                this.toAnchor = this.parseAnchor(this.props.toAnchor);
+            }
+            this.delay = this.parseDelay(nextProps.delay);
+            if (typeof this.delay !== 'undefined') {
+                this.deferUpdate(this.delay);
+            }
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            if (this.t) {
+                clearTimeout(this.t);
+                this.t = null;
+            }
+        }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate() {
+            // Always update component if the parent component has been updated.
+            // The reason for this is that we would not only like to update
+            // this component when the props have changed, but also when
+            // the position of our target elements has changed.
+            // We could return true only if the positions of `from` and `to` have
+            // changed, but that may be expensive and unnecessary.
+            return true;
+        }
+
+        // Forced update after delay (MS)
+
+    }, {
+        key: 'deferUpdate',
+        value: function deferUpdate(delay) {
+            var _this2 = this;
+
+            if (this.t) {
+                clearTimeout(this.t);
+            }
+            this.t = setTimeout(function () {
+                return _this2.forceUpdate();
+            }, delay);
+        }
+    }, {
+        key: 'parseDelay',
+        value: function parseDelay(value) {
+            if (typeof value === 'undefined') {
+                return value;
+            } else if (typeof value === 'boolean' && value) {
+                return 0;
+            }
+            var delay = parseInt(value, 10);
+            if (isNaN(delay) || !isFinite(delay)) {
+                throw new Error('LinkTo could not parse delay attribute "' + value + '"');
+            }
+            return delay;
+        }
+    }, {
+        key: 'parseAnchorPercent',
+        value: function parseAnchorPercent(value) {
+            var percent = parseFloat(value) / 100;
+            if (isNaN(percent) || !isFinite(percent)) {
+                throw new Error('LinkTo could not parse percent value "' + value + '"');
+            }
+            return percent;
+        }
+    }, {
+        key: 'parseAnchorText',
+        value: function parseAnchorText(value) {
+            // Try to infer the relevant axis.
+            switch (value) {
+                case 'top':
+                    return { y: 0 };
+                case 'left':
+                    return { x: 0 };
+                case 'middle':
+                    return { y: 0.5 };
+                case 'center':
+                    return { x: 0.5 };
+                case 'bottom':
+                    return { y: 1 };
+                case 'right':
+                    return { x: 1 };
+            }
+            return null;
+        }
+    }, {
+        key: 'parseAnchor',
+        value: function parseAnchor(value) {
+            if (!value) {
+                return defaultAnchor;
+            }
+            var parts = value.split(' ');
+            if (parts.length > 2) {
+                throw new Error('LinkTo anchor format is "<x> <y>"');
+            }
+
+            var _parts = _slicedToArray(parts, 2),
+                x = _parts[0],
+                y = _parts[1];
+
+            return Object.assign({}, defaultAnchor, x ? this.parseAnchorText(x) || { x: this.parseAnchorPercent(x) } : {}, y ? this.parseAnchorText(y) || { y: this.parseAnchorPercent(y) } : {});
+        }
+    }, {
+        key: 'findElement',
+        value: function findElement(className) {
+            return document.getElementsByClassName(className)[0];
+        }
+    }, {
+        key: 'detect',
+        value: function detect() {
+            var _props = this.props,
+                from = _props.from,
+                to = _props.to,
+                _props$within = _props.within,
+                within = _props$within === undefined ? '' : _props$within;
+
+
+            var a = this.findElement(from);
+            var b = this.findElement(to);
+
+            if (!a || !b) {
+                return false;
+            }
+
+            var anchor0 = this.fromAnchor;
+            var anchor1 = this.toAnchor;
+
+            var box0 = a.getBoundingClientRect();
+            var box1 = b.getBoundingClientRect();
+
+            var offsetX = window.pageXOffset;
+            var offsetY = window.pageYOffset;
+
+            if (within) {
+                var p = this.findElement(within);
+                var boxp = p.getBoundingClientRect();
+
+                offsetX -= boxp.left + (window.pageXOffset || document.documentElement.scrollLeft);
+                offsetY -= boxp.top + (window.pageYOffset || document.documentElement.scrollTop);
+            }
+
+            var x0 = box0.left + box0.width * anchor0.x + offsetX;
+            var x1 = box1.left + box1.width * anchor1.x + offsetX;
+            var y0 = box0.top + box0.height * anchor0.y + offsetY;
+            var y1 = box1.top + box1.height * anchor1.y + offsetY;
+
+            return { x0: x0, y0: y0, x1: x1, y1: y1 };
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var points = this.detect();
+            return points ? _react2.default.createElement(Line, _extends({}, points, this.props)) : null;
+        }
+    }]);
+
+    return LineTo;
+}(_react.Component);
+
+exports.default = LineTo;
+
+
+LineTo.propTypes = Object.assign({}, {
+    from: _propTypes2.default.string.isRequired,
+    to: _propTypes2.default.string.isRequired,
+    within: _propTypes2.default.string,
+    fromAnchor: _propTypes2.default.string,
+    toAnchor: _propTypes2.default.string,
+    delay: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
+}, optionalStyleProps);
+
+var SteppedLineTo = exports.SteppedLineTo = function (_LineTo) {
+    _inherits(SteppedLineTo, _LineTo);
+
+    function SteppedLineTo() {
+        _classCallCheck(this, SteppedLineTo);
+
+        return _possibleConstructorReturn(this, (SteppedLineTo.__proto__ || Object.getPrototypeOf(SteppedLineTo)).apply(this, arguments));
+    }
+
+    _createClass(SteppedLineTo, [{
+        key: 'render',
+        value: function render() {
+            var points = this.detect();
+            return points ? _react2.default.createElement(SteppedLine, _extends({}, points, this.props)) : null;
+        }
+    }]);
+
+    return SteppedLineTo;
+}(LineTo);
+
+var Line = exports.Line = function (_PureComponent) {
+    _inherits(Line, _PureComponent);
+
+    function Line() {
+        _classCallCheck(this, Line);
+
+        return _possibleConstructorReturn(this, (Line.__proto__ || Object.getPrototypeOf(Line)).apply(this, arguments));
+    }
+
+    _createClass(Line, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            // Append rendered DOM element to the container the
+            // offsets were calculated for
+            this.within.appendChild(this.el);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.within.removeChild(this.el);
+        }
+    }, {
+        key: 'findElement',
+        value: function findElement(className) {
+            return document.getElementsByClassName(className)[0];
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this5 = this;
+
+            var _props2 = this.props,
+                x0 = _props2.x0,
+                y0 = _props2.y0,
+                x1 = _props2.x1,
+                y1 = _props2.y1,
+                _props2$within = _props2.within,
+                within = _props2$within === undefined ? '' : _props2$within;
+
+
+            this.within = within ? this.findElement(within) : document.body;
+
+            var dy = y1 - y0;
+            var dx = x1 - x0;
+
+            var angle = Math.atan2(dy, dx) * 180 / Math.PI;
+            var length = Math.sqrt(dx * dx + dy * dy);
+
+            var positionStyle = {
+                position: 'absolute',
+                top: y0 + 'px',
+                left: x0 + 'px',
+                width: length + 'px',
+                zIndex: Number.isFinite(this.props.zIndex) ? String(this.props.zIndex) : '1',
+                transform: 'rotate(' + angle + 'deg)',
+                // Rotate around (x0, y0)
+                transformOrigin: '0 0'
+            };
+
+            var defaultStyle = {
+                borderTopColor: this.props.borderColor || defaultBorderColor,
+                borderTopStyle: this.props.borderStyle || defaultBorderStyle,
+                borderTopWidth: this.props.borderWidth || defaultBorderWidth
+            };
+
+            var props = {
+                className: this.props.className,
+                style: Object.assign({}, defaultStyle, positionStyle)
+
+                // We need a wrapper element to prevent an exception when then
+                // React component is removed. This is because we manually
+                // move the rendered DOM element after creation.
+            };return _react2.default.createElement(
+                'div',
+                { className: 'react-lineto-placeholder' },
+                _react2.default.createElement('div', _extends({
+                    ref: function ref(el) {
+                        _this5.el = el;
+                    }
+                }, props))
+            );
+        }
+    }]);
+
+    return Line;
+}(_react.PureComponent);
+
+Line.propTypes = Object.assign({}, {
+    x0: _propTypes2.default.number.isRequired,
+    y0: _propTypes2.default.number.isRequired,
+    x1: _propTypes2.default.number.isRequired,
+    y1: _propTypes2.default.number.isRequired
+}, optionalStyleProps);
+
+var SteppedLine = exports.SteppedLine = function (_PureComponent2) {
+    _inherits(SteppedLine, _PureComponent2);
+
+    function SteppedLine() {
+        _classCallCheck(this, SteppedLine);
+
+        return _possibleConstructorReturn(this, (SteppedLine.__proto__ || Object.getPrototypeOf(SteppedLine)).apply(this, arguments));
+    }
+
+    _createClass(SteppedLine, [{
+        key: 'render',
+        value: function render() {
+            if (this.props.orientation === 'h') {
+                return this.renderHorizontal();
+            }
+            return this.renderVertical();
+        }
+    }, {
+        key: 'renderVertical',
+        value: function renderVertical() {
+            var _props3 = this.props,
+                x0 = _props3.x0,
+                y0 = _props3.y0,
+                x1 = _props3.x1,
+                y1 = _props3.y1;
+
+
+            var dx = x1 - x0;
+            if (dx === 0) {
+                return _react2.default.createElement(Line, this.props);
+            }
+
+            var borderWidth = this.props.borderWidth || defaultBorderWidth;
+            var y2 = (y0 + y1) / 2;
+
+            var xOffset = dx > 0 ? borderWidth : 0;
+            var minX = Math.min(x0, x1) - xOffset;
+            var maxX = Math.max(x0, x1);
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'react-steppedlineto' },
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: x0, y0: y0, x1: x0, y1: y2 })),
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: x1, y0: y1, x1: x1, y1: y2 })),
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: minX, y0: y2, x1: maxX, y1: y2 }))
+            );
+        }
+    }, {
+        key: 'renderHorizontal',
+        value: function renderHorizontal() {
+            var _props4 = this.props,
+                x0 = _props4.x0,
+                y0 = _props4.y0,
+                x1 = _props4.x1,
+                y1 = _props4.y1;
+
+
+            var dy = y1 - y0;
+            if (dy === 0) {
+                return _react2.default.createElement(Line, this.props);
+            }
+
+            var borderWidth = this.props.borderWidth || defaultBorderWidth;
+            var x2 = (x0 + x1) / 2;
+
+            var yOffset = dy < 0 ? borderWidth : 0;
+            var minY = Math.min(y0, y1) - yOffset;
+            var maxY = Math.max(y0, y1);
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'react-steppedlineto' },
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: x0, y0: y0, x1: x2, y1: y0 })),
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: x1, y0: y1, x1: x2, y1: y1 })),
+                _react2.default.createElement(Line, _extends({}, this.props, { x0: x2, y0: minY, x1: x2, y1: maxY }))
+            );
+        }
+    }]);
+
+    return SteppedLine;
+}(_react.PureComponent);
+
+SteppedLine.propTypes = Object.assign({}, {
+    x0: _propTypes2.default.number.isRequired,
+    y0: _propTypes2.default.number.isRequired,
+    x1: _propTypes2.default.number.isRequired,
+    y1: _propTypes2.default.number.isRequired,
+    orientation: _propTypes2.default.oneOf(['h', 'v'])
+}, optionalStyleProps);
+
+/***/ })
+/******/ ]);
+});
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(33);
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -6831,885 +5645,451 @@ if (false) {
 
 
 
+var emptyFunction = __webpack_require__(14);
+var invariant = __webpack_require__(15);
+var ReactPropTypesSecret = __webpack_require__(16);
+
+module.exports = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    invariant(
+      false,
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim
+  };
+
+  ReactPropTypes.checkPropTypes = emptyFunction;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
 
 
-if (true) {
-  (function() {
-'use strict';
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports, '__esModule', { value: true });
+"use strict";
 
-// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-// nor polyfill, then a plain number is used for performance.
-var hasSymbol = typeof Symbol === 'function' && Symbol.for;
 
-var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
-// TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
-// (unstable) APIs that have been removed. Can we remove the symbols?
-var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
 
-function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' ||
-  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE);
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
 }
 
 /**
- * Forked from fbjs/warning:
- * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
  *
- * Only change is we use console.warn instead of console.error,
- * and do nothing when 'console' is not supported.
- * This really simplifies the code.
- * ---
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
  */
 
-var lowPriorityWarning = function () {};
 
-{
-  var printWarning = function (format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var validateFormat = function validateFormat(format) {};
+
+if (false) {}
+
+function invariant(condition, format, a, b, c, d, e, f) {
+  validateFormat(format);
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
     }
 
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.warn(message);
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+}
+
+module.exports = invariant;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
     }
     try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  lowPriorityWarning = function (condition, format) {
-    if (format === undefined) {
-      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
     }
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
     }
-  };
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
 }
 
-var lowPriorityWarning$1 = lowPriorityWarning;
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
 
-function typeOf(object) {
-  if (typeof object === 'object' && object !== null) {
-    var $$typeof = object.$$typeof;
-    switch ($$typeof) {
-      case REACT_ELEMENT_TYPE:
-        var type = object.type;
-
-        switch (type) {
-          case REACT_ASYNC_MODE_TYPE:
-          case REACT_CONCURRENT_MODE_TYPE:
-          case REACT_FRAGMENT_TYPE:
-          case REACT_PROFILER_TYPE:
-          case REACT_STRICT_MODE_TYPE:
-          case REACT_SUSPENSE_TYPE:
-            return type;
-          default:
-            var $$typeofType = type && type.$$typeof;
-
-            switch ($$typeofType) {
-              case REACT_CONTEXT_TYPE:
-              case REACT_FORWARD_REF_TYPE:
-              case REACT_PROVIDER_TYPE:
-                return $$typeofType;
-              default:
-                return $$typeof;
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
             }
         }
-      case REACT_LAZY_TYPE:
-      case REACT_MEMO_TYPE:
-      case REACT_PORTAL_TYPE:
-        return $$typeof;
+        queueIndex = -1;
+        len = queue.length;
     }
-  }
-
-  return undefined;
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
 }
 
-// AsyncMode is deprecated along with isAsyncMode
-var AsyncMode = REACT_ASYNC_MODE_TYPE;
-var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-var ContextConsumer = REACT_CONTEXT_TYPE;
-var ContextProvider = REACT_PROVIDER_TYPE;
-var Element = REACT_ELEMENT_TYPE;
-var ForwardRef = REACT_FORWARD_REF_TYPE;
-var Fragment = REACT_FRAGMENT_TYPE;
-var Lazy = REACT_LAZY_TYPE;
-var Memo = REACT_MEMO_TYPE;
-var Portal = REACT_PORTAL_TYPE;
-var Profiler = REACT_PROFILER_TYPE;
-var StrictMode = REACT_STRICT_MODE_TYPE;
-var Suspense = REACT_SUSPENSE_TYPE;
-
-var hasWarnedAboutDeprecatedIsAsyncMode = false;
-
-// AsyncMode should be deprecated
-function isAsyncMode(object) {
-  {
-    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-      hasWarnedAboutDeprecatedIsAsyncMode = true;
-      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
-    }
-  }
-  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
-}
-function isConcurrentMode(object) {
-  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-}
-function isContextConsumer(object) {
-  return typeOf(object) === REACT_CONTEXT_TYPE;
-}
-function isContextProvider(object) {
-  return typeOf(object) === REACT_PROVIDER_TYPE;
-}
-function isElement(object) {
-  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-}
-function isForwardRef(object) {
-  return typeOf(object) === REACT_FORWARD_REF_TYPE;
-}
-function isFragment(object) {
-  return typeOf(object) === REACT_FRAGMENT_TYPE;
-}
-function isLazy(object) {
-  return typeOf(object) === REACT_LAZY_TYPE;
-}
-function isMemo(object) {
-  return typeOf(object) === REACT_MEMO_TYPE;
-}
-function isPortal(object) {
-  return typeOf(object) === REACT_PORTAL_TYPE;
-}
-function isProfiler(object) {
-  return typeOf(object) === REACT_PROFILER_TYPE;
-}
-function isStrictMode(object) {
-  return typeOf(object) === REACT_STRICT_MODE_TYPE;
-}
-function isSuspense(object) {
-  return typeOf(object) === REACT_SUSPENSE_TYPE;
-}
-
-exports.typeOf = typeOf;
-exports.AsyncMode = AsyncMode;
-exports.ConcurrentMode = ConcurrentMode;
-exports.ContextConsumer = ContextConsumer;
-exports.ContextProvider = ContextProvider;
-exports.Element = Element;
-exports.ForwardRef = ForwardRef;
-exports.Fragment = Fragment;
-exports.Lazy = Lazy;
-exports.Memo = Memo;
-exports.Portal = Portal;
-exports.Profiler = Profiler;
-exports.StrictMode = StrictMode;
-exports.Suspense = Suspense;
-exports.isValidElementType = isValidElementType;
-exports.isAsyncMode = isAsyncMode;
-exports.isConcurrentMode = isConcurrentMode;
-exports.isContextConsumer = isContextConsumer;
-exports.isContextProvider = isContextProvider;
-exports.isElement = isElement;
-exports.isForwardRef = isForwardRef;
-exports.isFragment = isFragment;
-exports.isLazy = isLazy;
-exports.isMemo = isMemo;
-exports.isPortal = isPortal;
-exports.isProfiler = isProfiler;
-exports.isStrictMode = isStrictMode;
-exports.isSuspense = isSuspense;
-  })();
-}
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = compose;
-function compose() {
-  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  if (funcs.length === 0) {
-    return function (arg) {
-      return arg;
-    };
-  }
-
-  if (funcs.length === 1) {
-    return funcs[0];
-  }
-
-  return funcs.reduce(function (a, b) {
-    return function () {
-      return a(b.apply(undefined, arguments));
-    };
-  });
-}
-
-/***/ }),
-/* 29 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var isMouseOverElement = function isMouseOverElement(_ref) {
-  var elem = _ref.elem,
-      e = _ref.e;
-  var pageY = e.pageY,
-      pageX = e.pageX;
-
-  var _elem$getBoundingClie = elem.getBoundingClientRect(),
-      left = _elem$getBoundingClie.left,
-      right = _elem$getBoundingClie.right,
-      bottom = _elem$getBoundingClie.bottom,
-      top = _elem$getBoundingClie.top;
-
-  return pageX > left && pageX < right && pageY > top && pageY < bottom;
-};
-
-var isMouseHovering = function isMouseHovering() {
-  var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'isMouseHovering';
-  return function (DecoratedComponent) {
-    var IsMouseHovering = function (_Component) {
-      _inherits(IsMouseHovering, _Component);
-
-      function IsMouseHovering() {
-        _classCallCheck(this, IsMouseHovering);
-
-        var _this = _possibleConstructorReturn(this, _Component.call(this));
-
-        _this.onMouseMove = function (e) {
-          var elem = _this.el;
-
-          _this.setState({
-            isHoveringOver: isMouseOverElement({ elem: elem, e: e })
-          });
-        };
-
-        _this.state = {
-          isHoveringOver: false
-        };
-        return _this;
-      }
-
-      IsMouseHovering.prototype.componentDidMount = function componentDidMount() {
-        document.addEventListener('mousemove', this.onMouseMove);
-      };
-
-      IsMouseHovering.prototype.componentWillUnmount = function componentWillUnmount() {
-        document.removeEventListener('mousemove', this.onMouseMove);
-      };
-
-      IsMouseHovering.prototype.render = function render() {
-        var _this2 = this,
-            _hocProps;
-
-        var hocProps = (_hocProps = {}, _hocProps[key] = {
-          innerRef: function innerRef(el) {
-            return _this2.el = el;
-          },
-          isHoveringOver: this.state.isHoveringOver
-        }, _hocProps);
-
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DecoratedComponent, _extends({}, this.props, hocProps));
-      };
-
-      return IsMouseHovering;
-    }(__WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"]);
-
-    IsMouseHovering.displayName = 'IsMouseHovering(' + DecoratedComponent.displayName + ')';
-
-    return IsMouseHovering;
-  };
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (isMouseHovering);
-
-/***/ }),
-/* 30 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var withRelativeMousePos = function withRelativeMousePos() {
-  var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'relativeMousePos';
-  return function (DecoratedComponent) {
-    var WithRelativeMousePos = function (_Component) {
-      _inherits(WithRelativeMousePos, _Component);
-
-      function WithRelativeMousePos() {
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, WithRelativeMousePos);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
         }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = { x: null, y: null }, _this.innerRef = function (el) {
-          _this.container = el;
-        }, _this.onMouseMove = function (e) {
-          _this.setState({
-            x: e.nativeEvent.offsetX / _this.container.width * 100,
-            y: e.nativeEvent.offsetY / _this.container.height * 100
-          });
-        }, _this.onMouseLeave = function (e) {
-          _this.setState({ x: null, y: null });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-      }
-
-      WithRelativeMousePos.prototype.render = function render() {
-        var _hocProps;
-
-        var hocProps = (_hocProps = {}, _hocProps[key] = {
-          innerRef: this.innerRef,
-          onMouseMove: this.onMouseMove,
-          onMouseLeave: this.onMouseLeave,
-          x: this.state.x,
-          y: this.state.y
-        }, _hocProps);
-
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DecoratedComponent, _extends({}, this.props, hocProps));
-      };
-
-      return WithRelativeMousePos;
-    }(__WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"]);
-
-    WithRelativeMousePos.displayName = 'withRelativeMousePos(' + DecoratedComponent.displayName + ')';
-
-    return WithRelativeMousePos;
-  };
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (withRelativeMousePos);
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
 
 /***/ }),
-/* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 18 */
+/***/ (function(module, exports) {
 
-"use strict";
-/* unused harmony export TYPE */
-/* unused harmony export intersects */
-/* unused harmony export area */
-/* unused harmony export methods */
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var getCoordPercentage = function getCoordPercentage(e) {
-  return {
-    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
-    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
-  };
+module.exports = function(originalModule) {
+	if (!originalModule.webpackPolyfill) {
+		var module = Object.create(originalModule);
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		Object.defineProperty(module, "exports", {
+			enumerable: true
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
 };
 
-var TYPE = 'RECTANGLE';
-
-function intersects(_ref, geometry) {
-  var x = _ref.x,
-      y = _ref.y;
-
-  if (x < geometry.x) return false;
-  if (y < geometry.y) return false;
-  if (x > geometry.x + geometry.width) return false;
-  if (y > geometry.y + geometry.height) return false;
-
-  return true;
-}
-
-function area(geometry) {
-  return geometry.height * geometry.width;
-}
-
-var methods = {
-  onMouseDown: function onMouseDown(annotation, e) {
-    if (!annotation.selection) {
-      var _getCoordPercentage = getCoordPercentage(e),
-          anchorX = _getCoordPercentage.x,
-          anchorY = _getCoordPercentage.y;
-
-      return _extends({}, annotation, {
-        selection: _extends({}, annotation.selection, {
-          mode: 'SELECTING',
-          anchorX: anchorX,
-          anchorY: anchorY
-        })
-      });
-    } else {
-      return {};
-    }
-
-    return annotation;
-  },
-  onMouseUp: function onMouseUp(annotation, e) {
-    if (annotation.selection) {
-      var selection = annotation.selection,
-          geometry = annotation.geometry;
-
-
-      if (!geometry) {
-        return {};
-      }
-
-      switch (annotation.selection.mode) {
-        case 'SELECTING':
-          return _extends({}, annotation, {
-            selection: _extends({}, annotation.selection, {
-              showEditor: true,
-              mode: 'EDITING'
-            })
-          });
-        default:
-          break;
-      }
-    }
-
-    return annotation;
-  },
-  onMouseMove: function onMouseMove(annotation, e) {
-    if (annotation.selection && annotation.selection.mode === 'SELECTING') {
-      var _annotation$selection = annotation.selection,
-          anchorX = _annotation$selection.anchorX,
-          anchorY = _annotation$selection.anchorY;
-
-      var _getCoordPercentage2 = getCoordPercentage(e),
-          newX = _getCoordPercentage2.x,
-          newY = _getCoordPercentage2.y;
-
-      var width = newX - anchorX;
-      var height = newY - anchorY;
-
-      return _extends({}, annotation, {
-        geometry: _extends({}, annotation.geometry, {
-          type: TYPE,
-          x: width > 0 ? anchorX : newX,
-          y: height > 0 ? anchorY : newY,
-          width: Math.abs(width),
-          height: Math.abs(height)
-        })
-      });
-    }
-
-    return annotation;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  TYPE: TYPE,
-  intersects: intersects,
-  area: area,
-  methods: methods
-});
 
 /***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* unused harmony export TYPE */
-/* unused harmony export intersects */
-/* unused harmony export area */
-/* unused harmony export methods */
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var MARGIN = 6;
-
-var getCoordPercentage = function getCoordPercentage(e) {
-  return {
-    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
-    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
-  };
-};
-
-var marginToPercentage = function marginToPercentage(container) {
-  return {
-    marginX: MARGIN / container.width * 100,
-    marginY: MARGIN / container.height * 100
-  };
-};
-
-var TYPE = 'POINT';
-
-function intersects(_ref, geometry, container) {
-  var x = _ref.x,
-      y = _ref.y;
-
-  var _marginToPercentage = marginToPercentage(container),
-      marginX = _marginToPercentage.marginX,
-      marginY = _marginToPercentage.marginY;
-
-  if (x < geometry.x - marginX) return false;
-  if (y < geometry.y - marginY) return false;
-  if (x > geometry.x + marginX) return false;
-  if (y > geometry.y + marginY) return false;
-
-  return true;
-}
-
-function area(geometry, container) {
-  var _marginToPercentage2 = marginToPercentage(container),
-      marginX = _marginToPercentage2.marginX,
-      marginY = _marginToPercentage2.marginY;
-
-  return marginX * marginY;
-}
-
-var methods = {
-  onClick: function onClick(annotation, e) {
-    if (!annotation.geometry) {
-      return _extends({}, annotation, {
-        selection: _extends({}, annotation.selection, {
-          showEditor: true,
-          mode: 'EDITING'
-        }),
-        geometry: _extends({}, annotation.geometry, getCoordPercentage(e), {
-          width: 0,
-          height: 0,
-          type: TYPE
-        })
-      });
-    } else {
-      return {};
-    }
-  }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  TYPE: TYPE,
-  intersects: intersects,
-  area: area,
-  methods: methods
-});
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export TYPE */
-/* unused harmony export intersects */
-/* unused harmony export area */
-/* unused harmony export methods */
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var square = function square(n) {
-  return Math.pow(n, 2);
-};
-
-var getCoordPercentage = function getCoordPercentage(e) {
-  return {
-    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
-    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
-  };
-};
-
-var TYPE = 'OVAL';
-
-function intersects(_ref, geometry) {
-  var x = _ref.x,
-      y = _ref.y;
-
-  var rx = geometry.width / 2;
-  var ry = geometry.height / 2;
-  var h = geometry.x + rx;
-  var k = geometry.y + ry;
-
-  var value = square(x - h) / square(rx) + square(y - k) / square(ry);
-
-  return value <= 1;
-}
-
-function area(geometry) {
-  var rx = geometry.width / 2;
-  var ry = geometry.height / 2;
-
-  return Math.PI * rx * ry;
-}
-
-var methods = {
-  onMouseDown: function onMouseDown(annotation, e) {
-    if (!annotation.selection) {
-      var _getCoordPercentage = getCoordPercentage(e),
-          anchorX = _getCoordPercentage.x,
-          anchorY = _getCoordPercentage.y;
-
-      return _extends({}, annotation, {
-        selection: _extends({}, annotation.selection, {
-          mode: 'SELECTING',
-          anchorX: anchorX,
-          anchorY: anchorY
-        })
-      });
-    } else {
-      return {};
-    }
-
-    return annotation;
-  },
-  onMouseUp: function onMouseUp(annotation, e) {
-    if (annotation.selection) {
-      var selection = annotation.selection,
-          geometry = annotation.geometry;
 
 
-      if (!geometry) {
-        return {};
-      }
-
-      switch (annotation.selection.mode) {
-        case 'SELECTING':
-          return _extends({}, annotation, {
-            selection: _extends({}, annotation.selection, {
-              showEditor: true,
-              mode: 'EDITING'
-            })
-          });
-        default:
-          break;
-      }
-    }
-
-    return annotation;
-  },
-  onMouseMove: function onMouseMove(annotation, e) {
-    if (annotation.selection && annotation.selection.mode === 'SELECTING') {
-      var _annotation$selection = annotation.selection,
-          anchorX = _annotation$selection.anchorX,
-          anchorY = _annotation$selection.anchorY;
-
-      var _getCoordPercentage2 = getCoordPercentage(e),
-          newX = _getCoordPercentage2.x,
-          newY = _getCoordPercentage2.y;
-
-      var width = newX - anchorX;
-      var height = newY - anchorY;
-
-      return _extends({}, annotation, {
-        geometry: _extends({}, annotation.geometry, {
-          type: TYPE,
-          x: width > 0 ? anchorX : newX,
-          y: height > 0 ? anchorY : newY,
-          width: Math.abs(width),
-          height: Math.abs(height)
-        })
-      });
-    }
-
-    return annotation;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  TYPE: TYPE,
-  intersects: intersects,
-  area: area,
-  methods: methods
-});
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export TYPE */
-/* unused harmony export intersects */
-/* unused harmony export area */
-/* unused harmony export methods */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_polygon_tools__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_polygon_tools___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_polygon_tools__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_pointsUtils__ = __webpack_require__(3);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var PolygonLookup = __webpack_require__(35);
-
-
-
-
-var getCoordPercentage = function getCoordPercentage(e) {
-  return {
-    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
-    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
-  };
-};
-
-var TYPE = 'POLYGON';
-
-/* 
- * This function checks if the argument pointToCheck exists on the line created between pointA and pointB.
- * All point arguments are represented as two element arrays (e.g.: [10, 15]).
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
  */
-function isPointOnLine(pointA, pointB, pointToCheck) {
-  return Math.hypot(pointToCheck[0] - pointA[0], pointToCheck[1] - pointA[1]) + Math.hypot(pointB[0] - pointToCheck[0], pointB[1] - pointToCheck[1]) === Math.hypot(pointB[0] - pointA[0], pointB[1] - pointA[1]);
-}
 
-/* 
- * This function checks if the point [x, y] exists on the edge of the polygon created by points polygonPoints.
- * The argument polygonPoints is an array of objects (e.g.: [{x: 10, y: 15}, ...]).
+var _uppercasePattern = /([A-Z])/g;
+
+/**
+ * Hyphenates a camelcased string, for example:
+ *
+ *   > hyphenate('backgroundColor')
+ *   < "background-color"
+ *
+ * For CSS style names, use `hyphenateStyleName` instead which works properly
+ * with all vendor prefixes, including `ms`.
+ *
+ * @param {string} string
+ * @return {string}
  */
-function isPointOnPolygonEdge(_ref, polygonPoints) {
-  var x = _ref.x,
-      y = _ref.y;
-
-  if (!polygonPoints || polygonPoints.length < 3 || !x || !y) {
-    return false;
-  }
-
-  for (var i = 0; i < polygonPoints.length - 1; ++i) {
-    if (i === 0) {
-      // First point
-      if (isPointOnLine(polygonPoints[0], polygonPoints[polygonPoints.length - 1], [x, y])) {
-        return true;
-      }
-    } else {
-      if (isPointOnLine(polygonPoints[i], polygonPoints[i + 1], [x, y])) {
-        return true;
-      }
-    }
-  }
-  return false;
+function hyphenate(string) {
+  return string.replace(_uppercasePattern, '-$1').toLowerCase();
 }
 
-function intersects(_ref2, geometry) {
-  var x = _ref2.x,
-      y = _ref2.y;
-
-  if (!geometry || !geometry.points || geometry.points.length < 3) return false;
-
-  // Switch to point array format (e.g.: [{x: 10, y: 15}, ...] -> [[10, 15], ...])
-  var pointsAsArrays = geometry.points.map(function (point) {
-    return [point.x, point.y];
-  });
-
-  // Setup GeoJSON json format
-  var featureCollection = {
-    type: 'FeatureCollection',
-    features: [{
-      geometry: {
-        type: 'Polygon',
-        coordinates: [pointsAsArrays]
-      }
-    }]
-
-    // Determine if point is inside polygon
-  };var lookup = new PolygonLookup(featureCollection);
-  var poly = lookup.search(x, y);
-
-  // Return whether the point is inside the polygon (poly equals undefined if not) or if the
-  // point is on the edge (isPointOnPolygonEdge function call)
-  return poly !== undefined || isPointOnPolygonEdge({ x: x, y: y }, pointsAsArrays);
-}
-
-function area(geometry) {
-  if (!geometry || !geometry.points || geometry.points.length < 3) return 0;
-
-  return __WEBPACK_IMPORTED_MODULE_0_polygon_tools__["polygon"].area(geometry.points.map(function (point) {
-    return [point.x, point.y];
-  }));
-}
-
-var methods = {
-  onSelectionComplete: function onSelectionComplete(annotation) {
-    return _extends({}, annotation, {
-      selection: _extends({}, annotation.selection, {
-        showEditor: true,
-        mode: 'EDITING'
-      })
-    });
-  },
-  onSelectionClear: function onSelectionClear(annotation) {
-    return _extends({}, annotation, {
-      geometry: _extends({}, annotation.geometry, {
-        points: []
-      })
-    });
-  },
-  onSelectionUndo: function onSelectionUndo(annotation) {
-    return _extends({}, annotation, {
-      geometry: _extends({}, annotation.geometry, {
-        points: annotation.geometry.points.slice(0, -1)
-      })
-    });
-  },
-  onClick: function onClick(annotation, e) {
-    var coordOfClick = getCoordPercentage(e);
-
-    return _extends({}, annotation, {
-      geometry: _extends({}, annotation.geometry, {
-        type: TYPE,
-        points: !annotation.geometry ? [coordOfClick] : [].concat(annotation.geometry.points, [coordOfClick])
-      }),
-      selection: _extends({}, annotation.selection, {
-        mode: 'SELECTING'
-      })
-    });
-  }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  TYPE: TYPE,
-  intersects: intersects,
-  area: area,
-  methods: methods
-});
+module.exports = hyphenate;
 
 /***/ }),
-/* 35 */
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.9.0
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+Object.defineProperty(exports,"__esModule",{value:!0});
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?Symbol.for("react.suspense_list"):
+60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.fundamental"):60117,w=b?Symbol.for("react.responder"):60118;function x(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case h:return a;default:return u}}case t:case r:case d:return u}}}function y(a){return x(a)===m}exports.typeOf=x;exports.AsyncMode=l;
+exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===v||a.$$typeof===w)};exports.isAsyncMode=function(a){return y(a)||x(a)===l};exports.isConcurrentMode=y;exports.isContextConsumer=function(a){return x(a)===k};exports.isContextProvider=function(a){return x(a)===h};
+exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return x(a)===n};exports.isFragment=function(a){return x(a)===e};exports.isLazy=function(a){return x(a)===t};exports.isMemo=function(a){return x(a)===r};exports.isPortal=function(a){return x(a)===d};exports.isProfiler=function(a){return x(a)===g};exports.isStrictMode=function(a){return x(a)===f};exports.isSuspense=function(a){return x(a)===p};
+
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7721,10 +6101,10 @@ var methods = {
 
 
 
-var Rbush = __webpack_require__( 36 );
-var pointInPolygon = __webpack_require__( 38 );
-var polygonUtils = __webpack_require__( 39 );
-var _ = __webpack_require__(40);
+var Rbush = __webpack_require__( 22 );
+var pointInPolygon = __webpack_require__( 24 );
+var polygonUtils = __webpack_require__( 25 );
+var _ = __webpack_require__(26);
 
 /**
  * @property {rbush} rtree A spatial index for `this.polygons`.
@@ -7890,7 +6270,7 @@ module.exports = PolygonLookup;
 
 
 /***/ }),
-/* 36 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7899,7 +6279,7 @@ module.exports = PolygonLookup;
 module.exports = rbush;
 module.exports.default = rbush;
 
-var quickselect = __webpack_require__(37);
+var quickselect = __webpack_require__(23);
 
 function rbush(maxEntries, format) {
     if (!(this instanceof rbush)) return new rbush(maxEntries, format);
@@ -8459,13 +6839,12 @@ function multiSelect(arr, left, right, n, compare) {
 
 
 /***/ }),
-/* 37 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function (global, factory) {
 	 true ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.quickselect = factory());
+	undefined;
 }(this, (function () { 'use strict';
 
 function quickselect(arr, k, left, right, compare) {
@@ -8528,7 +6907,7 @@ return quickselect;
 
 
 /***/ }),
-/* 38 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = function (point, vs) {
@@ -8552,7 +6931,7 @@ module.exports = function (point, vs) {
 
 
 /***/ }),
-/* 39 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8603,7 +6982,7 @@ module.exports = {
 
 
 /***/ }),
-/* 40 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -25708,22 +24087,13 @@ module.exports = {
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   }
   // Check for `exports` after `define` in case a build optimizer adds it.
-  else if (freeModule) {
-    // Export for Node.js.
-    (freeModule.exports = _)._ = _;
-    // Export for CommonJS support.
-    freeExports._ = _;
-  }
-  else {
-    // Export to the global object.
-    root._ = _;
-  }
+  else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(41), __webpack_require__(42)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(27), __webpack_require__(28)(module)))
 
 /***/ }),
-/* 41 */
+/* 27 */
 /***/ (function(module, exports) {
 
 var g;
@@ -25735,11 +24105,10 @@ g = (function() {
 
 try {
 	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
 	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
+	if (typeof window === "object") g = window;
 }
 
 // g can still be undefined, but nothing to do about it...
@@ -25750,15 +24119,15 @@ module.exports = g;
 
 
 /***/ }),
-/* 42 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
-	if(!module.webpackPolyfill) {
+	if (!module.webpackPolyfill) {
 		module.deprecate = function() {};
 		module.paths = [];
 		// module.parent = undefined by default
-		if(!module.children) module.children = [];
+		if (!module.children) module.children = [];
 		Object.defineProperty(module, "loaded", {
 			enumerable: true,
 			get: function() {
@@ -25778,41 +24147,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.tesselator = exports.polygon = undefined;
-
-var _tesselator = __webpack_require__(9);
-
-var tess = _interopRequireWildcard(_tesselator);
-
-var _polygon = __webpack_require__(10);
-
-var p = _interopRequireWildcard(_polygon);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-var polygon = exports.polygon = p;
-var tesselator = exports.tesselator = tess;
-
-if (typeof window !== 'undefined') {
-  window.PolygonTools = {
-    polygon: p,
-    tesselator: tess,
-    version: window.polygon_tools_version || '',
-    build: window.polygon_tools_rev || ''
-  };
-}
-
-/***/ }),
-/* 44 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25877,7 +24212,7 @@ X.prototype.gluTessProperty=X.prototype.B;X.prototype.gluGetTessProperty=X.proto
 
 
 /***/ }),
-/* 45 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25982,13 +24317,664 @@ function subtract(a, b) {
 var sub = exports.sub = subtract;
 
 /***/ }),
-/* 46 */
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 32 */,
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
+var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0);
+var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/__webpack_require__.n(external_root_React_commonjs2_react_commonjs_react_amd_react_);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
+var styled_components_browser_esm = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./src/utils/compose.js
+function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
+}
+// CONCATENATED MODULE: ./src/utils/isMouseHovering.js
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var isMouseOverElement = function isMouseOverElement(_ref) {
+  var elem = _ref.elem,
+      e = _ref.e;
+  var pageY = e.pageY,
+      pageX = e.pageX;
+
+  var _elem$getBoundingClie = elem.getBoundingClientRect(),
+      left = _elem$getBoundingClie.left,
+      right = _elem$getBoundingClie.right,
+      bottom = _elem$getBoundingClie.bottom,
+      top = _elem$getBoundingClie.top;
+
+  return pageX > left && pageX < right && pageY > top && pageY < bottom;
+};
+
+var isMouseHovering_isMouseHovering = function isMouseHovering() {
+  var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'isMouseHovering';
+  return function (DecoratedComponent) {
+    var IsMouseHovering = function (_Component) {
+      _inherits(IsMouseHovering, _Component);
+
+      function IsMouseHovering() {
+        _classCallCheck(this, IsMouseHovering);
+
+        var _this = _possibleConstructorReturn(this, _Component.call(this));
+
+        _this.onMouseMove = function (e) {
+          var elem = _this.el;
+
+          _this.setState({
+            isHoveringOver: isMouseOverElement({ elem: elem, e: e })
+          });
+        };
+
+        _this.state = {
+          isHoveringOver: false
+        };
+        return _this;
+      }
+
+      IsMouseHovering.prototype.componentDidMount = function componentDidMount() {
+        document.addEventListener('mousemove', this.onMouseMove);
+      };
+
+      IsMouseHovering.prototype.componentWillUnmount = function componentWillUnmount() {
+        document.removeEventListener('mousemove', this.onMouseMove);
+      };
+
+      IsMouseHovering.prototype.render = function render() {
+        var _this2 = this,
+            _hocProps;
+
+        var hocProps = (_hocProps = {}, _hocProps[key] = {
+          innerRef: function innerRef(el) {
+            return _this2.el = el;
+          },
+          isHoveringOver: this.state.isHoveringOver
+        }, _hocProps);
+
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(DecoratedComponent, _extends({}, this.props, hocProps));
+      };
+
+      return IsMouseHovering;
+    }(external_root_React_commonjs2_react_commonjs_react_amd_react_["PureComponent"]);
+
+    IsMouseHovering.displayName = 'IsMouseHovering(' + DecoratedComponent.displayName + ')';
+
+    return IsMouseHovering;
+  };
+};
+
+/* harmony default export */ var utils_isMouseHovering = (isMouseHovering_isMouseHovering);
+// CONCATENATED MODULE: ./src/utils/withRelativeMousePos.js
+var withRelativeMousePos_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function withRelativeMousePos_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function withRelativeMousePos_possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function withRelativeMousePos_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var withRelativeMousePos_withRelativeMousePos = function withRelativeMousePos() {
+  var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'relativeMousePos';
+  return function (DecoratedComponent) {
+    var WithRelativeMousePos = function (_Component) {
+      withRelativeMousePos_inherits(WithRelativeMousePos, _Component);
+
+      function WithRelativeMousePos() {
+        var _temp, _this, _ret;
+
+        withRelativeMousePos_classCallCheck(this, WithRelativeMousePos);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = withRelativeMousePos_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = { x: null, y: null }, _this.innerRef = function (el) {
+          _this.container = el;
+        }, _this.onMouseMove = function (e) {
+          _this.setState({
+            x: e.nativeEvent.offsetX / _this.container.width * 100,
+            y: e.nativeEvent.offsetY / _this.container.height * 100
+          });
+        }, _this.onMouseLeave = function (e) {
+          _this.setState({ x: null, y: null });
+        }, _temp), withRelativeMousePos_possibleConstructorReturn(_this, _ret);
+      }
+
+      WithRelativeMousePos.prototype.render = function render() {
+        var _hocProps;
+
+        var hocProps = (_hocProps = {}, _hocProps[key] = {
+          innerRef: this.innerRef,
+          onMouseMove: this.onMouseMove,
+          onMouseLeave: this.onMouseLeave,
+          x: this.state.x,
+          y: this.state.y
+        }, _hocProps);
+
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(DecoratedComponent, withRelativeMousePos_extends({}, this.props, hocProps));
+      };
+
+      return WithRelativeMousePos;
+    }(external_root_React_commonjs2_react_commonjs_react_amd_react_["PureComponent"]);
+
+    WithRelativeMousePos.displayName = 'withRelativeMousePos(' + DecoratedComponent.displayName + ')';
+
+    return WithRelativeMousePos;
+  };
+};
+
+/* harmony default export */ var utils_withRelativeMousePos = (withRelativeMousePos_withRelativeMousePos);
+// CONCATENATED MODULE: ./src/hocs/RectangleSelector.js
+var RectangleSelector_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var getCoordPercentage = function getCoordPercentage(e) {
+  return {
+    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
+    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
+  };
+};
+
+var TYPE = 'RECTANGLE';
+
+function intersects(_ref, geometry) {
+  var x = _ref.x,
+      y = _ref.y;
+
+  if (x < geometry.x) return false;
+  if (y < geometry.y) return false;
+  if (x > geometry.x + geometry.width) return false;
+  if (y > geometry.y + geometry.height) return false;
+
+  return true;
+}
+
+function RectangleSelector_area(geometry) {
+  return geometry.height * geometry.width;
+}
+
+var methods = {
+  onMouseDown: function onMouseDown(annotation, e) {
+    if (!annotation.selection) {
+      var _getCoordPercentage = getCoordPercentage(e),
+          anchorX = _getCoordPercentage.x,
+          anchorY = _getCoordPercentage.y;
+
+      return RectangleSelector_extends({}, annotation, {
+        selection: RectangleSelector_extends({}, annotation.selection, {
+          mode: 'SELECTING',
+          anchorX: anchorX,
+          anchorY: anchorY
+        })
+      });
+    } else {
+      return {};
+    }
+
+    return annotation;
+  },
+  onMouseUp: function onMouseUp(annotation, e) {
+    if (annotation.selection) {
+      var selection = annotation.selection,
+          geometry = annotation.geometry;
+
+
+      if (!geometry) {
+        return {};
+      }
+
+      switch (annotation.selection.mode) {
+        case 'SELECTING':
+          return RectangleSelector_extends({}, annotation, {
+            selection: RectangleSelector_extends({}, annotation.selection, {
+              showEditor: true,
+              mode: 'EDITING'
+            })
+          });
+        default:
+          break;
+      }
+    }
+
+    return annotation;
+  },
+  onMouseMove: function onMouseMove(annotation, e) {
+    if (annotation.selection && annotation.selection.mode === 'SELECTING') {
+      var _annotation$selection = annotation.selection,
+          anchorX = _annotation$selection.anchorX,
+          anchorY = _annotation$selection.anchorY;
+
+      var _getCoordPercentage2 = getCoordPercentage(e),
+          newX = _getCoordPercentage2.x,
+          newY = _getCoordPercentage2.y;
+
+      var width = newX - anchorX;
+      var height = newY - anchorY;
+
+      return RectangleSelector_extends({}, annotation, {
+        geometry: RectangleSelector_extends({}, annotation.geometry, {
+          type: TYPE,
+          x: width > 0 ? anchorX : newX,
+          y: height > 0 ? anchorY : newY,
+          width: Math.abs(width),
+          height: Math.abs(height)
+        })
+      });
+    }
+
+    return annotation;
+  }
+};
+
+/* harmony default export */ var RectangleSelector = ({
+  TYPE: TYPE,
+  intersects: intersects,
+  area: RectangleSelector_area,
+  methods: methods
+});
+// CONCATENATED MODULE: ./src/hocs/PointSelector.js
+var PointSelector_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var MARGIN = 6;
+
+var PointSelector_getCoordPercentage = function getCoordPercentage(e) {
+  return {
+    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
+    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
+  };
+};
+
+var marginToPercentage = function marginToPercentage(container) {
+  return {
+    marginX: MARGIN / container.width * 100,
+    marginY: MARGIN / container.height * 100
+  };
+};
+
+var PointSelector_TYPE = 'POINT';
+
+function PointSelector_intersects(_ref, geometry, container) {
+  var x = _ref.x,
+      y = _ref.y;
+
+  var _marginToPercentage = marginToPercentage(container),
+      marginX = _marginToPercentage.marginX,
+      marginY = _marginToPercentage.marginY;
+
+  if (x < geometry.x - marginX) return false;
+  if (y < geometry.y - marginY) return false;
+  if (x > geometry.x + marginX) return false;
+  if (y > geometry.y + marginY) return false;
+
+  return true;
+}
+
+function PointSelector_area(geometry, container) {
+  var _marginToPercentage2 = marginToPercentage(container),
+      marginX = _marginToPercentage2.marginX,
+      marginY = _marginToPercentage2.marginY;
+
+  return marginX * marginY;
+}
+
+var PointSelector_methods = {
+  onClick: function onClick(annotation, e) {
+    if (!annotation.geometry) {
+      return PointSelector_extends({}, annotation, {
+        selection: PointSelector_extends({}, annotation.selection, {
+          showEditor: true,
+          mode: 'EDITING'
+        }),
+        geometry: PointSelector_extends({}, annotation.geometry, PointSelector_getCoordPercentage(e), {
+          width: 0,
+          height: 0,
+          type: PointSelector_TYPE
+        })
+      });
+    } else {
+      return {};
+    }
+  }
+};
+
+/* harmony default export */ var PointSelector = ({
+  TYPE: PointSelector_TYPE,
+  intersects: PointSelector_intersects,
+  area: PointSelector_area,
+  methods: PointSelector_methods
+});
+// CONCATENATED MODULE: ./src/hocs/OvalSelector.js
+var OvalSelector_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var square = function square(n) {
+  return Math.pow(n, 2);
+};
+
+var OvalSelector_getCoordPercentage = function getCoordPercentage(e) {
+  return {
+    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
+    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
+  };
+};
+
+var OvalSelector_TYPE = 'OVAL';
+
+function OvalSelector_intersects(_ref, geometry) {
+  var x = _ref.x,
+      y = _ref.y;
+
+  var rx = geometry.width / 2;
+  var ry = geometry.height / 2;
+  var h = geometry.x + rx;
+  var k = geometry.y + ry;
+
+  var value = square(x - h) / square(rx) + square(y - k) / square(ry);
+
+  return value <= 1;
+}
+
+function OvalSelector_area(geometry) {
+  var rx = geometry.width / 2;
+  var ry = geometry.height / 2;
+
+  return Math.PI * rx * ry;
+}
+
+var OvalSelector_methods = {
+  onMouseDown: function onMouseDown(annotation, e) {
+    if (!annotation.selection) {
+      var _getCoordPercentage = OvalSelector_getCoordPercentage(e),
+          anchorX = _getCoordPercentage.x,
+          anchorY = _getCoordPercentage.y;
+
+      return OvalSelector_extends({}, annotation, {
+        selection: OvalSelector_extends({}, annotation.selection, {
+          mode: 'SELECTING',
+          anchorX: anchorX,
+          anchorY: anchorY
+        })
+      });
+    } else {
+      return {};
+    }
+
+    return annotation;
+  },
+  onMouseUp: function onMouseUp(annotation, e) {
+    if (annotation.selection) {
+      var selection = annotation.selection,
+          geometry = annotation.geometry;
+
+
+      if (!geometry) {
+        return {};
+      }
+
+      switch (annotation.selection.mode) {
+        case 'SELECTING':
+          return OvalSelector_extends({}, annotation, {
+            selection: OvalSelector_extends({}, annotation.selection, {
+              showEditor: true,
+              mode: 'EDITING'
+            })
+          });
+        default:
+          break;
+      }
+    }
+
+    return annotation;
+  },
+  onMouseMove: function onMouseMove(annotation, e) {
+    if (annotation.selection && annotation.selection.mode === 'SELECTING') {
+      var _annotation$selection = annotation.selection,
+          anchorX = _annotation$selection.anchorX,
+          anchorY = _annotation$selection.anchorY;
+
+      var _getCoordPercentage2 = OvalSelector_getCoordPercentage(e),
+          newX = _getCoordPercentage2.x,
+          newY = _getCoordPercentage2.y;
+
+      var width = newX - anchorX;
+      var height = newY - anchorY;
+
+      return OvalSelector_extends({}, annotation, {
+        geometry: OvalSelector_extends({}, annotation.geometry, {
+          type: OvalSelector_TYPE,
+          x: width > 0 ? anchorX : newX,
+          y: height > 0 ? anchorY : newY,
+          width: Math.abs(width),
+          height: Math.abs(height)
+        })
+      });
+    }
+
+    return annotation;
+  }
+};
+
+/* harmony default export */ var OvalSelector = ({
+  TYPE: OvalSelector_TYPE,
+  intersects: OvalSelector_intersects,
+  area: OvalSelector_area,
+  methods: OvalSelector_methods
+});
+// EXTERNAL MODULE: ./node_modules/polygon-tools/lib/index.js
+var lib = __webpack_require__(10);
+
+// CONCATENATED MODULE: ./src/utils/pointsUtils.js
+/*
+ * This util file contains functions for getting different kinds of horizontal/vertical
+ * points given an array of points (e.g.: [{x: 4, y: 87}, {x: 99, y:7}, ...]).
+ */
+
+/*
+ * This function returns the horizontally central x-value (number return type), defined
+ * as the mean of the smallest and largest x-values.
+ */
+function getHorizontallyCentralPoint(points) {
+  var leftMostHorizontalPoint = points.reduce(function (prev, curr) {
+    return curr.x < prev.x ? curr : prev;
+  }).x;
+  var rightMostHorizontalPoint = points.reduce(function (prev, curr) {
+    return curr.x > prev.x ? curr : prev;
+  }).x;
+
+  return leftMostHorizontalPoint + Math.round((rightMostHorizontalPoint - leftMostHorizontalPoint) / 2);
+}
+
+/*
+ * This function returns the vertically lowest y-value (number return type), defined
+ * as the largest y-value.
+ */
+function getVerticallyLowestPoint(points) {
+  return points.reduce(function (prev, curr) {
+    return curr.y > prev.y ? curr : prev;
+  }).y;
+}
+// CONCATENATED MODULE: ./src/hocs/PolygonSelector.js
+var PolygonSelector_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var PolygonLookup = __webpack_require__(21);
+
+
+
+
+var PolygonSelector_getCoordPercentage = function getCoordPercentage(e) {
+  return {
+    x: e.nativeEvent.offsetX / e.currentTarget.offsetWidth * 100,
+    y: e.nativeEvent.offsetY / e.currentTarget.offsetHeight * 100
+  };
+};
+
+var PolygonSelector_TYPE = 'POLYGON';
+
+/* 
+ * This function checks if the argument pointToCheck exists on the line created between pointA and pointB.
+ * All point arguments are represented as two element arrays (e.g.: [10, 15]).
+ */
+function isPointOnLine(pointA, pointB, pointToCheck) {
+  return Math.hypot(pointToCheck[0] - pointA[0], pointToCheck[1] - pointA[1]) + Math.hypot(pointB[0] - pointToCheck[0], pointB[1] - pointToCheck[1]) === Math.hypot(pointB[0] - pointA[0], pointB[1] - pointA[1]);
+}
+
+/* 
+ * This function checks if the point [x, y] exists on the edge of the polygon created by points polygonPoints.
+ * The argument polygonPoints is an array of objects (e.g.: [{x: 10, y: 15}, ...]).
+ */
+function isPointOnPolygonEdge(_ref, polygonPoints) {
+  var x = _ref.x,
+      y = _ref.y;
+
+  if (!polygonPoints || polygonPoints.length < 3 || !x || !y) {
+    return false;
+  }
+
+  for (var i = 0; i < polygonPoints.length - 1; ++i) {
+    if (i === 0) {
+      // First point
+      if (isPointOnLine(polygonPoints[0], polygonPoints[polygonPoints.length - 1], [x, y])) {
+        return true;
+      }
+    } else {
+      if (isPointOnLine(polygonPoints[i], polygonPoints[i + 1], [x, y])) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function PolygonSelector_intersects(_ref2, geometry) {
+  var x = _ref2.x,
+      y = _ref2.y;
+
+  if (!geometry || !geometry.points || geometry.points.length < 3) return false;
+
+  // Switch to point array format (e.g.: [{x: 10, y: 15}, ...] -> [[10, 15], ...])
+  var pointsAsArrays = geometry.points.map(function (point) {
+    return [point.x, point.y];
+  });
+
+  // Setup GeoJSON json format
+  var featureCollection = {
+    type: 'FeatureCollection',
+    features: [{
+      geometry: {
+        type: 'Polygon',
+        coordinates: [pointsAsArrays]
+      }
+    }]
+
+    // Determine if point is inside polygon
+  };var lookup = new PolygonLookup(featureCollection);
+  var poly = lookup.search(x, y);
+
+  // Return whether the point is inside the polygon (poly equals undefined if not) or if the
+  // point is on the edge (isPointOnPolygonEdge function call)
+  return poly !== undefined || isPointOnPolygonEdge({ x: x, y: y }, pointsAsArrays);
+}
+
+function PolygonSelector_area(geometry) {
+  if (!geometry || !geometry.points || geometry.points.length < 3) return 0;
+
+  return lib["polygon"].area(geometry.points.map(function (point) {
+    return [point.x, point.y];
+  }));
+}
+
+var PolygonSelector_methods = {
+  onSelectionComplete: function onSelectionComplete(annotation) {
+    return PolygonSelector_extends({}, annotation, {
+      selection: PolygonSelector_extends({}, annotation.selection, {
+        showEditor: true,
+        mode: 'EDITING'
+      })
+    });
+  },
+  onSelectionClear: function onSelectionClear(annotation) {
+    return PolygonSelector_extends({}, annotation, {
+      geometry: PolygonSelector_extends({}, annotation.geometry, {
+        points: []
+      })
+    });
+  },
+  onSelectionUndo: function onSelectionUndo(annotation) {
+    return PolygonSelector_extends({}, annotation, {
+      geometry: PolygonSelector_extends({}, annotation.geometry, {
+        points: annotation.geometry.points.slice(0, -1)
+      })
+    });
+  },
+  onClick: function onClick(annotation, e) {
+    var coordOfClick = PolygonSelector_getCoordPercentage(e);
+
+    return PolygonSelector_extends({}, annotation, {
+      geometry: PolygonSelector_extends({}, annotation.geometry, {
+        type: PolygonSelector_TYPE,
+        points: !annotation.geometry ? [coordOfClick] : [].concat(annotation.geometry.points, [coordOfClick])
+      }),
+      selection: PolygonSelector_extends({}, annotation.selection, {
+        mode: 'SELECTING'
+      })
+    });
+  }
+};
+
+/* harmony default export */ var PolygonSelector = ({
+  TYPE: PolygonSelector_TYPE,
+  intersects: PolygonSelector_intersects,
+  area: PolygonSelector_area,
+  methods: PolygonSelector_methods
+});
+// CONCATENATED MODULE: ./src/selectors.js
+
+
+
+
+// CONCATENATED MODULE: ./src/components/Point/index.js
 var _templateObject = _taggedTemplateLiteralLoose(['\n  border: solid 3px white;\n  border-radius: 50%;\n  box-sizing: border-box;\n  box-shadow:\n    0 0 0 1px rgba(0,0,0,0.3),\n    0 0 0 2px rgba(0,0,0,0.2),\n    0 5px 4px rgba(0,0,0,0.4);\n  height: 16px;\n  position: absolute;\n  transform: translate3d(-50%, -50%, 0);\n  width: 16px;\n'], ['\n  border: solid 3px white;\n  border-radius: 50%;\n  box-sizing: border-box;\n  box-shadow:\n    0 0 0 1px rgba(0,0,0,0.3),\n    0 0 0 2px rgba(0,0,0,0.2),\n    0 5px 4px rgba(0,0,0,0.4);\n  height: 16px;\n  position: absolute;\n  transform: translate3d(-50%, -50%, 0);\n  width: 16px;\n']);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
@@ -25996,14 +24982,14 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
+var Container = styled_components_browser_esm["a" /* default */].div(_templateObject);
 
 function Point(props) {
   var geometry = props.annotation.geometry;
 
   if (!geometry) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Container, {
     style: {
       top: geometry.y + '%',
       left: geometry.x + '%'
@@ -26011,68 +24997,210 @@ function Point(props) {
   });
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Point);
+/* harmony default export */ var components_Point = (Point);
+// CONCATENATED MODULE: ./src/components/TextEditor/index.js
+var TextEditor_templateObject = TextEditor_taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n'], ['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n']),
+    _templateObject2 = TextEditor_taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
 
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TextEditor__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RadioButtonEditor__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_pointsUtils__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectors__ = __webpack_require__(2);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n'], ['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function TextEditor_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
+var Inner = styled_components_browser_esm["a" /* default */].div(TextEditor_templateObject);
+
+var Button = styled_components_browser_esm["a" /* default */].div(_templateObject2);
+
+function TextEditor(props) {
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment,
+    null,
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      Inner,
+      null,
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('textarea', {
+        placeholder: 'Write description',
+        onFocus: props.onFocus,
+        onBlur: props.onBlur,
+        onChange: props.onChange,
+        value: props.value
+      })
+    ),
+    props.value && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      Button,
+      {
+        onClick: props.onSubmit
+      },
+      'Submit'
+    )
+  );
+}
+
+/* harmony default export */ var components_TextEditor = (TextEditor);
+// CONCATENATED MODULE: ./src/components/RadioButtonEditor/index.js
+var RadioButtonEditor_templateObject = RadioButtonEditor_taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n  color: #363636!important;\n'], ['\n  padding: 8px 16px;\n  color: #363636!important;\n']),
+    RadioButtonEditor_templateObject2 = RadioButtonEditor_taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
+
+function RadioButtonEditor_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
-var fadeInScale = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* keyframes */])(_templateObject);
+var RadioButtonEditor_Inner = styled_components_browser_esm["a" /* default */].div(RadioButtonEditor_templateObject);
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject2, fadeInScale);
+var RadioButtonEditor_Button = styled_components_browser_esm["a" /* default */].div(RadioButtonEditor_templateObject2);
+
+function RadioButtonEditor(props) {
+  var zoomBetweenZeroAndOne = Math.abs((props.imageZoomAmount - 1) / 4 - 1);
+
+  var fontSize = 1 / 5 + zoomBetweenZeroAndOne * (4 / 5);
+
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment,
+    null,
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      RadioButtonEditor_Inner,
+      { style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' } },
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'h6',
+          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
+          ' - Coffee Age - '
+        )
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'label',
+          null,
+          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
+            name: 'age',
+            value: 'young',
+            checked: props.ageValue === 'young',
+            onChange: props.onChangeAge
+          }),
+          ' Young'
+        )
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'label',
+          null,
+          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
+            name: 'age',
+            value: 'mature',
+            checked: props.ageValue === 'mature',
+            onChange: props.onChangeAge
+          }),
+          ' Mature'
+        )
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'h6',
+          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
+          ' - Renovation Type - '
+        )
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'label',
+          null,
+          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
+            name: 'renovationType',
+            value: 'esqueletomento',
+            checked: props.renovationTypeValue === 'esqueletomento',
+            onChange: props.onChangeRenovationType
+          }),
+          ' Esquele.'
+        )
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          'label',
+          null,
+          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
+            name: 'renovationType',
+            value: 'recepa',
+            checked: props.renovationTypeValue === 'recepa',
+            onChange: props.onChangeRenovationType
+          }),
+          ' Recepa'
+        )
+      )
+    ),
+    props.ageValue && props.ageValue.length > 0 && props.renovationTypeValue && props.renovationTypeValue.length > 0 && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      RadioButtonEditor_Button,
+      {
+        onClick: props.onSubmit,
+        style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
+      },
+      'Submit'
+    )
+  );
+}
+
+/* harmony default export */ var components_RadioButtonEditor = (RadioButtonEditor);
+// CONCATENATED MODULE: ./src/components/Editor/index.js
+var Editor_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var Editor_templateObject = Editor_taggedTemplateLiteralLoose(['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n'], ['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n']),
+    Editor_templateObject2 = Editor_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n']);
+
+function Editor_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+var fadeInScale = Object(styled_components_browser_esm["b" /* keyframes */])(Editor_templateObject);
+
+var Editor_Container = styled_components_browser_esm["a" /* default */].div(Editor_templateObject2, fadeInScale);
 
 function Editor(props) {
   var geometry = props.annotation.geometry;
 
   if (!geometry) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     {
       className: props.className,
-      style: _extends({
+      style: Editor_extends({
         position: 'absolute',
-        left: geometry.type === __WEBPACK_IMPORTED_MODULE_5__selectors__["c" /* PolygonSelector */].TYPE ? Object(__WEBPACK_IMPORTED_MODULE_4__utils_pointsUtils__["a" /* getHorizontallyCentralPoint */])(geometry.points) + '%' : geometry.x + '%',
-        top: geometry.type === __WEBPACK_IMPORTED_MODULE_5__selectors__["c" /* PolygonSelector */].TYPE ? Object(__WEBPACK_IMPORTED_MODULE_4__utils_pointsUtils__["b" /* getVerticallyLowestPoint */])(geometry.points) + '%' : geometry.y + geometry.height + '%',
+        left: geometry.type === PolygonSelector.TYPE ? getHorizontallyCentralPoint(geometry.points) + '%' : geometry.x + '%',
+        top: geometry.type === PolygonSelector.TYPE ? getVerticallyLowestPoint(geometry.points) + '%' : geometry.y + geometry.height + '%',
         zIndex: 999
       }, props.style)
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Container,
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      Editor_Container,
       null,
-      geometry.type === __WEBPACK_IMPORTED_MODULE_5__selectors__["c" /* PolygonSelector */].TYPE && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__RadioButtonEditor__["a" /* default */], {
+      geometry.type === PolygonSelector.TYPE && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_RadioButtonEditor, {
         onChangeAge: function onChangeAge(e) {
-          return props.onChange(_extends({}, props.annotation, {
-            data: _extends({}, props.annotation.data, {
+          return props.onChange(Editor_extends({}, props.annotation, {
+            data: Editor_extends({}, props.annotation.data, {
               age: e.target.value
             })
           }));
         },
         onChangeRenovationType: function onChangeRenovationType(e) {
-          return props.onChange(_extends({}, props.annotation, {
-            data: _extends({}, props.annotation.data, {
+          return props.onChange(Editor_extends({}, props.annotation, {
+            data: Editor_extends({}, props.annotation.data, {
               renovationType: e.target.value
             })
           }));
@@ -26082,10 +25210,10 @@ function Editor(props) {
         renovationTypeValue: props.annotation.data && props.annotation.data.renovationType,
         imageZoomAmount: props.imageZoomAmount
       }),
-      geometry.type !== __WEBPACK_IMPORTED_MODULE_5__selectors__["c" /* PolygonSelector */].TYPE && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__TextEditor__["a" /* default */], {
+      geometry.type !== PolygonSelector.TYPE && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_TextEditor, {
         onChange: function onChange(e) {
-          return props.onChange(_extends({}, props.annotation, {
-            data: _extends({}, props.annotation.data, {
+          return props.onChange(Editor_extends({}, props.annotation, {
+            data: Editor_extends({}, props.annotation.data, {
               text: e.target.value
             })
           }));
@@ -26102,207 +25230,28 @@ Editor.defaultProps = {
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Editor);
+/* harmony default export */ var components_Editor = (Editor);
+// CONCATENATED MODULE: ./src/components/PolygonControls/index.js
+var PolygonControls_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-/***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+var PolygonControls_templateObject = PolygonControls_taggedTemplateLiteralLoose(['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n'], ['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n']),
+    PolygonControls_templateObject2 = PolygonControls_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  transform-origin: top left;\n\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  transform-origin: top left;\n\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n']),
+    _templateObject3 = PolygonControls_taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _templateObject = _taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n'], ['\n  padding: 8px 16px;\n\n  textarea {\n    border: 0;\n    font-size: 14px;\n    margin: 6px 0;\n    min-height: 60px;\n    outline: 0;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-var Inner = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
-
-var Button = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject2);
-
-function TextEditor(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment,
-    null,
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Inner,
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', {
-        placeholder: 'Write description',
-        onFocus: props.onFocus,
-        onBlur: props.onBlur,
-        onChange: props.onChange,
-        value: props.value
-      })
-    ),
-    props.value && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Button,
-      {
-        onClick: props.onSubmit
-      },
-      'Submit'
-    )
-  );
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (TextEditor);
-
-/***/ }),
-/* 49 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _templateObject = _taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n  color: #363636!important;\n'], ['\n  padding: 8px 16px;\n  color: #363636!important;\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-var Inner = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
-
-var Button = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject2);
-
-function RadioButtonEditor(props) {
-  var zoomBetweenZeroAndOne = Math.abs((props.imageZoomAmount - 1) / 4 - 1);
-
-  var fontSize = 1 / 5 + zoomBetweenZeroAndOne * (4 / 5);
-
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment,
-    null,
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Inner,
-      { style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' } },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h6',
-          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
-          ' - Coffee Age - '
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'radio',
-            name: 'age',
-            value: 'young',
-            checked: props.ageValue === 'young',
-            onChange: props.onChangeAge
-          }),
-          ' Young'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'radio',
-            name: 'age',
-            value: 'mature',
-            checked: props.ageValue === 'mature',
-            onChange: props.onChangeAge
-          }),
-          ' Mature'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h6',
-          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
-          ' - Renovation Type - '
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'radio',
-            name: 'renovationType',
-            value: 'esqueletomento',
-            checked: props.renovationTypeValue === 'esqueletomento',
-            onChange: props.onChangeRenovationType
-          }),
-          ' Esquele.'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'label',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'radio',
-            name: 'renovationType',
-            value: 'recepa',
-            checked: props.renovationTypeValue === 'recepa',
-            onChange: props.onChangeRenovationType
-          }),
-          ' Recepa'
-        )
-      )
-    ),
-    props.ageValue && props.ageValue.length > 0 && props.renovationTypeValue && props.renovationTypeValue.length > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Button,
-      {
-        onClick: props.onSubmit,
-        style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
-      },
-      'Submit'
-    )
-  );
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (RadioButtonEditor);
-
-/***/ }),
-/* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__ = __webpack_require__(3);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n'], ['\n  from {\n    opacity: 0;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 1;\n    transform: scale(1);\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  transform-origin: top left;\n\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  transform-origin: top left;\n\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n']),
-    _templateObject3 = _taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function PolygonControls_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
 
-var fadeInScale = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* keyframes */])(_templateObject);
+var PolygonControls_fadeInScale = Object(styled_components_browser_esm["b" /* keyframes */])(PolygonControls_templateObject);
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject2, fadeInScale);
+var PolygonControls_Container = styled_components_browser_esm["a" /* default */].div(PolygonControls_templateObject2, PolygonControls_fadeInScale);
 //  margin-left: -50%;
 //  margin-right: 50%
 //`
 
-var Button = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject3);
+var PolygonControls_Button = styled_components_browser_esm["a" /* default */].div(_templateObject3);
 
 function PolygonControls(props) {
   var geometry = props.annotation.geometry;
@@ -26316,38 +25265,38 @@ function PolygonControls(props) {
   var paddingHorizontal = 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne;
   var paddingVertical = 1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     {
-      style: _extends({
+      style: PolygonControls_extends({
         position: 'absolute',
-        left: Object(__WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__["a" /* getHorizontallyCentralPoint */])(geometry.points) + '%',
-        top: Object(__WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__["b" /* getVerticallyLowestPoint */])(geometry.points) + (10 * (1 / 5) + 10 * (4 / 5) * zoomBetweenZeroAndOne) + '%'
+        left: getHorizontallyCentralPoint(geometry.points) + '%',
+        top: getVerticallyLowestPoint(geometry.points) + (10 * (1 / 5) + 10 * (4 / 5) * zoomBetweenZeroAndOne) + '%'
       }, props.style)
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Container,
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      PolygonControls_Container,
       {
         className: props.className
       },
-      geometry.points.length >= 2 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        Button,
+      geometry.points.length >= 2 && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        PolygonControls_Button,
         {
           onClick: props.onSelectionUndo,
           style: { fontSize: fontSize + 'rem', padding: paddingHorizontal + 'px ' + paddingVertical + 'px' }
         },
         'Undo'
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        Button,
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        PolygonControls_Button,
         {
           onClick: props.onSelectionClear,
           style: { fontSize: fontSize + 'rem', padding: paddingHorizontal + 'px ' + paddingVertical + 'px' }
         },
         'Clear'
       ),
-      geometry.points.length >= 3 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        Button,
+      geometry.points.length >= 3 && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        PolygonControls_Button,
         {
           onClick: props.onSelectionComplete,
           style: { fontSize: fontSize + 'rem', padding: paddingHorizontal + 'px ' + paddingVertical + 'px' }
@@ -26363,27 +25312,19 @@ PolygonControls.defaultProps = {
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (PolygonControls);
+/* harmony default export */ var components_PolygonControls = (PolygonControls);
+// CONCATENATED MODULE: ./src/components/FancyRectangle/index.js
+var FancyRectangle_templateObject = FancyRectangle_taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n']),
+    FancyRectangle_templateObject2 = FancyRectangle_taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
 
-/***/ }),
-/* 51 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function FancyRectangle_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
-var Box = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
+var Box = styled_components_browser_esm["a" /* default */].div(FancyRectangle_templateObject);
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject2);
+var FancyRectangle_Container = styled_components_browser_esm["a" /* default */].div(FancyRectangle_templateObject2);
 
 function FancyRectangle(props) {
   var geometry = props.annotation.geometry;
@@ -26391,26 +25332,26 @@ function FancyRectangle(props) {
 
   if (!geometry) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    Container,
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+    FancyRectangle_Container,
     {
       className: props.className,
       style: props.style
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Box, {
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Box, {
       style: {
         height: geometry.y + '%',
         width: '100%'
       }
     }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Box, {
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Box, {
       style: {
         top: geometry.y + '%',
         height: geometry.height + '%',
         width: geometry.x + '%'
       }
     }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Box, {
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Box, {
       style: {
         top: geometry.y + '%',
         left: geometry.x + geometry.width + '%',
@@ -26418,7 +25359,7 @@ function FancyRectangle(props) {
         width: 100 - (geometry.x + geometry.width) + '%'
       }
     }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Box, {
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Box, {
       style: {
         top: geometry.y + geometry.height + '%',
         height: 100 - (geometry.y + geometry.height) + '%',
@@ -26433,35 +25374,27 @@ FancyRectangle.defaultProps = {
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (FancyRectangle);
+/* harmony default export */ var components_FancyRectangle = (FancyRectangle);
+// CONCATENATED MODULE: ./src/components/Rectangle/index.js
+var Rectangle_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-/***/ }),
-/* 52 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+var Rectangle_templateObject = Rectangle_taggedTemplateLiteralLoose(['\n  border: dashed 2px black;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n'], ['\n  border: dashed 2px black;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n']);
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  border: dashed 2px black;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n'], ['\n  border: dashed 2px black;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function Rectangle_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
+var Rectangle_Container = styled_components_browser_esm["a" /* default */].div(Rectangle_templateObject);
 
 function Rectangle(props) {
   var geometry = props.annotation.geometry;
 
   if (!geometry) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Rectangle_Container, {
     className: props.className,
-    style: _extends({
+    style: Rectangle_extends({
       position: 'absolute',
       left: geometry.x + '%',
       top: geometry.y + '%',
@@ -26477,35 +25410,27 @@ Rectangle.defaultProps = {
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Rectangle);
+/* harmony default export */ var components_Rectangle = (Rectangle);
+// CONCATENATED MODULE: ./src/components/Oval/index.js
+var Oval_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-/***/ }),
-/* 53 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+var Oval_templateObject = Oval_taggedTemplateLiteralLoose(['\n  border: dashed 2px black;\n  border-radius: 100%;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n'], ['\n  border: dashed 2px black;\n  border-radius: 100%;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n']);
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  border: dashed 2px black;\n  border-radius: 100%;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n'], ['\n  border: dashed 2px black;\n  border-radius: 100%;\n  box-shadow: 0px 0px 1px 1px white inset;\n  box-sizing: border-box;\n  transition: box-shadow 0.21s ease-in-out;\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function Oval_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
+var Oval_Container = styled_components_browser_esm["a" /* default */].div(Oval_templateObject);
 
 function Oval(props) {
   var geometry = props.annotation.geometry;
 
   if (!geometry) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Oval_Container, {
     className: props.className,
-    style: _extends({
+    style: Oval_extends({
       position: 'absolute',
       left: geometry.x + '%',
       top: geometry.y + '%',
@@ -26521,32 +25446,27 @@ Oval.defaultProps = {
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Oval);
+/* harmony default export */ var components_Oval = (Oval);
+// EXTERNAL MODULE: ./node_modules/react-lineto/dist/react-lineto.js
+var react_lineto = __webpack_require__(11);
+var react_lineto_default = /*#__PURE__*/__webpack_require__.n(react_lineto);
 
-/***/ }),
-/* 54 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+// EXTERNAL MODULE: ./src/components/Polygon/index.css
+var Polygon = __webpack_require__(31);
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_lineto__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_lineto___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_lineto__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__index_css__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+// CONCATENATED MODULE: ./src/components/Polygon/index.js
+var Polygon_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n'], ['\n  background: white;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n']);
+var Polygon_templateObject = Polygon_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n'], ['\n  background: white;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n']);
 
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+function Polygon_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
 
 
 
 
 
-var PointDot = __WEBPACK_IMPORTED_MODULE_2_styled_components__["a" /* default */].div(_templateObject);
+var PointDot = styled_components_browser_esm["a" /* default */].div(Polygon_templateObject);
 
 function edgesFromPoints(points) {
   if (!points || points.length < 3) return [];
@@ -26563,16 +25483,16 @@ function edgesFromPoints(points) {
   return edges;
 }
 
-function Polygon(props) {
+function Polygon_Polygon(props) {
   var geometry = props.annotation.geometry;
 
   if (!geometry || !geometry.points || geometry.points.length === 0) return null;
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     {
       className: 'linesContainer ' + props.className,
-      style: _extends({
+      style: Polygon_extends({
         width: '100%',
         height: '100%'
       }, props.style)
@@ -26588,7 +25508,7 @@ function Polygon(props) {
       }
       return (
         // Note that each LineTo element must have a unique key (unique relative to the connected points)
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_lineto___default.a, {
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(react_lineto_default.a, {
           key: i + "_" + item.x + "_" + item.y + "_" + prevItem.x + "_" + prevItem.y,
           from: 'linesContainer',
           fromAnchor: item.x + "% " + item.y + "%",
@@ -26605,7 +25525,7 @@ function Polygon(props) {
       // Iterate over points to points
       return (
         // Note that each LineTo element must have a unique key (unique relative to the point)
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PointDot, {
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PointDot, {
           key: i + "_" + item.x + "_" + item.y,
           style: {
             left: item.x + "% ",
@@ -26617,591 +25537,25 @@ function Polygon(props) {
   );
 }
 
-Polygon.defaultProps = {
+Polygon_Polygon.defaultProps = {
   className: '',
   style: {}
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Polygon);
+/* harmony default export */ var components_Polygon = (Polygon_Polygon);
+// CONCATENATED MODULE: ./src/components/Content/index.js
+var Content_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
+var Content_templateObject = Content_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n']);
 
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory(__webpack_require__(4), __webpack_require__(0));
-	else if(typeof define === 'function' && define.amd)
-		define("react-lineto", ["prop-types", "react"], factory);
-	else if(typeof exports === 'object')
-		exports["react-lineto"] = factory(require("prop-types"), require("react"));
-	else
-		root["react-lineto"] = factory(root["prop-types"], root["react"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+function Content_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.SteppedLine = exports.Line = exports.SteppedLineTo = undefined;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _propTypes = __webpack_require__(0);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var defaultAnchor = { x: 0.5, y: 0.5 };
-var defaultBorderColor = '#f00';
-var defaultBorderStyle = 'solid';
-var defaultBorderWidth = 1;
-
-var optionalStyleProps = {
-    borderColor: _propTypes2.default.string,
-    borderStyle: _propTypes2.default.string,
-    borderWidth: _propTypes2.default.number,
-    className: _propTypes2.default.string,
-    zIndex: _propTypes2.default.number
-};
-
-var LineTo = function (_Component) {
-    _inherits(LineTo, _Component);
-
-    function LineTo() {
-        _classCallCheck(this, LineTo);
-
-        return _possibleConstructorReturn(this, (LineTo.__proto__ || Object.getPrototypeOf(LineTo)).apply(this, arguments));
-    }
-
-    _createClass(LineTo, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            this.fromAnchor = this.parseAnchor(this.props.fromAnchor);
-            this.toAnchor = this.parseAnchor(this.props.toAnchor);
-            this.delay = this.parseDelay(this.props.delay);
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.delay = this.parseDelay(this.props.delay);
-            if (typeof this.delay !== 'undefined') {
-                this.deferUpdate(this.delay);
-            }
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            if (nextProps.fromAnchor !== this.props.fromAnchor) {
-                this.fromAnchor = this.parseAnchor(this.props.fromAnchor);
-            }
-            if (nextProps.toAnchor !== this.props.toAnchor) {
-                this.toAnchor = this.parseAnchor(this.props.toAnchor);
-            }
-            this.delay = this.parseDelay(nextProps.delay);
-            if (typeof this.delay !== 'undefined') {
-                this.deferUpdate(this.delay);
-            }
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            if (this.t) {
-                clearTimeout(this.t);
-                this.t = null;
-            }
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate() {
-            // Always update component if the parent component has been updated.
-            // The reason for this is that we would not only like to update
-            // this component when the props have changed, but also when
-            // the position of our target elements has changed.
-            // We could return true only if the positions of `from` and `to` have
-            // changed, but that may be expensive and unnecessary.
-            return true;
-        }
-
-        // Forced update after delay (MS)
-
-    }, {
-        key: 'deferUpdate',
-        value: function deferUpdate(delay) {
-            var _this2 = this;
-
-            if (this.t) {
-                clearTimeout(this.t);
-            }
-            this.t = setTimeout(function () {
-                return _this2.forceUpdate();
-            }, delay);
-        }
-    }, {
-        key: 'parseDelay',
-        value: function parseDelay(value) {
-            if (typeof value === 'undefined') {
-                return value;
-            } else if (typeof value === 'boolean' && value) {
-                return 0;
-            }
-            var delay = parseInt(value, 10);
-            if (isNaN(delay) || !isFinite(delay)) {
-                throw new Error('LinkTo could not parse delay attribute "' + value + '"');
-            }
-            return delay;
-        }
-    }, {
-        key: 'parseAnchorPercent',
-        value: function parseAnchorPercent(value) {
-            var percent = parseFloat(value) / 100;
-            if (isNaN(percent) || !isFinite(percent)) {
-                throw new Error('LinkTo could not parse percent value "' + value + '"');
-            }
-            return percent;
-        }
-    }, {
-        key: 'parseAnchorText',
-        value: function parseAnchorText(value) {
-            // Try to infer the relevant axis.
-            switch (value) {
-                case 'top':
-                    return { y: 0 };
-                case 'left':
-                    return { x: 0 };
-                case 'middle':
-                    return { y: 0.5 };
-                case 'center':
-                    return { x: 0.5 };
-                case 'bottom':
-                    return { y: 1 };
-                case 'right':
-                    return { x: 1 };
-            }
-            return null;
-        }
-    }, {
-        key: 'parseAnchor',
-        value: function parseAnchor(value) {
-            if (!value) {
-                return defaultAnchor;
-            }
-            var parts = value.split(' ');
-            if (parts.length > 2) {
-                throw new Error('LinkTo anchor format is "<x> <y>"');
-            }
-
-            var _parts = _slicedToArray(parts, 2),
-                x = _parts[0],
-                y = _parts[1];
-
-            return Object.assign({}, defaultAnchor, x ? this.parseAnchorText(x) || { x: this.parseAnchorPercent(x) } : {}, y ? this.parseAnchorText(y) || { y: this.parseAnchorPercent(y) } : {});
-        }
-    }, {
-        key: 'findElement',
-        value: function findElement(className) {
-            return document.getElementsByClassName(className)[0];
-        }
-    }, {
-        key: 'detect',
-        value: function detect() {
-            var _props = this.props,
-                from = _props.from,
-                to = _props.to,
-                _props$within = _props.within,
-                within = _props$within === undefined ? '' : _props$within;
-
-
-            var a = this.findElement(from);
-            var b = this.findElement(to);
-
-            if (!a || !b) {
-                return false;
-            }
-
-            var anchor0 = this.fromAnchor;
-            var anchor1 = this.toAnchor;
-
-            var box0 = a.getBoundingClientRect();
-            var box1 = b.getBoundingClientRect();
-
-            var offsetX = window.pageXOffset;
-            var offsetY = window.pageYOffset;
-
-            if (within) {
-                var p = this.findElement(within);
-                var boxp = p.getBoundingClientRect();
-
-                offsetX -= boxp.left + (window.pageXOffset || document.documentElement.scrollLeft);
-                offsetY -= boxp.top + (window.pageYOffset || document.documentElement.scrollTop);
-            }
-
-            var x0 = box0.left + box0.width * anchor0.x + offsetX;
-            var x1 = box1.left + box1.width * anchor1.x + offsetX;
-            var y0 = box0.top + box0.height * anchor0.y + offsetY;
-            var y1 = box1.top + box1.height * anchor1.y + offsetY;
-
-            return { x0: x0, y0: y0, x1: x1, y1: y1 };
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var points = this.detect();
-            return points ? _react2.default.createElement(Line, _extends({}, points, this.props)) : null;
-        }
-    }]);
-
-    return LineTo;
-}(_react.Component);
-
-exports.default = LineTo;
-
-
-LineTo.propTypes = Object.assign({}, {
-    from: _propTypes2.default.string.isRequired,
-    to: _propTypes2.default.string.isRequired,
-    within: _propTypes2.default.string,
-    fromAnchor: _propTypes2.default.string,
-    toAnchor: _propTypes2.default.string,
-    delay: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
-}, optionalStyleProps);
-
-var SteppedLineTo = exports.SteppedLineTo = function (_LineTo) {
-    _inherits(SteppedLineTo, _LineTo);
-
-    function SteppedLineTo() {
-        _classCallCheck(this, SteppedLineTo);
-
-        return _possibleConstructorReturn(this, (SteppedLineTo.__proto__ || Object.getPrototypeOf(SteppedLineTo)).apply(this, arguments));
-    }
-
-    _createClass(SteppedLineTo, [{
-        key: 'render',
-        value: function render() {
-            var points = this.detect();
-            return points ? _react2.default.createElement(SteppedLine, _extends({}, points, this.props)) : null;
-        }
-    }]);
-
-    return SteppedLineTo;
-}(LineTo);
-
-var Line = exports.Line = function (_PureComponent) {
-    _inherits(Line, _PureComponent);
-
-    function Line() {
-        _classCallCheck(this, Line);
-
-        return _possibleConstructorReturn(this, (Line.__proto__ || Object.getPrototypeOf(Line)).apply(this, arguments));
-    }
-
-    _createClass(Line, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            // Append rendered DOM element to the container the
-            // offsets were calculated for
-            this.within.appendChild(this.el);
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            this.within.removeChild(this.el);
-        }
-    }, {
-        key: 'findElement',
-        value: function findElement(className) {
-            return document.getElementsByClassName(className)[0];
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this5 = this;
-
-            var _props2 = this.props,
-                x0 = _props2.x0,
-                y0 = _props2.y0,
-                x1 = _props2.x1,
-                y1 = _props2.y1,
-                _props2$within = _props2.within,
-                within = _props2$within === undefined ? '' : _props2$within;
-
-
-            this.within = within ? this.findElement(within) : document.body;
-
-            var dy = y1 - y0;
-            var dx = x1 - x0;
-
-            var angle = Math.atan2(dy, dx) * 180 / Math.PI;
-            var length = Math.sqrt(dx * dx + dy * dy);
-
-            var positionStyle = {
-                position: 'absolute',
-                top: y0 + 'px',
-                left: x0 + 'px',
-                width: length + 'px',
-                zIndex: Number.isFinite(this.props.zIndex) ? String(this.props.zIndex) : '1',
-                transform: 'rotate(' + angle + 'deg)',
-                // Rotate around (x0, y0)
-                transformOrigin: '0 0'
-            };
-
-            var defaultStyle = {
-                borderTopColor: this.props.borderColor || defaultBorderColor,
-                borderTopStyle: this.props.borderStyle || defaultBorderStyle,
-                borderTopWidth: this.props.borderWidth || defaultBorderWidth
-            };
-
-            var props = {
-                className: this.props.className,
-                style: Object.assign({}, defaultStyle, positionStyle)
-
-                // We need a wrapper element to prevent an exception when then
-                // React component is removed. This is because we manually
-                // move the rendered DOM element after creation.
-            };return _react2.default.createElement(
-                'div',
-                { className: 'react-lineto-placeholder' },
-                _react2.default.createElement('div', _extends({
-                    ref: function ref(el) {
-                        _this5.el = el;
-                    }
-                }, props))
-            );
-        }
-    }]);
-
-    return Line;
-}(_react.PureComponent);
-
-Line.propTypes = Object.assign({}, {
-    x0: _propTypes2.default.number.isRequired,
-    y0: _propTypes2.default.number.isRequired,
-    x1: _propTypes2.default.number.isRequired,
-    y1: _propTypes2.default.number.isRequired
-}, optionalStyleProps);
-
-var SteppedLine = exports.SteppedLine = function (_PureComponent2) {
-    _inherits(SteppedLine, _PureComponent2);
-
-    function SteppedLine() {
-        _classCallCheck(this, SteppedLine);
-
-        return _possibleConstructorReturn(this, (SteppedLine.__proto__ || Object.getPrototypeOf(SteppedLine)).apply(this, arguments));
-    }
-
-    _createClass(SteppedLine, [{
-        key: 'render',
-        value: function render() {
-            if (this.props.orientation === 'h') {
-                return this.renderHorizontal();
-            }
-            return this.renderVertical();
-        }
-    }, {
-        key: 'renderVertical',
-        value: function renderVertical() {
-            var _props3 = this.props,
-                x0 = _props3.x0,
-                y0 = _props3.y0,
-                x1 = _props3.x1,
-                y1 = _props3.y1;
-
-
-            var dx = x1 - x0;
-            if (dx === 0) {
-                return _react2.default.createElement(Line, this.props);
-            }
-
-            var borderWidth = this.props.borderWidth || defaultBorderWidth;
-            var y2 = (y0 + y1) / 2;
-
-            var xOffset = dx > 0 ? borderWidth : 0;
-            var minX = Math.min(x0, x1) - xOffset;
-            var maxX = Math.max(x0, x1);
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'react-steppedlineto' },
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: x0, y0: y0, x1: x0, y1: y2 })),
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: x1, y0: y1, x1: x1, y1: y2 })),
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: minX, y0: y2, x1: maxX, y1: y2 }))
-            );
-        }
-    }, {
-        key: 'renderHorizontal',
-        value: function renderHorizontal() {
-            var _props4 = this.props,
-                x0 = _props4.x0,
-                y0 = _props4.y0,
-                x1 = _props4.x1,
-                y1 = _props4.y1;
-
-
-            var dy = y1 - y0;
-            if (dy === 0) {
-                return _react2.default.createElement(Line, this.props);
-            }
-
-            var borderWidth = this.props.borderWidth || defaultBorderWidth;
-            var x2 = (x0 + x1) / 2;
-
-            var yOffset = dy < 0 ? borderWidth : 0;
-            var minY = Math.min(y0, y1) - yOffset;
-            var maxY = Math.max(y0, y1);
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'react-steppedlineto' },
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: x0, y0: y0, x1: x2, y1: y0 })),
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: x1, y0: y1, x1: x2, y1: y1 })),
-                _react2.default.createElement(Line, _extends({}, this.props, { x0: x2, y0: minY, x1: x2, y1: maxY }))
-            );
-        }
-    }]);
-
-    return SteppedLine;
-}(_react.PureComponent);
-
-SteppedLine.propTypes = Object.assign({}, {
-    x0: _propTypes2.default.number.isRequired,
-    y0: _propTypes2.default.number.isRequired,
-    x1: _propTypes2.default.number.isRequired,
-    y1: _propTypes2.default.number.isRequired,
-    orientation: _propTypes2.default.oneOf(['h', 'v'])
-}, optionalStyleProps);
-
-/***/ })
-/******/ ]);
-});
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 57 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__selectors__ = __webpack_require__(2);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n']);
-
-function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-
-
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject);
+var Content_Container = styled_components_browser_esm["a" /* default */].div(Content_templateObject);
 
 function Content(props) {
   var geometry = props.annotation.geometry;
@@ -27210,20 +25564,20 @@ function Content(props) {
 
   var zoomBetweenZeroAndOne = Math.abs((props.imageZoomAmount - 1) / 4 - 1);
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     {
-      style: _extends({
+      style: Content_extends({
         position: 'absolute',
-        left: geometry.type === __WEBPACK_IMPORTED_MODULE_3__selectors__["c" /* PolygonSelector */].TYPE ? Object(__WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__["a" /* getHorizontallyCentralPoint */])(geometry.points) + '%' : geometry.x + '%',
-        top: geometry.type === __WEBPACK_IMPORTED_MODULE_3__selectors__["c" /* PolygonSelector */].TYPE ? Object(__WEBPACK_IMPORTED_MODULE_2__utils_pointsUtils__["b" /* getVerticallyLowestPoint */])(geometry.points) + '%' : geometry.y + geometry.height + '%',
+        left: geometry.type === PolygonSelector.TYPE ? getHorizontallyCentralPoint(geometry.points) + '%' : geometry.x + '%',
+        top: geometry.type === PolygonSelector.TYPE ? getVerticallyLowestPoint(geometry.points) + '%' : geometry.y + geometry.height + '%',
         zIndex: 999
       }, props.style),
       className: props.className,
       geometry: geometry
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Container,
+    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      Content_Container,
       {
         style: { fontSize: 1 / 5 + zoomBetweenZeroAndOne * (4 / 5) + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
       },
@@ -27239,7 +25593,457 @@ Content.defaultProps = {
   className: ''
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Content);
+/* harmony default export */ var components_Content = (Content);
+// CONCATENATED MODULE: ./src/components/Overlay/index.js
+var Overlay_templateObject = Overlay_taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, .4);\n  border-radius: 5px;\n  bottom: 4px;\n  color: white;\n  font-size: 12px;\n  font-weight: bold;\n  opacity: 0;\n  padding: 10px;\n  pointer-events: none;\n  position: absolute;\n  right: 4px;\n  transition: opacity 0.21s ease-in-out;\n  user-select: none;\n'], ['\n  background: rgba(0, 0, 0, .4);\n  border-radius: 5px;\n  bottom: 4px;\n  color: white;\n  font-size: 12px;\n  font-weight: bold;\n  opacity: 0;\n  padding: 10px;\n  pointer-events: none;\n  position: absolute;\n  right: 4px;\n  transition: opacity 0.21s ease-in-out;\n  user-select: none;\n']);
+
+function Overlay_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+/* harmony default export */ var Overlay = (styled_components_browser_esm["a" /* default */].div(Overlay_templateObject));
+// CONCATENATED MODULE: ./src/components/defaultProps.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ var defaultProps = ({
+  innerRef: function innerRef() {},
+  onChange: function onChange() {},
+  onSubmit: function onSubmit() {},
+  type: RectangleSelector.TYPE,
+  selectors: [RectangleSelector, PointSelector, OvalSelector, PolygonSelector],
+  disableAnnotation: false,
+  disableSelector: false,
+  disableEditor: false,
+  disableOverlay: false,
+  imageZoomAmount: 1,
+  activeAnnotationComparator: function activeAnnotationComparator(a, b) {
+    return a === b;
+  },
+  renderSelector: function renderSelector(_ref) {
+    var annotation = _ref.annotation;
+
+    switch (annotation.geometry.type) {
+      case RectangleSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_FancyRectangle, {
+          annotation: annotation
+        });
+      case PointSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Point, {
+          annotation: annotation
+        });
+      case OvalSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Oval, {
+          annotation: annotation
+        });
+      case PolygonSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Polygon, {
+          annotation: annotation
+        });
+      default:
+        return null;
+    }
+  },
+  renderEditor: function renderEditor(_ref2) {
+    var annotation = _ref2.annotation,
+        onChange = _ref2.onChange,
+        onSubmit = _ref2.onSubmit,
+        imageZoomAmount = _ref2.imageZoomAmount;
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Editor, {
+      annotation: annotation,
+      onChange: onChange,
+      onSubmit: onSubmit,
+      imageZoomAmount: imageZoomAmount
+    });
+  },
+  renderPolygonControls: function renderPolygonControls(_ref3) {
+    var annotation = _ref3.annotation,
+        onSelectionComplete = _ref3.onSelectionComplete,
+        onSelectionClear = _ref3.onSelectionClear,
+        onSelectionUndo = _ref3.onSelectionUndo,
+        imageZoomAmount = _ref3.imageZoomAmount;
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_PolygonControls, {
+      annotation: annotation,
+      onSelectionComplete: onSelectionComplete,
+      onSelectionClear: onSelectionClear,
+      onSelectionUndo: onSelectionUndo,
+      imageZoomAmount: imageZoomAmount
+    });
+  },
+  renderHighlight: function renderHighlight(_ref4) {
+    var key = _ref4.key,
+        annotation = _ref4.annotation,
+        active = _ref4.active;
+
+    switch (annotation.geometry.type) {
+      case RectangleSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Rectangle, {
+          key: key,
+          annotation: annotation,
+          active: active
+        });
+      case PointSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Point, {
+          key: key,
+          annotation: annotation,
+          active: active
+        });
+      case OvalSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Oval, {
+          key: key,
+          annotation: annotation,
+          active: active
+        });
+      case PolygonSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Polygon, {
+          key: key,
+          annotation: annotation,
+          active: active
+        });
+      default:
+        return null;
+    }
+  },
+  renderContent: function renderContent(_ref5) {
+    var key = _ref5.key,
+        annotation = _ref5.annotation,
+        imageZoomAmount = _ref5.imageZoomAmount;
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Content, {
+      key: key,
+      annotation: annotation,
+      imageZoomAmount: imageZoomAmount
+    });
+  },
+  renderOverlay: function renderOverlay(_ref6) {
+    var type = _ref6.type,
+        annotation = _ref6.annotation;
+
+    switch (type) {
+      case PointSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          Overlay,
+          null,
+          'Click to Annotate'
+        );
+      case PolygonSelector.TYPE:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          Overlay,
+          null,
+          'Click to Add Points to Annotation'
+        );
+      default:
+        return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+          Overlay,
+          null,
+          'Click and Drag to Annotate'
+        );
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Annotation.js
+var _class, _temp2;
+
+var Annotation_templateObject = Annotation_taggedTemplateLiteralLoose(['\n  clear: both;\n  position: relative;\n  width: 100%;\n  &:hover ', ' {\n    opacity: 1;\n  }\n'], ['\n  clear: both;\n  position: relative;\n  width: 100%;\n  &:hover ', ' {\n    opacity: 1;\n  }\n']),
+    Annotation_templateObject2 = Annotation_taggedTemplateLiteralLoose(['\n  display: block;\n  width: 100%;\n'], ['\n  display: block;\n  width: 100%;\n']),
+    Annotation_templateObject3 = Annotation_taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
+
+function Annotation_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Annotation_possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function Annotation_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function Annotation_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Annotation_Container = styled_components_browser_esm["a" /* default */].div(Annotation_templateObject, Overlay);
+
+var Img = styled_components_browser_esm["a" /* default */].img(Annotation_templateObject2);
+
+var Items = styled_components_browser_esm["a" /* default */].div(Annotation_templateObject3);
+
+var Target = Items;
+
+/* harmony default export */ var components_Annotation = (compose(utils_isMouseHovering(), utils_withRelativeMousePos())((_temp2 = _class = function (_Component) {
+  Annotation_inherits(Annotation, _Component);
+
+  function Annotation() {
+    var _temp, _this, _ret;
+
+    Annotation_classCallCheck(this, Annotation);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = Annotation_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
+      window.addEventListener("resize", _this.forceUpdateComponent);
+    }, _this.componentWillUnmount = function () {
+      window.removeEventListener("resize", _this.forceUpdateComponent);
+    }, _this.forceUpdateComponent = function () {
+      _this.forceUpdate();
+    }, _this.componentDidUpdate = function (prevProps) {
+      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
+        _this.forceUpdateComponent();
+      }
+    }, _this.setInnerRef = function (el) {
+      _this.container = el;
+      _this.props.relativeMousePos.innerRef(el);
+      _this.props.innerRef(el);
+    }, _this.getSelectorByType = function (type) {
+      return _this.props.selectors.find(function (s) {
+        return s.TYPE === type;
+      });
+    }, _this.getTopAnnotationAt = function (x, y) {
+      var annotations = _this.props.annotations;
+      var _this2 = _this,
+          container = _this2.container,
+          getSelectorByType = _this2.getSelectorByType;
+
+
+      if (!container) return;
+
+      var intersections = annotations.map(function (annotation) {
+        var geometry = annotation.geometry;
+
+        var selector = getSelectorByType(geometry.type);
+
+        return selector.intersects({ x: x, y: y }, geometry, container) ? annotation : false;
+      }).filter(function (a) {
+        return !!a;
+      }).sort(function (a, b) {
+        var aSelector = getSelectorByType(a.geometry.type);
+        var bSelector = getSelectorByType(b.geometry.type);
+
+        return aSelector.area(a.geometry, container) - bSelector.area(b.geometry, container);
+      });
+
+      return intersections[0];
+    }, _this.onTargetMouseMove = function (e) {
+      _this.props.relativeMousePos.onMouseMove(e);
+      _this.onMouseMove(e);
+    }, _this.onTargetMouseLeave = function (e) {
+      _this.props.relativeMousePos.onMouseLeave(e);
+    }, _this.onMouseUp = function (e) {
+      return _this.callSelectorMethod('onMouseUp', e);
+    }, _this.onMouseDown = function (e) {
+      return _this.callSelectorMethod('onMouseDown', e);
+    }, _this.onMouseMove = function (e) {
+      return _this.callSelectorMethod('onMouseMove', e);
+    }, _this.onClick = function (e) {
+      var onClickCheckFunc = _this.props.onClickCheckFunc;
+
+
+      if (!onClickCheckFunc || onClickCheckFunc(e)) {
+        return _this.callSelectorMethod('onClick', e);
+      }
+      return;
+    }, _this.onSelectionComplete = function () {
+      return _this.callSelectorMethod('onSelectionComplete');
+    }, _this.onSelectionClear = function () {
+      return _this.callSelectorMethod('onSelectionClear');
+    }, _this.onSelectionUndo = function () {
+      return _this.callSelectorMethod('onSelectionUndo');
+    }, _this.onSubmit = function () {
+      _this.props.onSubmit(_this.props.value);
+    }, _this.callSelectorMethod = function (methodName, e) {
+      if (_this.props.disableAnnotation) {
+        return;
+      }
+
+      if (!!_this.props[methodName]) {
+        _this.props[methodName](e);
+      } else {
+        var selector = _this.getSelectorByType(_this.props.type);
+        if (selector && selector.methods[methodName]) {
+          var value = selector.methods[methodName](_this.props.value, e);
+
+          if (typeof value === 'undefined') {
+            if (false) {}
+          } else {
+            _this.props.onChange(value);
+          }
+        }
+      }
+    }, _this.shouldAnnotationBeActive = function (annotation, top) {
+      if (_this.props.activeAnnotations) {
+        var isActive = !!_this.props.activeAnnotations.find(function (active) {
+          return _this.props.activeAnnotationComparator(annotation, active);
+        });
+
+        return isActive || top === annotation;
+      } else {
+        return top === annotation;
+      }
+    }, _temp), Annotation_possibleConstructorReturn(_this, _ret);
+  }
+
+  Annotation.prototype.render = function render() {
+    var _this3 = this;
+
+    var props = this.props;
+    var isMouseHovering = props.isMouseHovering,
+        renderHighlight = props.renderHighlight,
+        renderContent = props.renderContent,
+        renderSelector = props.renderSelector,
+        renderEditor = props.renderEditor,
+        renderOverlay = props.renderOverlay,
+        renderPolygonControls = props.renderPolygonControls;
+
+
+    var topAnnotationAtMouse = this.getTopAnnotationAt(this.props.relativeMousePos.x, this.props.relativeMousePos.y);
+
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+      Annotation_Container,
+      {
+        style: props.style,
+        innerRef: isMouseHovering.innerRef,
+        onMouseLeave: this.onTargetMouseLeave
+      },
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Img, {
+        className: props.className,
+        style: props.style,
+        alt: props.alt,
+        src: props.src,
+        draggable: false,
+        innerRef: this.setInnerRef
+      }),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        Items,
+        null,
+        props.annotations.map(function (annotation) {
+          return renderHighlight({
+            key: annotation.data.id,
+            annotation: annotation,
+            active: _this3.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
+          });
+        }),
+        !props.disableSelector && props.value && props.value.geometry && renderSelector({
+          annotation: props.value
+        })
+      ),
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Target, {
+        onClick: this.onClick,
+        onMouseUp: this.onMouseUp,
+        onMouseDown: this.onMouseDown,
+        onMouseMove: this.onTargetMouseMove
+      }),
+      !props.disableOverlay && renderOverlay({
+        type: props.type,
+        annotation: props.value
+      }),
+      props.annotations.map(function (annotation) {
+        return (
+          /* this.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
+          && ( */
+          renderContent({
+            key: annotation.data.id,
+            annotation: annotation,
+            imageZoomAmount: props.imageZoomAmount
+          })
+          // )
+
+        );
+      }),
+      !props.disableEditor && props.value && props.value.selection && props.value.selection.showEditor && renderEditor({
+        annotation: props.value,
+        onChange: props.onChange,
+        onSubmit: this.onSubmit,
+        imageZoomAmount: props.imageZoomAmount
+      }),
+      props.value && props.value.geometry && props.value.geometry.type === PolygonSelector.TYPE && (!props.value.selection || !props.value.selection.showEditor) && renderPolygonControls({
+        annotation: props.value,
+        onSelectionComplete: this.onSelectionComplete,
+        onSelectionClear: this.onSelectionClear,
+        onSelectionUndo: this.onSelectionUndo,
+        imageZoomAmount: props.imageZoomAmount
+      })
+    );
+  };
+
+  return Annotation;
+}(external_root_React_commonjs2_react_commonjs_react_amd_react_["Component"]), _class.propTypes = {
+  innerRef: prop_types_default.a.func,
+  onMouseUp: prop_types_default.a.func,
+  onMouseDown: prop_types_default.a.func,
+  onMouseMove: prop_types_default.a.func,
+  onClick: prop_types_default.a.func,
+  // This prop represents how zoom the image is (default: 1)
+  imageZoomAmount: prop_types_default.a.number,
+  // This function is run before the onClick callback is executed (onClick
+  // is only called if onClickCheckFunc resolve to true or doesn't exist)
+  onClickCheckFunc: prop_types_default.a.func,
+  // For Polygon Selector
+  onSelectionComplete: prop_types_default.a.func,
+  onSelectionClear: prop_types_default.a.func,
+  onSelectionUndo: prop_types_default.a.func,
+
+  annotations: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+    type: prop_types_default.a.string
+  })).isRequired,
+  type: prop_types_default.a.string,
+  selectors: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+    TYPE: prop_types_default.a.string,
+    intersects: prop_types_default.a.func.isRequired,
+    area: prop_types_default.a.func.isRequired,
+    methods: prop_types_default.a.object.isRequired
+  })).isRequired,
+
+  value: prop_types_default.a.shape({
+    selection: prop_types_default.a.object,
+    geometry: prop_types_default.a.shape({
+      type: prop_types_default.a.string.isRequired
+    }),
+    data: prop_types_default.a.object
+  }),
+  onChange: prop_types_default.a.func,
+  onSubmit: prop_types_default.a.func,
+
+  activeAnnotationComparator: prop_types_default.a.func,
+  activeAnnotations: prop_types_default.a.arrayOf(prop_types_default.a.any),
+
+  disableAnnotation: prop_types_default.a.bool,
+  disableSelector: prop_types_default.a.bool,
+  renderSelector: prop_types_default.a.func,
+  disableEditor: prop_types_default.a.bool,
+  renderEditor: prop_types_default.a.func,
+
+  renderHighlight: prop_types_default.a.func.isRequired,
+  renderContent: prop_types_default.a.func.isRequired,
+
+  disableOverlay: prop_types_default.a.bool,
+  renderOverlay: prop_types_default.a.func.isRequired,
+  renderPolygonControls: prop_types_default.a.func.isRequired
+}, _class.defaultProps = defaultProps, _temp2)));
+// CONCATENATED MODULE: ./src/index.js
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "defaultProps", function() { return defaultProps; });
+
+
+
+/* harmony default export */ var src = __webpack_exports__["default"] = (components_Annotation);
 
 /***/ })
 /******/ ])["default"];
