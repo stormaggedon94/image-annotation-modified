@@ -8,7 +8,6 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import TextEditor from '../TextEditor';
-import RadioButtonEditor from '../RadioButtonEditor';
 import { getHorizontallyCentralPoint, getVerticallyLowestPoint } from '../../utils/pointsUtils';
 import { PolygonSelector } from '../../selectors';
 
@@ -35,27 +34,7 @@ function Editor(props) {
     React.createElement(
       Container,
       null,
-      geometry.type === PolygonSelector.TYPE && React.createElement(RadioButtonEditor, {
-        onChangeAge: function onChangeAge(e) {
-          return props.onChange(_extends({}, props.annotation, {
-            data: _extends({}, props.annotation.data, {
-              age: e.target.value
-            })
-          }));
-        },
-        onChangeRenovationType: function onChangeRenovationType(e) {
-          return props.onChange(_extends({}, props.annotation, {
-            data: _extends({}, props.annotation.data, {
-              renovationType: e.target.value
-            })
-          }));
-        },
-        onSubmit: props.onSubmit,
-        ageValue: props.annotation.data && props.annotation.data.age,
-        renovationTypeValue: props.annotation.data && props.annotation.data.renovationType,
-        imageZoomAmount: props.imageZoomAmount
-      }),
-      geometry.type !== PolygonSelector.TYPE && React.createElement(TextEditor, {
+      React.createElement(TextEditor, {
         onChange: function onChange(e) {
           return props.onChange(_extends({}, props.annotation, {
             data: _extends({}, props.annotation.data, {

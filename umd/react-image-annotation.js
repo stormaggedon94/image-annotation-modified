@@ -25037,121 +25037,6 @@ function TextEditor(props) {
 }
 
 /* harmony default export */ var components_TextEditor = (TextEditor);
-// CONCATENATED MODULE: ./src/components/RadioButtonEditor/index.js
-var RadioButtonEditor_templateObject = RadioButtonEditor_taggedTemplateLiteralLoose(['\n  padding: 8px 16px;\n  color: #363636!important;\n'], ['\n  padding: 8px 16px;\n  color: #363636!important;\n']),
-    RadioButtonEditor_templateObject2 = RadioButtonEditor_taggedTemplateLiteralLoose(['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n'], ['\n  background: whitesmoke;\n  border: 0;\n  box-sizing: border-box;\n  color: #363636;\n  cursor: pointer;\n  font-size: 1rem;\n  margin: 0;\n  outline: 0;\n  padding: 8px 16px;\n  text-align: center;\n  text-shadow: 0 1px 0 rgba(0,0,0,0.1);\n  width: 100%;\n\n  transition: background 0.21s ease-in-out;\n\n  &:focus, &:hover {\n    background: #eeeeee;\n  }\n']);
-
-function RadioButtonEditor_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
-
-
-
-var RadioButtonEditor_Inner = styled_components_browser_esm["a" /* default */].div(RadioButtonEditor_templateObject);
-
-var RadioButtonEditor_Button = styled_components_browser_esm["a" /* default */].div(RadioButtonEditor_templateObject2);
-
-function RadioButtonEditor(props) {
-  var zoomBetweenZeroAndOne = Math.abs((props.imageZoomAmount - 1) / 4 - 1);
-
-  var fontSize = 1 / 5 + zoomBetweenZeroAndOne * (4 / 5);
-
-  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment,
-    null,
-    external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-      RadioButtonEditor_Inner,
-      { style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' } },
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'h6',
-          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
-          ' - Coffee Age - '
-        )
-      ),
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'label',
-          null,
-          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
-            name: 'age',
-            value: 'young',
-            checked: props.ageValue === 'young',
-            onChange: props.onChangeAge
-          }),
-          ' Young'
-        )
-      ),
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'label',
-          null,
-          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
-            name: 'age',
-            value: 'mature',
-            checked: props.ageValue === 'mature',
-            onChange: props.onChangeAge
-          }),
-          ' Mature'
-        )
-      ),
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'h6',
-          { style: { margin: '0px 0px', textAlign: 'center', fontSize: fontSize + 'rem' } },
-          ' - Renovation Type - '
-        )
-      ),
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'label',
-          null,
-          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
-            name: 'renovationType',
-            value: 'esqueletomento',
-            checked: props.renovationTypeValue === 'esqueletomento',
-            onChange: props.onChangeRenovationType
-          }),
-          ' Esquele.'
-        )
-      ),
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        null,
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-          'label',
-          null,
-          external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('input', { type: 'radio',
-            name: 'renovationType',
-            value: 'recepa',
-            checked: props.renovationTypeValue === 'recepa',
-            onChange: props.onChangeRenovationType
-          }),
-          ' Recepa'
-        )
-      )
-    ),
-    props.ageValue && props.ageValue.length > 0 && props.renovationTypeValue && props.renovationTypeValue.length > 0 && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-      RadioButtonEditor_Button,
-      {
-        onClick: props.onSubmit,
-        style: { fontSize: fontSize + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
-      },
-      'Submit'
-    )
-  );
-}
-
-/* harmony default export */ var components_RadioButtonEditor = (RadioButtonEditor);
 // CONCATENATED MODULE: ./src/components/Editor/index.js
 var Editor_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -25159,7 +25044,6 @@ var Editor_templateObject = Editor_taggedTemplateLiteralLoose(['\n  from {\n    
     Editor_templateObject2 = Editor_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  margin-top: 16px;\n  transform-origin: top left;\n  animation: ', ' 0.31s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n  overflow: hidden;\n  margin-left: -50%;\n  margin-right: 50%\n']);
 
 function Editor_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
-
 
 
 
@@ -25190,27 +25074,7 @@ function Editor(props) {
     external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
       Editor_Container,
       null,
-      geometry.type === PolygonSelector.TYPE && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_RadioButtonEditor, {
-        onChangeAge: function onChangeAge(e) {
-          return props.onChange(Editor_extends({}, props.annotation, {
-            data: Editor_extends({}, props.annotation.data, {
-              age: e.target.value
-            })
-          }));
-        },
-        onChangeRenovationType: function onChangeRenovationType(e) {
-          return props.onChange(Editor_extends({}, props.annotation, {
-            data: Editor_extends({}, props.annotation.data, {
-              renovationType: e.target.value
-            })
-          }));
-        },
-        onSubmit: props.onSubmit,
-        ageValue: props.annotation.data && props.annotation.data.age,
-        renovationTypeValue: props.annotation.data && props.annotation.data.renovationType,
-        imageZoomAmount: props.imageZoomAmount
-      }),
-      geometry.type !== PolygonSelector.TYPE && external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_TextEditor, {
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_TextEditor, {
         onChange: function onChange(e) {
           return props.onChange(Editor_extends({}, props.annotation, {
             data: Editor_extends({}, props.annotation.data, {
@@ -25581,9 +25445,7 @@ function Content(props) {
       {
         style: { fontSize: 1 / 5 + zoomBetweenZeroAndOne * (4 / 5) + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
       },
-      props.annotation.data && props.annotation.data.age,
-      ' - ',
-      props.annotation.data && props.annotation.data.renovationType
+      props.annotation.data && props.annotation.data.text
     )
   );
 }
