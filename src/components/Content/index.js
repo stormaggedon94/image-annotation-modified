@@ -12,8 +12,9 @@ const Container = styled.div`
     0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   padding: 8px 16px;
   margin-top: 8px;
-  margin-left: -50%;
-  margin-right: 50%;
+
+
+
   color: #363636!important;
 `
 
@@ -22,6 +23,21 @@ function Content (props) {
   if (!geometry) return null
 
   const zoomBetweenZeroAndOne = Math.abs(((props.imageZoomAmount - 1) / 4) - 1);
+
+  var style = {}
+
+  if (geometry.type === PolygonSelector.TYPE){
+    style ={
+      marginRight:"50%",
+      marginLeft:"-50%"
+    }
+  }
+  else{
+    style ={
+      marginLeft:"8px"
+    }
+  }
+
 
   return (
     <div
@@ -36,7 +52,7 @@ function Content (props) {
       geometry={geometry}
     >
       <Container
-        style={{fontSize: (((1 / 5) + (zoomBetweenZeroAndOne * (4 / 5))) + 'rem'), padding: ((((1 / 5) * 8) + ((4 / 5) * 8 * zoomBetweenZeroAndOne)) + 'px ' + (((1 / 5) * 16) + ((4 / 5) * 16 * zoomBetweenZeroAndOne)) + 'px')}}
+        style={style}
       >
         {props.annotation.data && props.annotation.data.text}
       </Container>

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Box = styled.div`
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
 `
 
