@@ -44,6 +44,8 @@ export default compose(
     onMouseDown: T.func,
     onMouseMove: T.func,
     onClick: T.func,
+    imageZoomAmount: T.number,
+    onClickCheckFunc: T.func,
 
     // For Polygon Selector
     onSelectionComplete: T.func,
@@ -94,6 +96,25 @@ export default compose(
 
   static defaultProps = defaultProps
 
+  componentDidMount = () => {
+   window.addEventListener("resize", this.forceUpdateComponent);
+ }
+
+ componentWillUnmount = () => {
+   window.removeEventListener("resize", this.forceUpdateComponent);
+ }
+
+ forceUpdateComponent = () => {
+   this.forceUpdate();
+ }
+
+ componentDidUpdate = prevProps => {
+    if (prevProps.imageZoomAmount !== this.props.imageZoomAmount) {
+      this.forceUpdateComponent();
+    }
+  }
+
+
   setInnerRef = (el) => {
     this.container = el
     this.props.relativeMousePos.innerRef(el)
@@ -142,7 +163,14 @@ export default compose(
   onMouseUp = (e) => this.callSelectorMethod('onMouseUp', e)
   onMouseDown = (e) => this.callSelectorMethod('onMouseDown', e)
   onMouseMove = (e) => this.callSelectorMethod('onMouseMove', e)
-  onClick = (e) => this.callSelectorMethod('onClick', e)
+  onClick = (e) => {
+    const { onClickCheckFunc } = this.props;
+
+    if (!onClickCheckFunc || onClickCheckFunc(e)) {
+      return this.callSelectorMethod('onClick', e)
+    }
+    return;
+  }
   onSelectionComplete = () => this.callSelectorMethod('onSelectionComplete')
   onSelectionClear = () => this.callSelectorMethod('onSelectionClear')
   onSelectionUndo = () => this.callSelectorMethod('onSelectionUndo')

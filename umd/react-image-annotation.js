@@ -25674,7 +25674,17 @@ var Target = Items;
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = Annotation_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.setInnerRef = function (el) {
+    return _ret = (_temp = (_this = Annotation_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
+      window.addEventListener("resize", _this.forceUpdateComponent);
+    }, _this.componentWillUnmount = function () {
+      window.removeEventListener("resize", _this.forceUpdateComponent);
+    }, _this.forceUpdateComponent = function () {
+      _this.forceUpdate();
+    }, _this.componentDidUpdate = function (prevProps) {
+      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
+        _this.forceUpdateComponent();
+      }
+    }, _this.setInnerRef = function (el) {
       _this.container = el;
       _this.props.relativeMousePos.innerRef(el);
       _this.props.innerRef(el);
@@ -25719,7 +25729,13 @@ var Target = Items;
     }, _this.onMouseMove = function (e) {
       return _this.callSelectorMethod('onMouseMove', e);
     }, _this.onClick = function (e) {
-      return _this.callSelectorMethod('onClick', e);
+      var onClickCheckFunc = _this.props.onClickCheckFunc;
+
+
+      if (!onClickCheckFunc || onClickCheckFunc(e)) {
+        return _this.callSelectorMethod('onClick', e);
+      }
+      return;
     }, _this.onSelectionComplete = function () {
       return _this.callSelectorMethod('onSelectionComplete');
     }, _this.onSelectionClear = function () {
@@ -25844,6 +25860,8 @@ var Target = Items;
   onMouseDown: prop_types_default.a.func,
   onMouseMove: prop_types_default.a.func,
   onClick: prop_types_default.a.func,
+  imageZoomAmount: prop_types_default.a.number,
+  onClickCheckFunc: prop_types_default.a.func,
 
   // For Polygon Selector
   onSelectionComplete: prop_types_default.a.func,

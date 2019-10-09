@@ -44,7 +44,17 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.setInnerRef = function (el) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
+      window.addEventListener("resize", _this.forceUpdateComponent);
+    }, _this.componentWillUnmount = function () {
+      window.removeEventListener("resize", _this.forceUpdateComponent);
+    }, _this.forceUpdateComponent = function () {
+      _this.forceUpdate();
+    }, _this.componentDidUpdate = function (prevProps) {
+      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
+        _this.forceUpdateComponent();
+      }
+    }, _this.setInnerRef = function (el) {
       _this.container = el;
       _this.props.relativeMousePos.innerRef(el);
       _this.props.innerRef(el);
@@ -89,7 +99,13 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
     }, _this.onMouseMove = function (e) {
       return _this.callSelectorMethod('onMouseMove', e);
     }, _this.onClick = function (e) {
-      return _this.callSelectorMethod('onClick', e);
+      var onClickCheckFunc = _this.props.onClickCheckFunc;
+
+
+      if (!onClickCheckFunc || onClickCheckFunc(e)) {
+        return _this.callSelectorMethod('onClick', e);
+      }
+      return;
     }, _this.onSelectionComplete = function () {
       return _this.callSelectorMethod('onSelectionComplete');
     }, _this.onSelectionClear = function () {
@@ -216,6 +232,8 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
   onMouseDown: T.func,
   onMouseMove: T.func,
   onClick: T.func,
+  imageZoomAmount: T.number,
+  onClickCheckFunc: T.func,
 
   // For Polygon Selector
   onSelectionComplete: T.func,
