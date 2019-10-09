@@ -25178,7 +25178,7 @@ PolygonControls.defaultProps = {
 
 /* harmony default export */ var components_PolygonControls = (PolygonControls);
 // CONCATENATED MODULE: ./src/components/FancyRectangle/index.js
-var FancyRectangle_templateObject = FancyRectangle_taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n']),
+var FancyRectangle_templateObject = FancyRectangle_taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.6);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.6);\n  position: absolute;\n']),
     FancyRectangle_templateObject2 = FancyRectangle_taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
 
 function FancyRectangle_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
@@ -25410,7 +25410,7 @@ Polygon_Polygon.defaultProps = {
 // CONCATENATED MODULE: ./src/components/Content/index.js
 var Content_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var Content_templateObject = Content_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n']);
+var Content_templateObject = Content_taggedTemplateLiteralLoose(['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n\n\n\n  color: #363636!important;\n'], ['\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n\n\n\n  color: #363636!important;\n']);
 
 function Content_taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
@@ -25428,6 +25428,19 @@ function Content(props) {
 
   var zoomBetweenZeroAndOne = Math.abs((props.imageZoomAmount - 1) / 4 - 1);
 
+  var style = {};
+
+  if (geometry.type === PolygonSelector.TYPE) {
+    style = {
+      marginRight: "50%",
+      marginLeft: "-50%"
+    };
+  } else {
+    style = {
+      marginLeft: "8px"
+    };
+  }
+
   return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     'div',
     {
@@ -25443,7 +25456,7 @@ function Content(props) {
     external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
       Content_Container,
       {
-        style: { fontSize: 1 / 5 + zoomBetweenZeroAndOne * (4 / 5) + 'rem', padding: 1 / 5 * 8 + 4 / 5 * 8 * zoomBetweenZeroAndOne + 'px ' + (1 / 5 * 16 + 4 / 5 * 16 * zoomBetweenZeroAndOne) + 'px' }
+        style: style
       },
       props.annotation.data && props.annotation.data.text
     )
@@ -25661,17 +25674,7 @@ var Target = Items;
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = Annotation_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
-      window.addEventListener("resize", _this.forceUpdateComponent);
-    }, _this.componentWillUnmount = function () {
-      window.removeEventListener("resize", _this.forceUpdateComponent);
-    }, _this.forceUpdateComponent = function () {
-      _this.forceUpdate();
-    }, _this.componentDidUpdate = function (prevProps) {
-      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
-        _this.forceUpdateComponent();
-      }
-    }, _this.setInnerRef = function (el) {
+    return _ret = (_temp = (_this = Annotation_possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.setInnerRef = function (el) {
       _this.container = el;
       _this.props.relativeMousePos.innerRef(el);
       _this.props.innerRef(el);
@@ -25716,13 +25719,7 @@ var Target = Items;
     }, _this.onMouseMove = function (e) {
       return _this.callSelectorMethod('onMouseMove', e);
     }, _this.onClick = function (e) {
-      var onClickCheckFunc = _this.props.onClickCheckFunc;
-
-
-      if (!onClickCheckFunc || onClickCheckFunc(e)) {
-        return _this.callSelectorMethod('onClick', e);
-      }
-      return;
+      return _this.callSelectorMethod('onClick', e);
     }, _this.onSelectionComplete = function () {
       return _this.callSelectorMethod('onSelectionComplete');
     }, _this.onSelectionClear = function () {
@@ -25818,17 +25815,11 @@ var Target = Items;
         annotation: props.value
       }),
       props.annotations.map(function (annotation) {
-        return (
-          /* this.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
-          && ( */
-          renderContent({
-            key: annotation.data.id,
-            annotation: annotation,
-            imageZoomAmount: props.imageZoomAmount
-          })
-          // )
-
-        );
+        return _this3.shouldAnnotationBeActive(annotation, topAnnotationAtMouse) && renderContent({
+          key: annotation.data.id,
+          annotation: annotation,
+          imageZoomAmount: props.imageZoomAmount
+        });
       }),
       !props.disableEditor && props.value && props.value.selection && props.value.selection.showEditor && renderEditor({
         annotation: props.value,
@@ -25853,11 +25844,7 @@ var Target = Items;
   onMouseDown: prop_types_default.a.func,
   onMouseMove: prop_types_default.a.func,
   onClick: prop_types_default.a.func,
-  // This prop represents how zoom the image is (default: 1)
-  imageZoomAmount: prop_types_default.a.number,
-  // This function is run before the onClick callback is executed (onClick
-  // is only called if onClickCheckFunc resolve to true or doesn't exist)
-  onClickCheckFunc: prop_types_default.a.func,
+
   // For Polygon Selector
   onSelectionComplete: prop_types_default.a.func,
   onSelectionClear: prop_types_default.a.func,

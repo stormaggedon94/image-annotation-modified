@@ -1,4 +1,4 @@
-var _templateObject = _taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.2);\n  position: absolute;\n']),
+var _templateObject = _taggedTemplateLiteralLoose(['\n  background: rgba(0, 0, 0, 0.6);\n  position: absolute;\n'], ['\n  background: rgba(0, 0, 0, 0.6);\n  position: absolute;\n']),
     _templateObject2 = _taggedTemplateLiteralLoose(['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n'], ['\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n']);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }

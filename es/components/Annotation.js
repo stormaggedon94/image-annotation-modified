@@ -44,17 +44,7 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.componentDidMount = function () {
-      window.addEventListener("resize", _this.forceUpdateComponent);
-    }, _this.componentWillUnmount = function () {
-      window.removeEventListener("resize", _this.forceUpdateComponent);
-    }, _this.forceUpdateComponent = function () {
-      _this.forceUpdate();
-    }, _this.componentDidUpdate = function (prevProps) {
-      if (prevProps.imageZoomAmount !== _this.props.imageZoomAmount) {
-        _this.forceUpdateComponent();
-      }
-    }, _this.setInnerRef = function (el) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.setInnerRef = function (el) {
       _this.container = el;
       _this.props.relativeMousePos.innerRef(el);
       _this.props.innerRef(el);
@@ -99,13 +89,7 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
     }, _this.onMouseMove = function (e) {
       return _this.callSelectorMethod('onMouseMove', e);
     }, _this.onClick = function (e) {
-      var onClickCheckFunc = _this.props.onClickCheckFunc;
-
-
-      if (!onClickCheckFunc || onClickCheckFunc(e)) {
-        return _this.callSelectorMethod('onClick', e);
-      }
-      return;
+      return _this.callSelectorMethod('onClick', e);
     }, _this.onSelectionComplete = function () {
       return _this.callSelectorMethod('onSelectionComplete');
     }, _this.onSelectionClear = function () {
@@ -203,17 +187,11 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
         annotation: props.value
       }),
       props.annotations.map(function (annotation) {
-        return (
-          /* this.shouldAnnotationBeActive(annotation, topAnnotationAtMouse)
-          && ( */
-          renderContent({
-            key: annotation.data.id,
-            annotation: annotation,
-            imageZoomAmount: props.imageZoomAmount
-          })
-          // )
-
-        );
+        return _this3.shouldAnnotationBeActive(annotation, topAnnotationAtMouse) && renderContent({
+          key: annotation.data.id,
+          annotation: annotation,
+          imageZoomAmount: props.imageZoomAmount
+        });
       }),
       !props.disableEditor && props.value && props.value.selection && props.value.selection.showEditor && renderEditor({
         annotation: props.value,
@@ -238,11 +216,7 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
   onMouseDown: T.func,
   onMouseMove: T.func,
   onClick: T.func,
-  // This prop represents how zoom the image is (default: 1)
-  imageZoomAmount: T.number,
-  // This function is run before the onClick callback is executed (onClick
-  // is only called if onClickCheckFunc resolve to true or doesn't exist)
-  onClickCheckFunc: T.func,
+
   // For Polygon Selector
   onSelectionComplete: T.func,
   onSelectionClear: T.func,
