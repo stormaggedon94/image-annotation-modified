@@ -188,8 +188,13 @@ export default compose(
       this.props[methodName](e)
     } else {
       const selector = this.getSelectorByType(this.props.type)
-      if (selector && selector.methods[methodName]) {
+      if(this.props.type === PolygonSelector.TYPE && methodName==="onSelectionComplete"){
+        this.props.onSubmit(this.props.value)
+      }
+      else if (selector && selector.methods[methodName]) {
         const value = selector.methods[methodName](this.props.value, e)
+
+
 
         if (typeof value === 'undefined') {
           if (process.env.NODE_ENV !== 'production') {

@@ -123,7 +123,9 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
         _this.props[methodName](e);
       } else {
         var selector = _this.getSelectorByType(_this.props.type);
-        if (selector && selector.methods[methodName]) {
+        if (_this.props.type === PolygonSelector.TYPE && methodName === "onSelectionComplete") {
+          _this.props.onSubmit(_this.props.value);
+        } else if (selector && selector.methods[methodName]) {
           var value = selector.methods[methodName](_this.props.value, e);
 
           if (typeof value === 'undefined') {
