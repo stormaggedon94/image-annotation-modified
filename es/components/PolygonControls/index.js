@@ -37,7 +37,7 @@ function PolygonControls(props) {
       style: _extends({
         position: 'absolute',
         left: getHorizontallyCentralPoint(geometry.points) + '%',
-        top: getVerticallyLowestPoint(geometry.points) + (10 * (1 / 5) + 10 * (4 / 5) * zoomBetweenZeroAndOne) + '%'
+        top: getVerticallyLowestPoint(geometry.points) + 10 * (1 / 5) + '%'
       }, props.style)
     },
     React.createElement(

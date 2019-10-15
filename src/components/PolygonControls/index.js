@@ -67,14 +67,14 @@ function PolygonControls (props) {
       style={{
         position: 'absolute',
         left: `${getHorizontallyCentralPoint(geometry.points)}%`,
-        top: `${(getVerticallyLowestPoint(geometry.points) + ((10 * (1 / 5)) + (10 * (4 / 5) * zoomBetweenZeroAndOne)))}%`,
+        top: `${(getVerticallyLowestPoint(geometry.points) + (10 * (1 / 5)) )}%`,
         ...props.style
       }}
     >
       <Container
         className={props.className}
       >
-        {(geometry.points.length >= 2) && 
+        {(geometry.points.length >= 2) &&
           <Button
             onClick={props.onSelectionUndo}
             style={{fontSize: (fontSize + 'rem'), padding: paddingHorizontal + 'px ' + paddingVertical + 'px'}}
