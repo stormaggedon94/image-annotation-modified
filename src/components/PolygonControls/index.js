@@ -67,7 +67,7 @@ function PolygonControls (props) {
       style={{
         position: 'absolute',
         left: `${getHorizontallyCentralPoint(geometry.points)}%`,
-        top: `${(getVerticallyLowestPoint(geometry.points) + (10 * (1 / 5)) )}%`,
+        top: `${(getVerticallyLowestPoint(geometry.points) + (10 * (4 / 5)) )}%`,
         ...props.style
       }}
     >
