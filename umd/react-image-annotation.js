@@ -25135,7 +25135,7 @@ function PolygonControls(props) {
       style: PolygonControls_extends({
         position: 'absolute',
         left: getHorizontallyCentralPoint(geometry.points) + '%',
-        top: getVerticallyLowestPoint(geometry.points) + 10 * (4 / 5) + '%'
+        top: getVerticallyLowestPoint(geometry.points) + 15 * (5 / 5) + '%'
       }, props.style)
     },
     external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(

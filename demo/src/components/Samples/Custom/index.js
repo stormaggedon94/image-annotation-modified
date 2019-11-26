@@ -72,7 +72,7 @@ function renderContent ({ annotation }) {
         color: 'white',
         padding: 10,
         position: 'absolute',
-        fontSize: 12,
+        fontSize: 14,
         left: `${geometry.x}%`,
         top: `${geometry.y + geometry.height}%`
       }}
